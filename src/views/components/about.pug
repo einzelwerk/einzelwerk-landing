@@ -1,0 +1,32 @@
+mixin about
+  section.about
+    .about__container.container 
+      .about__content
+        h2.about__title.section__title Наша студия в цифрах
+        - 
+          const aboutList = [
+            {
+              num: '2',
+              name: 'Награды',
+            },
+            {
+              num: '16',
+              name: 'Человек в команде',
+            },
+            {
+              num: '15',
+              name: 'Лет в бизнесе',
+            },
+              {
+              num: '85',
+              name: 'Сайтов запущено',
+            },
+          ]
+        ul.about__list
+          each about in aboutList
+            li.about__item 
+              span.about__num=about.num 
+              span.about__name=about.name 
+      picture.about__img-wrap 
+        img.about__img(src="@/assets/img/about.png", alt="")
+        

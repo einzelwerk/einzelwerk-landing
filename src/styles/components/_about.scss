@@ -1,0 +1,62 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.about {
+  padding: 10px 0;
+  overflow: hidden;
+  background: vars.$grayscale100;
+
+  &__container {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    gap: 214px;
+    padding: 80px 0;
+  }
+
+  &__title {
+    max-width: 366px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 110px;
+    margin-top: auto;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__num {
+    @include mix.h2;
+  }
+
+  &__name {
+    @include mix.p18;
+
+    color: vars.$grayscale600;
+  }
+
+  &__img {
+    &-wrap {
+      width: 100%;
+      height: 100%;
+      margin-right: calc(-1 * fn.free-place() + 10px);
+    }
+
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+  }
+}

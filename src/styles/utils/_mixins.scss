@@ -1,0 +1,67 @@
+@use '../base/typography';
+@use './variables' as vars;
+@use './functions' as fn;
+
+@mixin h1 {
+  font-weight: 400;
+  font-size: 64px;
+  font-family: HeadingNow, sans-serif;
+  font-style: normal;
+  line-height: 72px;
+}
+
+@mixin h2 {
+  font-weight: 300;
+  font-size: 40px;
+  font-family: HeadingNow, sans-serif;
+  font-style: normal;
+  line-height: 130%;
+}
+
+@mixin h3 {
+  font-weight: 300;
+  font-size: 24px;
+  font-family: HeadingNow, sans-serif;
+  font-style: normal;
+  line-height: 32px;
+}
+
+@mixin h4 {
+  font-weight: 300;
+  font-size: 20px;
+  font-family: HeadingNow, sans-serif;
+  font-style: normal;
+  line-height: 30px;
+}
+
+@mixin p16-heading {
+  font-weight: 300;
+  font-size: 16px;
+  font-family: HeadingNow, sans-serif;
+  font-style: normal;
+  line-height: 24px;
+}
+
+@mixin p18 {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: 28px;
+}
+
+@mixin p16 {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: 24px;
+}
+
+@mixin p14 {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: 22px;
+}
