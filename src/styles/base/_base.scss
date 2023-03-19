@@ -7,7 +7,7 @@
   flex-direction: column;
   min-height: 100vh;
   color: vars.$grayscale900;
-  background: vars.$white;
+  background: vars.$grayscale0;
   @include mix.p18;
 }
 
@@ -34,6 +34,7 @@
 }
 
 .btn {
+  flex: none;
   padding: 18px 32px;
   color: vars.$black;
   text-align: center;

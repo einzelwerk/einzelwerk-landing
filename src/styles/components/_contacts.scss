@@ -1,0 +1,67 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.contacts {
+  position: relative;
+  color: rgba(vars.$grayscale0, 0.6);
+  background: vars.$grayscale900;
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 600px;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    color: vars.$grayscale0;
+  }
+
+  &__desc {
+    font-weight: 400;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 520px;
+  }
+
+  &__field-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__field-row {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__btn-block {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__img-wrap {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 100%;
+    transform: translateY(-50%);
+  }
+
+  &__img {
+    height: 100%;
+  }
+}

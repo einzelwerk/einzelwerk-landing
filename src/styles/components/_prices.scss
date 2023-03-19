@@ -2,7 +2,7 @@
 @use '../utils/mixins' as mix;
 @use '../utils/functions' as fn;
 
-.services {
+.prices {
   &__top {
     display: flex;
     justify-content: space-between;
@@ -34,11 +34,11 @@
     }
 
     &_dark {
-      color: vars.$white;
+      color: vars.$grayscale0;
       background: vars.$grayscale900;
       border-color: vars.$grayscale900;
 
-      .services__benefits {
+      .prices__benefits {
         &-icon {
           color: vars.$lime;
         }

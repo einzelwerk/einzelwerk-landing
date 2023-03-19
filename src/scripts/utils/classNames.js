@@ -4,6 +4,13 @@ export const classNames = {
     blur: 'header_blur',
     hide: 'header_hide',
   },
-  toggle: 'toggle',
-  toggleActive: 'toggle_active',
+  toggle: {
+    block: 'toggle',
+    active: 'toggle_active',
+  },
+  tooltip: {
+    block: 'tooltip',
+    blockActive: 'tooltip_active',
+    btn: 'tooltip__btn',
+  },
 };

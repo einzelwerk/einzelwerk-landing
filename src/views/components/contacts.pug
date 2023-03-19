@@ -1,0 +1,43 @@
+include ../partials/fields
+
+mixin contacts
+  section#contacts.contacts.section
+    .contacts__container.container
+      .contacts__content
+        .contacts__text-block
+          h2.contacts__title.section__title Оставляйте заявку
+          p.contacts__desc Наш проджект свяжется с вами в течение рабочего дня!
+        form.contacts__form(action="#") 
+          .contacts__field-block
+            +input({
+              name: 'name',
+              placeholder: 'Ваше имя*',
+              type: 'text',
+              required: true
+            })
+            .contacts__field-row
+              +input({
+                name: 'email',
+                placeholder: 'E-mail*',
+                type: 'email',
+                required: true
+              })
+              +input({
+                name: 'tel',
+                placeholder: 'Телефон*',
+                type: 'tel',
+                required: true
+              })
+            +textarea({
+              name: 'message',
+              placeholder: 'Сообщение',
+            })
+          .contacts__btn-block 
+            button.contacts__submit.btn(type="submit") Оставить заявку
+            +checkbox({
+              name: 'agreement'
+            })
+              span Нажимая на кнопку отправить вы соглашаетесь с политикой 
+              a(href="#") обработки персональных данных
+      picture.contacts__img-wrap 
+        img.contacts__img(src="@/assets/img/contacts.png", alt="")

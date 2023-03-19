@@ -3,7 +3,7 @@
 @use '../utils/functions' as fn;
 
 .cases {
-  color: vars.$white;
+  color: vars.$grayscale0;
   background: vars.$grayscale900;
 
   &__list {

@@ -1,17 +1,17 @@
 include ../partials/tooltip
 include ../partials/toggle
 
-mixin services
-  section.services.section
-    .services__container.section__container.container 
-      .services__top
-        h2.services__title.section__title Стоимость работы
-        .services__info 
+mixin prices
+  section#prices.prices.section
+    .prices__container.section__container.container 
+      .prices__top
+        h2.prices__title.section__title Стоимость работы
+        .prices__info 
           +toggle('На основе фирменного конструктора')
           +tooltip
-      ul.services__list
+      ul.prices__list
         -
-          const servicesList = [
+          const pricesList = [
             {
               class: '',
               name: 'Лендинг',
@@ -29,7 +29,7 @@ mixin services
               btn: 'Заказать лендинг',
             },
             {
-              class: 'services__item_gray',
+              class: 'prices__item_gray',
               name: 'Сайт',
               list: [
                 'Анализ ниши и конкурентов',
@@ -46,7 +46,7 @@ mixin services
               btn: 'Заказать сайт',
             },
             {
-              class: 'services__item_dark',
+              class: 'prices__item_dark',
               name: 'E-commerce',
               list: [
                 'Анализ ниши и конкурентов',
@@ -64,19 +64,19 @@ mixin services
               btn: 'Заказать интернет-магазин',
             },
           ];
-        each service in servicesList
-          li.services__item(class=service.class)
-            .services__item-top
-              .services__name-block
-                .services__name=service.name 
+        each service in pricesList
+          li.prices__item(class=service.class)
+            .prices__item-top
+              .prices__name-block
+                .prices__name=service.name 
                 +tooltip
-              ul.services__benefits 
+              ul.prices__benefits 
                 each benefit in service.list
-                  li.services__benefits-item 
-                    svg.services__benefits-icon
+                  li.prices__benefits-item 
+                    svg.prices__benefits-icon
                       use(xlink:href="./assets/sprite.svg#check")
-                    span.services__benefits-text=benefit
-            .services__item-bottom 
-              span.services__payment=service.payment
-              span.services__duration=service.duration
-              button.services__order.btn(type="button")=service.btn
+                    span.prices__benefits-text=benefit
+            .prices__item-bottom 
+              span.prices__payment=service.payment
+              span.prices__duration=service.duration
+              button.prices__order.btn(type="button")=service.btn

@@ -3,11 +3,54 @@
 @use '../utils/functions' as fn;
 
 .tooltip {
+  position: relative;
   display: inline-flex;
+
+  &_active {
+    .tooltip {
+      &__content {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+  }
 
   &__icon {
     width: 20px;
     height: 20px;
     color: vars.$grayscale500;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    width: 270px;
+    padding: 15px;
+    background: vars.$grayscale300;
+    border-radius: 12px;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    &::before {
+      position: absolute;
+      bottom: -13px;
+      left: 50%;
+      display: block;
+      width: 0;
+      border-color: rgba(vars.$grayscale300, 100%) rgba(0, 0, 0, 0%);
+      border-style: solid;
+      border-width: 15px 15px 0;
+      transform: translate(-50%, 0);
+      content: '';
+    }
   }
 }
