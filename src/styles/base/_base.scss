@@ -34,10 +34,15 @@
 }
 
 .btn {
-  @include mix.p16;
-
   padding: 18px 32px;
   color: vars.$black;
-  background: vars.$yellow;
+  text-align: center;
+  background: vars.$lime;
   border-radius: 12px;
+  @include mix.p16;
+}
+
+.wh100 {
+  width: 100%;
+  height: 100%;
 }

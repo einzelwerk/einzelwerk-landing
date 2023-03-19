@@ -1,0 +1,56 @@
+mixin process
+  section.process.section
+    .process__container.container 
+      .process__content.section__container
+        h2.process__title.section__title 
+        ul.process__list
+          -
+            const processList = [
+              {
+                name: 'Брифим',
+                payment: 'Бесплатно',
+                desc: 'Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. ',
+              },
+              {
+                name: 'Исследуем бизнес',
+                payment: 'Бесплатно',
+                desc: 'Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. ',
+              },
+              {
+                name: 'Пишем тексты',
+                payment: '150 000 ₽',
+                desc: 'Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. ',
+              },
+              {
+                name: 'Прототипируем',
+                payment: '100 000 ₽',
+                desc: 'Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. ',
+              },
+              {
+                name: 'Дизайним',
+                payment: '100 000 ₽',
+                desc: 'Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. ',
+              },
+              {
+                name: 'Верстаем',
+                payment: '100 000 ₽',
+                desc: 'Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. ',
+              },
+              {
+                name: 'Тестируем и запускаемся',
+                payment: '100 000 ₽',
+                desc: 'Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. ',
+              },
+            ];
+          each process, idx in processList
+            li.process__item 
+              button.process__head(type="button" data-hc-control=idx)
+                span.process__name-block 
+                  span.process__name=process.name
+                span.process__payment=process.payment
+              .process__body(data-hc-content=idx)
+                .process__body-content
+                  p.process__desc=process.desc
+      .process__img-block 
+        picture.process__img-wrap 
+          img.process__img(src="@/assets/img/process.jpg" alt="")

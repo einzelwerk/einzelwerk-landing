@@ -9,6 +9,8 @@
 
 //  Partials
 @use './base/base';
+@use './partials/tooltip';
+@use './partials/toggle';
 
 //  Components
 @use './components/header';
@@ -16,5 +18,6 @@
 @use './components/hero';
 @use './components/benefits';
 @use './components/about';
-
-//  Pages
+@use './components/services';
+@use './components/cases';
+@use './components/process';

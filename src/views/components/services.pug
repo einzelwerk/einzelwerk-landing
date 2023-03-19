@@ -1,0 +1,82 @@
+include ../partials/tooltip
+include ../partials/toggle
+
+mixin services
+  section.services.section
+    .services__container.section__container.container 
+      .services__top
+        h2.services__title.section__title Стоимость работы
+        .services__info 
+          +toggle('На основе фирменного конструктора')
+          +tooltip
+      ul.services__list
+        -
+          const servicesList = [
+            {
+              class: '',
+              name: 'Лендинг',
+              list: [
+                'Анализ ниши и конкурентов',
+                'Прототипирование',
+                'Уникальный дизайн',
+                'Фронтенд и бэкенд сайта',
+                'Подключение домена',
+                'Тестирование',
+                'Инструкция по работе',
+              ],
+              payment: 'от 95 000 руб',
+              duration: '7-10 дней',
+              btn: 'Заказать лендинг',
+            },
+            {
+              class: 'services__item_gray',
+              name: 'Сайт',
+              list: [
+                'Анализ ниши и конкурентов',
+                'Прототипирование',
+                'Уникальный дизайн',
+                'Фронтенд и бэкенд сайта',
+                'Подключение домена',
+                'Тестирование',
+                'Базовая настройка SEO',
+                'Инструкция по работе',
+              ],
+              payment: 'от 220 000 руб',
+              duration: 'от 14 дней',
+              btn: 'Заказать сайт',
+            },
+            {
+              class: 'services__item_dark',
+              name: 'E-commerce',
+              list: [
+                'Анализ ниши и конкурентов',
+                'Прототипирование',
+                'Уникальный дизайн',
+                'Фронтенд и бэкенд сайта',
+                'Подключение домена',
+                'Подключение платежных сервисов',
+                'Тестирование',
+                'Базовая настройка SEO',
+                'Инструкция по работе',
+              ],
+              payment: 'от 325 000 руб',
+              duration: 'от 25 дней',
+              btn: 'Заказать интернет-магазин',
+            },
+          ];
+        each service in servicesList
+          li.services__item(class=service.class)
+            .services__item-top
+              .services__name-block
+                .services__name=service.name 
+                +tooltip
+              ul.services__benefits 
+                each benefit in service.list
+                  li.services__benefits-item 
+                    svg.services__benefits-icon
+                      use(xlink:href="./assets/sprite.svg#check")
+                    span.services__benefits-text=benefit
+            .services__item-bottom 
+              span.services__payment=service.payment
+              span.services__duration=service.duration
+              button.services__order.btn(type="button")=service.btn

@@ -1,0 +1,13 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.tooltip {
+  display: inline-flex;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    color: vars.$grayscale500;
+  }
+}
