@@ -223,14 +223,21 @@ var classNames = {
     blur: 'header_blur',
     hide: 'header_hide'
   },
-  toggle: 'toggle',
-  toggleActive: 'toggle_active'
+  toggle: {
+    block: 'toggle',
+    active: 'toggle_active'
+  },
+  tooltip: {
+    block: 'tooltip',
+    blockActive: 'tooltip_active',
+    btn: 'tooltip__btn'
+  }
 };
 ;// CONCATENATED MODULE: ./src/scripts/modules/toggle.js
 
 function toggle() {
-  var classToggle = classNames.toggle;
-  var classToggleActive = classNames.toggleActive;
+  var classToggle = classNames.toggle.block;
+  var classToggleActive = classNames.toggle.toggleActive;
   document.querySelectorAll(".".concat(classToggle)).forEach(function (toggleEl) {
     function handler(e) {
       if (!(e.type === 'click' || e.keyCode === 13)) return;
@@ -238,6 +245,23 @@ function toggle() {
     }
     toggleEl.addEventListener('click', handler);
     toggleEl.addEventListener('keydown', handler);
+  });
+}
+;// CONCATENATED MODULE: ./src/scripts/modules/tooltip.js
+
+function tooltip() {
+  var classTooltip = classNames.tooltip.block;
+  var classTooltipActive = classNames.tooltip.blockActive;
+  var classTooltipBtn = classNames.tooltip.btn;
+  document.querySelectorAll(".".concat(classTooltip)).forEach(function (tooltipEl) {
+    var tooltipBtn = tooltipEl.querySelector(".".concat(classTooltipBtn));
+    tooltipBtn.addEventListener('click', function () {
+      tooltipEl.classList.toggle(classTooltipActive);
+    });
+    document.addEventListener('click', function (e) {
+      if (tooltipEl.contains(e.target)) return;
+      tooltipEl.classList.remove(classTooltipActive);
+    });
   });
 }
 ;// CONCATENATED MODULE: ./src/scripts/vendor/header.js
@@ -282,17 +306,19 @@ function headerHide() {
 
 
 
+
 // Header
 headerBlur();
 headerHide();
 
-// Toggle
-toggle();
-
 // Accordion
 new p(); // eslint-disable-line
-
 // Select
 new Select('.select'); // eslint-disable-line
+
+// Toggle
+toggle();
+// Tooltip
+tooltip();
 /******/ })()
 ;
