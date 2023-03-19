@@ -53,6 +53,16 @@
     gap: 24px;
   }
 
+  &__agreement {
+    @include mix.p12;
+
+    color: rgba(vars.$grayscale0, 0.5);
+
+    &_link {
+      color: vars.$grayscale0;
+    }
+  }
+
   &__img-wrap {
     position: absolute;
     top: 50%;

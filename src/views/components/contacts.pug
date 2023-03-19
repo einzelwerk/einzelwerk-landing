@@ -34,10 +34,8 @@ mixin contacts
             })
           .contacts__btn-block 
             button.contacts__submit.btn(type="submit") Оставить заявку
-            +checkbox({
-              name: 'agreement'
-            })
+            .contacts__agreement
               span Нажимая на кнопку отправить вы соглашаетесь с политикой 
-              a(href="#") обработки персональных данных
+              a.contacts__agreement_link(href="#") обработки персональных данных
       picture.contacts__img-wrap 
         img.contacts__img(src="@/assets/img/contacts.png", alt="")

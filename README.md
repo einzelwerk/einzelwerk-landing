@@ -1,2 +1,2 @@
-# Einzelwerk Landing - https://einzelwerk.github.io/name/einzelwerk-landing
+# Einzelwerk Landing - https://einzelwerk.github.io/einzelwerk-landing
 
