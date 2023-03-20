@@ -3,8 +3,12 @@
 @use '../utils/functions' as fn;
 
 .prices {
+  overflow: hidden;
+
   &__top {
     display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     justify-content: space-between;
   }
 
@@ -18,12 +22,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    @media (max-width: vars.$xl) {
+      display: none;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 46px;
+    gap: 86px;
     padding: 30px;
     border: 1px solid vars.$grayscale300;
     border-radius: 16px;
@@ -97,5 +104,15 @@
 
     margin-bottom: 16px;
     color: vars.$grayscale500;
+  }
+
+  &__order {
+    transition: background-color 0.4s ease-in-out;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      background: vars.$grayscale0;
+    }
   }
 }

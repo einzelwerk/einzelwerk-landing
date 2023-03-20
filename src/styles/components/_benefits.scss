@@ -3,23 +3,33 @@
 @use '../utils/functions' as fn;
 
 .benefits {
+  @media (max-width: vars.$sm) {
+    padding-bottom: 40px;
+  }
+
   &__container {
     display: flex;
-    gap: 40px;
+    gap: fn.clip-min(32, 40);
+    @media (max-width: vars.$xxl) {
+      flex-direction: column;
+    }
   }
 
   &__title {
+    &-wrap {
+      flex: none;
+      max-width: 520px;
+    }
+
     position: sticky;
-    top: 20px;
+    top: 100px;
     left: 0;
-    flex: none;
-    max-width: 520px;
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px 40px;
+    gap: fn.clip-min(24, 50) fn.clip-min(16, 40);
   }
 
   &__item {
@@ -29,9 +39,9 @@
 
   &__icon {
     display: inline-block;
-    width: 64px;
-    height: 64px;
-    margin-bottom: 32px;
+    width: fn.clip-min(50, 64);
+    height: fn.clip-min(50, 64);
+    margin-bottom: fn.clip-min(16, 32);
   }
 
   &__name {

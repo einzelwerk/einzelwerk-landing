@@ -2,7 +2,7 @@ import { classNames } from '../utils/classNames';
 
 export function toggle() {
   const classToggle = classNames.toggle.block;
-  const classToggleActive = classNames.toggle.toggleActive;
+  const classToggleActive = classNames.toggle.active;
 
   document.querySelectorAll(`.${classToggle}`).forEach((toggleEl) => {
     function handler(e) {

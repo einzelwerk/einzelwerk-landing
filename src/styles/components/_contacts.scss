@@ -27,6 +27,8 @@
   }
 
   &__desc {
+    @include mix.p18-big;
+
     font-weight: 400;
   }
 

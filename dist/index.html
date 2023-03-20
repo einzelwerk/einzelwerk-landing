@@ -25,7 +25,7 @@
             </ul>
           </nav>
           <div class="header__contacts"><a class="header__contacts-tel" href="+79119892442">+7 911 989-24-42</a>
-            <button class="header__contacts-discuss" type="button">Заполнить бриф</button>
+            <button class="header__contacts-discuss" type="button" data-popup-open="discuss">Заполнить бриф</button>
           </div>
           <button class="header__burger" type="button"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></button>
         </div>
@@ -57,15 +57,19 @@
                           <h1 class="hero__title">Офигенные и продуманные сайты от немецкой студии</h1>
                         </div>
                         <div class="hero__desc">Делаем продукты, которые радуют не только глаз, но и ваших сейлзов</div>
-                        <button class="hero__btn btn" type="button">Обсудить проект</button>
+                        <button class="hero__btn btn" type="button" data-popup-open="discuss">Обсудить проект</button>
                       </div>
-                      <picture class="hero__bg-wrap"><img class="hero__bg" src="./assets/img/hero-bg.png" alt=""></picture>
                     </div>
                   </div>
+                  <picture class="hero__bg-wrap">
+                    <source media="(max-width:767.98px)" srcset="./assets/img/hero/poster-mobile.png"><img class="hero__bg" src="./assets/img/hero/poster.png" alt="">
+                  </picture>
                 </section>
                 <section class="benefits section" id="benefits"> 
                   <div class="benefits__container container"> 
-                    <h2 class="benefits__title section__title">Чем мы лучше конкурентов</h2>
+                    <div class="benefits__title-wrap">
+                      <h2 class="benefits__title section__title">Чем мы лучше конкурентов</h2>
+                    </div>
                     <ul class="benefits__list">
                       <li class="benefits__item">
                         <svg class="benefits__icon">
@@ -138,9 +142,7 @@
                                       <use xlink:href="./assets/sprite.svg#tooltip"></use>
                                     </svg>
                                   </button>
-                                  <div class="tooltip__body">
-                                    <div class="tooltip__content"><span>Lorem ipsum dolor sit </span></div>
-                                  </div>
+                                  <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
                                 </div>
                       </div>
                     </div>
@@ -155,9 +157,7 @@
                                           <use xlink:href="./assets/sprite.svg#tooltip"></use>
                                         </svg>
                                       </button>
-                                      <div class="tooltip__body">
-                                        <div class="tooltip__content"><span>Lorem ipsum dolor sit </span></div>
-                                      </div>
+                                      <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
                                     </div>
                           </div>
                           <ul class="prices__benefits"> 
@@ -199,7 +199,7 @@
                           </ul>
                         </div>
                         <div class="prices__item-bottom"> <span class="prices__payment">от 95 000 руб</span><span class="prices__duration">7-10 дней</span>
-                          <button class="prices__order btn" type="button">Заказать лендинг</button>
+                          <button class="prices__order btn" type="button" data-popup-open="landing">Заказать лендинг</button>
                         </div>
                       </li>
                       <li class="prices__item prices__item_gray">
@@ -212,9 +212,7 @@
                                           <use xlink:href="./assets/sprite.svg#tooltip"></use>
                                         </svg>
                                       </button>
-                                      <div class="tooltip__body">
-                                        <div class="tooltip__content"><span>Lorem ipsum dolor sit </span></div>
-                                      </div>
+                                      <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
                                     </div>
                           </div>
                           <ul class="prices__benefits"> 
@@ -261,7 +259,7 @@
                           </ul>
                         </div>
                         <div class="prices__item-bottom"> <span class="prices__payment">от 220 000 руб</span><span class="prices__duration">от 14 дней</span>
-                          <button class="prices__order btn" type="button">Заказать сайт</button>
+                          <button class="prices__order btn" type="button" data-popup-open="site">Заказать сайт</button>
                         </div>
                       </li>
                       <li class="prices__item prices__item_dark">
@@ -274,9 +272,7 @@
                                           <use xlink:href="./assets/sprite.svg#tooltip"></use>
                                         </svg>
                                       </button>
-                                      <div class="tooltip__body">
-                                        <div class="tooltip__content"><span>Lorem ipsum dolor sit </span></div>
-                                      </div>
+                                      <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
                                     </div>
                           </div>
                           <ul class="prices__benefits"> 
@@ -328,7 +324,7 @@
                           </ul>
                         </div>
                         <div class="prices__item-bottom"> <span class="prices__payment">от 325 000 руб</span><span class="prices__duration">от 25 дней</span>
-                          <button class="prices__order btn" type="button">Заказать интернет-магазин</button>
+                          <button class="prices__order btn" type="button" data-popup-open="ecommerce">Заказать интернет-магазин</button>
                         </div>
                       </li>
                     </ul>
@@ -336,7 +332,7 @@
                 </section>
                 <section class="cases section" id="cases">
                   <div class="cases__container section__container container"> 
-                    <h2 class="cases__title section__title">Кейсики</h2>
+                    <h2 class="cases__title section__title">Кейсики на Behance</h2>
                     <ul class="cases__list"> 
                       <li class="cases__item"> <a class="cases__link" href="#"> 
                           <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-1.jpg" alt=""></picture>
@@ -369,125 +365,6 @@
                             <h3 class="cases__name">KFP Architekten</h3><span class="cases__type">Сайт</span>
                           </div></a></li>
                     </ul>
-                  </div>
-                </section>
-                <section class="process section" id="process">
-                  <div class="process__container container"> 
-                    <div class="process__content section__container">
-                      <h2 class="process__title section__title">Процесс работы</h2>
-                      <ul class="process__list">
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-hc-control="0"><span class="process__name-block"> <span class="process__name">Брифим</span></span><span class="process__payment">Бесплатно</span></button>
-                          <div class="process__body" data-hc-content="0">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-hc-control="1"><span class="process__name-block"> <span class="process__name">Исследуем бизнес</span></span><span class="process__payment">Бесплатно</span></button>
-                          <div class="process__body" data-hc-content="1">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-hc-control="2"><span class="process__name-block"> <span class="process__name">Пишем тексты</span></span><span class="process__payment">150 000 ₽</span></button>
-                          <div class="process__body" data-hc-content="2">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-hc-control="3"><span class="process__name-block"> <span class="process__name">Прототипируем</span></span><span class="process__payment">100 000 ₽</span></button>
-                          <div class="process__body" data-hc-content="3">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-hc-control="4"><span class="process__name-block"> <span class="process__name">Дизайним</span></span><span class="process__payment">100 000 ₽</span></button>
-                          <div class="process__body" data-hc-content="4">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-hc-control="5"><span class="process__name-block"> <span class="process__name">Верстаем</span></span><span class="process__payment">100 000 ₽</span></button>
-                          <div class="process__body" data-hc-content="5">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-hc-control="6"><span class="process__name-block"> <span class="process__name">Тестируем и запускаемся</span></span><span class="process__payment">100 000 ₽</span></button>
-                          <div class="process__body" data-hc-content="6">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="process__img-block"> 
-                      <picture class="process__img-wrap"> <img class="process__img" src="./assets/img/process.jpg" alt=""></picture>
-                    </div>
-                  </div>
-                </section>
-                <section class="contacts section" id="contacts">
-                  <div class="contacts__container container">
-                    <div class="contacts__content">
-                      <div class="contacts__text-block">
-                        <h2 class="contacts__title section__title">Оставляйте заявку</h2>
-                        <p class="contacts__desc">Наш проджект свяжется с вами в течение рабочего дня!</p>
-                      </div>
-                      <form class="contacts__form" action="#"> 
-                        <div class="contacts__field-block">
-                                  <div class="input"> 
-                                    <label class="visually-hidden" for="name"> </label>
-                                    <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required autocomplete="off">
-                                  </div>
-                          <div class="contacts__field-row">
-                                    <div class="input"> 
-                                      <label class="visually-hidden" for="email"> </label>
-                                      <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required autocomplete="off">
-                                    </div>
-                                    <div class="input"> 
-                                      <label class="visually-hidden" for="tel"> </label>
-                                      <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required autocomplete="off">
-                                    </div>
-                          </div>
-                                  <div class="input"> 
-                                    <label class="visually-hidden" for="message"> </label>
-                                    <textarea class="input__field" id="message" name="message" placeholder="Сообщение" rows="1" autocomplete="off"></textarea>
-                                  </div>
-                        </div>
-                        <div class="contacts__btn-block"> 
-                          <button class="contacts__submit btn" type="submit">Оставить заявку</button>
-                          <div class="contacts__agreement"><span>Нажимая на кнопку отправить вы соглашаетесь с политикой </span><a class="contacts__agreement_link" href="#">обработки персональных данных</a></div>
-                        </div>
-                      </form>
-                    </div>
-                    <picture class="contacts__img-wrap"> <img class="contacts__img" src="./assets/img/contacts.png" alt=""></picture>
-                  </div>
-                </section>
-                <section class="additional section" id="additional">
-                  <div class="additional__container container">
-                    <div class="additional__title-block">
-                      <h2 class="additional__title section__title">Дополнительные услуги</h2>
-                      <ul class="additional__services">  
-                        <li class="additional__services-item">брендинг</li>
-                        <li class="additional__services-item">креативы</li>
-                        <li class="additional__services-item">моушн</li>
-                        <li class="additional__services-item">смм/сео</li>
-                      </ul>
-                    </div>
-                    <div class="additional__contact-block"> <span class="additional__interested">Заинтересованы?</span><a class="additional__contact" href="#contacts">Свяжитесь с нами</a></div>
                   </div>
                 </section>
       </main>

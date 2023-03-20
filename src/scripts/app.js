@@ -7,18 +7,17 @@ import { headerBlur, headerHide } from './vendor/header';
 import 'normalize.css';
 import '../styles/main.scss';
 
-// Header
-headerBlur();
-headerHide();
+window.onload = () => {
+  // Header
+  headerBlur();
+  headerHide();
 
-// Accordion
-new HandyCollapse(); // eslint-disable-line
-// Select
-new Select('.select'); // eslint-disable-line
+  // Accordion
+  new HandyCollapse(); // eslint-disable-line
+  // Select
+  new Select('.select'); // eslint-disable-line
 
-// Toggle
-toggle();
-// Tooltip
-tooltip()
-
-
+  // Toggle, Tooltip
+  toggle();
+  tooltip();
+};

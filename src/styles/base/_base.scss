@@ -20,12 +20,12 @@
 }
 
 .section {
-  padding: 100px 0;
+  padding: fn.clip-min(50, 100) 0;
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: fn.clip-min(16, 60);
   }
 
   &__title {
@@ -37,6 +37,7 @@
   flex: none;
   padding: 18px 32px;
   color: vars.$black;
+  white-space: nowrap;
   text-align: center;
   background: vars.$lime;
   border-radius: 12px;

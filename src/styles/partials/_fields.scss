@@ -3,9 +3,10 @@
 @use '../utils/functions' as fn;
 
 .input {
+  @include mix.p16;
+
   width: 100%;
   font-weight: 400;
-  @include mix.p16;
 
   &__field {
     width: 100%;

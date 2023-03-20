@@ -4,53 +4,61 @@
 
 @mixin h1 {
   font-weight: 400;
-  font-size: 64px;
+  font-size: fn.clip-min(35, 64);
   font-family: HeadingNow, sans-serif;
   font-style: normal;
-  line-height: 72px;
+  line-height: fn.clip-min(40, 72);
 }
 
 @mixin h2 {
   font-weight: 300;
-  font-size: 40px;
+  font-size: fn.clip-min(24, 40);
   font-family: HeadingNow, sans-serif;
   font-style: normal;
-  line-height: 130%;
-}
-
-@mixin h3-bold {
-  font-weight: 400;
-  font-size: 24px;
-  font-family: HeadingNow, sans-serif;
-  font-style: normal;
-  line-height: 32px;
+  line-height: fn.clip-min(32, 52);
 }
 
 @mixin h3 {
   font-weight: 300;
-  font-size: 24px;
+  font-size: fn.clip-min(16, 24);
   font-family: HeadingNow, sans-serif;
   font-style: normal;
-  line-height: 32px;
+  line-height: fn.clip-min(24, 32);
+}
+
+@mixin h3-bold {
+  font-weight: 400;
+  font-size: fn.clip-min(16, 24);
+  font-family: HeadingNow, sans-serif;
+  font-style: normal;
+  line-height: fn.clip-min(24, 32);
 }
 
 @mixin h4 {
   font-weight: 300;
-  font-size: 20px;
+  font-size: fn.clip-min(16, 20);
   font-family: HeadingNow, sans-serif;
   font-style: normal;
-  line-height: 30px;
-}
-
-@mixin p16-heading {
-  font-weight: 300;
-  font-size: 16px;
-  font-family: HeadingNow, sans-serif;
-  font-style: normal;
-  line-height: 24px;
+  line-height: fn.clip-min(24, 30);
 }
 
 @mixin p18 {
+  font-weight: 500;
+  font-size: fn.clip-min(14, 18);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: fn.clip-min(20, 28);
+}
+
+@mixin p18-big {
+  font-weight: 500;
+  font-size: fn.clip-min(16, 18);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: fn.clip-min(24, 28);
+}
+
+@mixin p18-desktop {
   font-weight: 500;
   font-size: 18px;
   font-family: Montserrat, sans-serif;
@@ -62,6 +70,14 @@
   font-weight: 500;
   font-size: 16px;
   font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: 24px;
+}
+
+@mixin p16-heading {
+  font-weight: 300;
+  font-size: 16px;
+  font-family: HeadingNow, sans-serif;
   font-style: normal;
   line-height: 24px;
 }

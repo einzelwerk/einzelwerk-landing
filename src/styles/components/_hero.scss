@@ -3,6 +3,7 @@
 @use '../utils/functions' as fn;
 
 .hero {
+  position: relative;
   width: 100%;
   padding-top: 80px;
   color: vars.$grayscale0;
@@ -16,11 +17,14 @@
 
   &__container {
     padding-top: 20px;
+    @media (max-width: vars.$md) {
+      padding-top: 0;
+    }
   }
 
   &__inner {
     position: relative;
-    padding-top: 40px;
+    padding-top: fn.clip-min(30, 40);
 
     & > * {
       position: relative;
@@ -34,8 +38,7 @@
       bottom: 0;
       left: 0;
       z-index: 0;
-      background: url('@/assets/img/hero-grid.png') no-repeat top center / 100%
-        auto;
+      background: url('@/assets/img/hero-grid.png') no-repeat top center / 100% auto;
       content: '';
     }
   }
@@ -48,12 +51,17 @@
   &__workers {
     @include mix.p16-heading;
 
+    @media (max-width: vars.$md) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
     display: flex;
     color: #b0b6ec;
 
     &-item {
-      width: 60px;
-      height: 60px;
+      width: fn.clip-min(40, 60);
+      height: fn.clip-min(40, 60);
       margin-left: -10px;
       background: #5c69e1;
       border-radius: 50%;
@@ -90,14 +98,20 @@
   }
 
   &__desc {
-    margin-bottom: 36px;
-  }
-
-  &__btn {
-    margin-bottom: 22px;
+    margin-bottom: fn.clip-min(32, 36);
   }
 
   &__bg {
+    &-wrap {
+      margin-top: 22px;
+      @media (max-width: vars.$xxl) {
+        width: 100%;
+      }
+      @media (max-width: vars.$md) {
+        margin-top: 30px;
+      }
+    }
+
     width: 100%;
   }
 }

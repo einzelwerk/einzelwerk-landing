@@ -4,6 +4,10 @@
 
 .header {
   @include mix.p14;
+  @media (max-width: vars.$md) {
+    font-size: 12px;
+    line-height: 18px;
+  }
 
   position: fixed;
   top: 0;
@@ -31,7 +35,7 @@
 
   &__container {
     display: flex;
-    gap: 48px;
+    gap: fn.clip-min(16, 48);
     align-items: center;
   }
 
@@ -42,13 +46,17 @@
     &-icon {
       width: 165px;
       height: 16px;
+      @media (max-width: vars.$md) {
+        width: 133px;
+        height: 12px;
+      }
     }
   }
 
   &__nav {
-    // @media (max-width: vars.$xl) {
-    //   display: none;
-    // }
+    @media (max-width: vars.$lg) {
+      display: none;
+    }
 
     &-list {
       display: flex;
@@ -75,22 +83,21 @@
 
   &__burger {
     display: flex;
-    display: none;
     flex: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 25px;
-    height: 25px;
-    padding: 5px 1px;
+    width: 40px;
+    height: 40px;
+    padding: 14px 10px;
 
-    // @media (min-width: vars.$min-xl) {
-    //   display: none;
-    // }
+    @media (min-width: vars.$min-lg) {
+      display: none;
+    }
 
     &-item {
       width: 100%;
       height: 2px;
-      background: vars.$grayscale900;
+      background: vars.$grayscale0;
     }
   }
 }

@@ -4,7 +4,7 @@ mixin hero
       .hero__inner
         .hero__content
           .hero__title-block 
-            - 
+            -
               const workersList = [ 
                 '@/assets/img/workers/woker-1.png',
                 '@/assets/img/workers/woker-2.png',
@@ -21,7 +21,8 @@ mixin hero
                 span +10
             h1.hero__title Офигенные и продуманные сайты от немецкой студии
           .hero__desc Делаем продукты, которые радуют не только глаз, но и ваших сейлзов
-          button.hero__btn.btn(type="button") Обсудить проект
-        picture.hero__bg-wrap
-          img.hero__bg(src="@/assets/img/hero-bg.png", alt="")
+          button.hero__btn.btn(type="button" data-popup-open="discuss") Обсудить проект
+    picture.hero__bg-wrap
+      source(media="(max-width:767.98px)", srcset="@/assets/img/hero/poster-mobile.png")
+      img.hero__bg(src="@/assets/img/hero/poster.png", alt="")
 

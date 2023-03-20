@@ -62,12 +62,15 @@
   }
 
   &__interested {
+    @include mix.p16;
+
     color: vars.$grayscale500;
     font-weight: 400;
-    @include mix.p16;
   }
 
   &__contact {
+    @include mix.p18-desktop;
+
     font-weight: 400;
     text-decoration: underline;
   }

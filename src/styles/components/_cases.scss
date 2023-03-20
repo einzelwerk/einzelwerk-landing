@@ -9,7 +9,10 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: fn.clip-min(8, 20);
+    @media (max-width: vars.$md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__link {
@@ -17,29 +20,29 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 600px;
-    padding: 30px;
     background: linear-gradient(180deg, rgba(vars.$grayscale900, 0) 50.4%, rgba(vars.$grayscale900, 0.6) 100%);
     border-radius: 16px;
   }
 
   &__img {
-    position: absolute;
-    top: 0;
-    left: 0;
     border-radius: 16px;
   }
 
   &__text-block {
-    position: relative;
+    position: absolute;
+    bottom: fn.clip-min(16, 30);
+    left: fn.clip-min(16, 30);
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-top: auto;
+    gap: fn.clip-min(4, 16);
   }
 
   &__name {
     @include mix.h4;
+  }
+
+  &__type {
+    @include mix.p18-big;
   }
 }

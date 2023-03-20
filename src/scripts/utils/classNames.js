@@ -10,6 +10,7 @@ export const classNames = {
   },
   tooltip: {
     block: 'tooltip',
+    body: 'tooltip__body',
     blockActive: 'tooltip_active',
     btn: 'tooltip__btn',
   },
