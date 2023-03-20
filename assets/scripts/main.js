@@ -229,6 +229,7 @@ var classNames = {
   },
   tooltip: {
     block: 'tooltip',
+    body: 'tooltip__body',
     blockActive: 'tooltip_active',
     btn: 'tooltip__btn'
   }
@@ -237,7 +238,7 @@ var classNames = {
 
 function toggle() {
   var classToggle = classNames.toggle.block;
-  var classToggleActive = classNames.toggle.toggleActive;
+  var classToggleActive = classNames.toggle.active;
   document.querySelectorAll(".".concat(classToggle)).forEach(function (toggleEl) {
     function handler(e) {
       if (!(e.type === 'click' || e.keyCode === 13)) return;
@@ -251,10 +252,18 @@ function toggle() {
 
 function tooltip() {
   var classTooltip = classNames.tooltip.block;
+  var classTooltipBody = classNames.tooltip.body;
   var classTooltipActive = classNames.tooltip.blockActive;
   var classTooltipBtn = classNames.tooltip.btn;
   document.querySelectorAll(".".concat(classTooltip)).forEach(function (tooltipEl) {
     var tooltipBtn = tooltipEl.querySelector(".".concat(classTooltipBtn));
+    var tooltipBody = tooltipEl.querySelector(".".concat(classTooltipBody));
+    var rect = tooltipBody.getBoundingClientRect();
+    if (rect.right > window.innerWidth) {
+      tooltipBody.style.marginLeft = "".concat(-1 * (rect.right - window.innerWidth) - 5, "px");
+    } else if (rect.left < 0) {
+      tooltipBody.style.marginLeft = "".concat(-1 * rect.left + 5, "px");
+    }
     tooltipBtn.addEventListener('click', function () {
       tooltipEl.classList.toggle(classTooltipActive);
     });
@@ -306,19 +315,19 @@ function headerHide() {
 
 
 
+window.onload = function () {
+  // Header
+  headerBlur();
+  headerHide();
 
-// Header
-headerBlur();
-headerHide();
+  // Accordion
+  new p(); // eslint-disable-line
+  // Select
+  new Select('.select'); // eslint-disable-line
 
-// Accordion
-new p(); // eslint-disable-line
-// Select
-new Select('.select'); // eslint-disable-line
-
-// Toggle
-toggle();
-// Tooltip
-tooltip();
+  // Toggle, Tooltip
+  toggle();
+  tooltip();
+};
 /******/ })()
 ;
