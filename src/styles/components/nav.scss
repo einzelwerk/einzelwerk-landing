@@ -1,0 +1,17 @@
+.nav {
+  &__list {
+    display: flex;
+    gap:32px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    line-height: 150%;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}

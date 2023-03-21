@@ -1,111 +1,99 @@
-.visually-hidden {
-  position: absolute !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  clip: rect(0 0 0 0) !important;
-  clip-path: inset(50%) !important;
+/***
+    The new CSS reset - version 1.8.4 (last updated 14.2.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+ *:where(:not(html, iframe, canvas, img, svg, video, audio, svg *, symbol *)) {
+  all: unset;
+  display: revert;
 }
 
-html {
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
 }
 
-body *,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: inherit;
-  font: inherit;
-  -webkit-tap-highlight-color: transparent;
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
 }
 
-ul,
-ol {
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
   list-style: none;
 }
 
-a,
-img,
-picture,
-svg,
-strong {
-  display: inline-block;
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
 }
 
-a {
-  text-decoration: none;
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
 }
 
-svg {
-  flex: none;
-  max-width: 100%;
-  max-height: 100%;
-  font-size: 0;
-  vertical-align: middle;
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  user-select: auto;
 }
 
-input,
-button,
-textarea,
-select {
-  padding: 0;
-  background: none;
-  border: none;
-  outline: none;
-  appearance: none;
-}
-
-button {
-  text-align: left;
-  cursor: pointer;
-}
-
+/* revert the 'white-space' property for textarea elements on Safari */
 textarea {
-  resize: none;
+  white-space: revert;
 }
 
-img,
-video {
-  max-width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: cover;
-  vertical-align: middle;
+/* minimum style to allow to style meter element */
+meter {
+  appearance: revert;
+  appearance: revert;
 }
 
-input[type='password'] {
-  &::-ms-reveal {
-    display: none;
-  }
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  appearance: none;
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
 }
 
-input[type=text]::-ms-clear {
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+ display:revert; revert to element instead of attribute */
+:where([hidden]) {
   display: none;
-  width: 0;
-  height: 0;
 }
 
-input[type=text]::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0;
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
+:where([contenteditable]:not([contenteditable='false'])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  user-select: auto;
 }
 
-input[type='search']::-webkit-search-decoration,
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-results-button,
-input[type='search']::-webkit-search-results-decoration {
-  display: none;
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable='true']) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
 }

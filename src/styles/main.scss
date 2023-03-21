@@ -1,5 +1,14 @@
+// base
 
+@use './base/reset';
+@use './base/base';
+@use './base/typography';
 
-@use './vendor/bootstrap.scss';
+@use './vendor/bootstrap';
 @use './utils/variables';
 
+// components
+
+@use './components/header';
+@use './components/logo';
+@use './components/nav';
