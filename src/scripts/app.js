@@ -5,7 +5,6 @@ import { tooltip } from './modules/tooltip';
 import { headerBlur, headerHide } from './vendor/header';
 
 import 'normalize.css';
-import '../styles/main.scss';
 
 window.onload = () => {
   // Header

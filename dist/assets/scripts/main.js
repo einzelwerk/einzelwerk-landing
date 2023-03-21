@@ -314,7 +314,6 @@ function headerHide() {
 
 
 
-
 window.onload = function () {
   // Header
   headerBlur();
