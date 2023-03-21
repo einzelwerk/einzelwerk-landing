@@ -10,6 +10,7 @@ mixin contacts
         form.contacts__form(action="#") 
           .contacts__field-block
             +input({
+              isDark: true,
               name: 'name',
               placeholder: 'Ваше имя*',
               type: 'text',
@@ -17,25 +18,29 @@ mixin contacts
             })
             .contacts__field-row
               +input({
+                isDark: true,
                 name: 'email',
                 placeholder: 'E-mail*',
                 type: 'email',
                 required: true
               })
               +input({
+                isDark: true,
                 name: 'tel',
                 placeholder: 'Телефон*',
                 type: 'tel',
                 required: true
               })
             +textarea({
+              isDark: true,
               name: 'message',
               placeholder: 'Сообщение',
             })
           .contacts__btn-block 
             button.contacts__submit.btn(type="submit") Оставить заявку
             .contacts__agreement
-              span Нажимая на кнопку отправить вы соглашаетесь с политикой 
+              span Нажимая на кнопку “Оставить заявку” вы соглашаетесь с политикой 
               a.contacts__agreement_link(href="#") обработки персональных данных
-      picture.contacts__img-wrap 
-        img.contacts__img(src="@/assets/img/contacts.png", alt="")
+    picture.contacts__img-wrap 
+      source(media="(max-width: 991.98px)", srcset="@/assets/img/contacts/contacts-mobile.png")
+      img.contacts__img(src="@/assets/img/contacts/contacts.png", alt="")

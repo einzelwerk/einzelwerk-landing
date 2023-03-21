@@ -12,7 +12,7 @@ const cleanCss = require('gulp-clean-css');
 const sass = gulpSass(dartSass)
 const postcssConfig = require('../../postcss.config');
 
-exports.styles = async function styles() {
+exports.styles = function styles() {
   return src(path.src.styles, {
       sourcemaps: isDev
     })
@@ -20,7 +20,7 @@ exports.styles = async function styles() {
       includePaths: ['node_modules'],
       outputStyle: 'expanded'
     }))
-    .pipe(plugins.replace(/@\//g, '../'))
+    .pipe(plugins.replace(/@\//g, '../../'))
     .pipe(plugins.if(isProd, groupCssMediaQueries()))
     .pipe(plugins.if(isProd, cleanCss({
       level: 2

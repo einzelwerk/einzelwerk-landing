@@ -6,80 +6,106 @@ mixin prices
     .prices__container.section__container.container 
       .prices__top
         h2.prices__title.section__title Стоимость работы
-        .prices__info 
+        .prices__top-info 
           +toggle('На основе фирменного конструктора')
           +tooltip
+      -
+        const pricesList = [
+          {
+            class: '',
+            name: 'Лендинг',
+            list: [
+              'Анализ ниши и конкурентов',
+              'Прототипирование',
+              'Уникальный дизайн',
+              'Фронтенд и бэкенд сайта',
+              'Подключение домена',
+              'Тестирование',
+              'Инструкция по работе',
+            ],
+            payment: 'от 95 000 руб',
+            duration: '7-10 дней',
+            btn: 'Заказать лендинг',
+            type: 'landing'
+          },
+          {
+            class: 'prices__item_gray',
+            name: 'Сайт',
+            list: [
+              'Анализ ниши и конкурентов',
+              'Прототипирование',
+              'Уникальный дизайн',
+              'Фронтенд и бэкенд сайта',
+              'Подключение домена',
+              'Тестирование',
+              'Базовая настройка SEO',
+              'Инструкция по работе',
+            ],
+            payment: 'от 220 000 руб',
+            duration: 'от 14 дней',
+            btn: 'Заказать сайт',
+            type: 'site'
+          },
+          {
+            class: 'prices__item_dark',
+            name: 'E-commerce',
+            list: [
+              'Анализ ниши и конкурентов',
+              'Прототипирование',
+              'Уникальный дизайн',
+              'Фронтенд и бэкенд сайта',
+              'Подключение домена',
+              'Подключение платежных сервисов',
+              'Тестирование',
+              'Базовая настройка SEO',
+              'Инструкция по работе',
+            ],
+            payment: 'от 325 000 руб',
+            duration: 'от 25 дней',
+            btn: 'Заказать интернет-магазин',
+            type: 'ecommerce'
+          },
+        ];
       ul.prices__list
-        -
-          const pricesList = [
-            {
-              class: '',
-              name: 'Лендинг',
-              list: [
-                'Анализ ниши и конкурентов',
-                'Прототипирование',
-                'Уникальный дизайн',
-                'Фронтенд и бэкенд сайта',
-                'Подключение домена',
-                'Тестирование',
-                'Инструкция по работе',
-              ],
-              payment: 'от 95 000 руб',
-              duration: '7-10 дней',
-              btn: 'Заказать лендинг',
-              type: 'landing'
-            },
-            {
-              class: 'prices__item_gray',
-              name: 'Сайт',
-              list: [
-                'Анализ ниши и конкурентов',
-                'Прототипирование',
-                'Уникальный дизайн',
-                'Фронтенд и бэкенд сайта',
-                'Подключение домена',
-                'Тестирование',
-                'Базовая настройка SEO',
-                'Инструкция по работе',
-              ],
-              payment: 'от 220 000 руб',
-              duration: 'от 14 дней',
-              btn: 'Заказать сайт',
-              type: 'site'
-            },
-            {
-              class: 'prices__item_dark',
-              name: 'E-commerce',
-              list: [
-                'Анализ ниши и конкурентов',
-                'Прототипирование',
-                'Уникальный дизайн',
-                'Фронтенд и бэкенд сайта',
-                'Подключение домена',
-                'Подключение платежных сервисов',
-                'Тестирование',
-                'Базовая настройка SEO',
-                'Инструкция по работе',
-              ],
-              payment: 'от 325 000 руб',
-              duration: 'от 25 дней',
-              btn: 'Заказать интернет-магазин',
-              type: 'ecommerce'
-            },
-          ];
         each service in pricesList
+          li.prices__item(class=service.class)
+            .prices__name-block
+              .prices__name=service.name 
+              +tooltip
+            ul.prices__benefits 
+              each benefit in service.list
+                li.prices__benefits-item 
+                  svg.prices__benefits-icon
+                    use(xlink:href="./assets/sprite.svg#check")
+                  span.prices__benefits-text=benefit
+            .prices__info 
+              span.prices__payment=service.payment
+              span.prices__duration=service.duration
+              button.prices__order.btn(type="button" data-popup-open=service.type)=service.btn
+      ul.prices__acc
+        each service, idx in pricesList
           li.prices__item(class=service.class)
             .prices__item-top
               .prices__name-block
                 .prices__name=service.name 
                 +tooltip
-              ul.prices__benefits 
+              button.prices__acc-btn(type="button" data-hc-control=`price-${idx}`)
+                span.prices__acc-btn-item.prices__acc-btn-item_open 
+                  |Открыть
+                  svg.prices__acc-btn-icon
+                    use(xlink:href="./assets/sprite.svg#plus")
+                span.prices__acc-btn-item.prices__acc-btn-item_close 
+                  |Скрыть
+                  svg.prices__acc-btn-icon
+                    use(xlink:href="./assets/sprite.svg#minus")
+            .prices__acc-body(data-hc-content=`price-${idx}`)
+              ul.prices__benefits
                 each benefit in service.list
                   li.prices__benefits-item 
                     svg.prices__benefits-icon
                       use(xlink:href="./assets/sprite.svg#check")
                     span.prices__benefits-text=benefit
-            .prices__item-bottom 
+            .prices__info 
               span.prices__payment=service.payment
               span.prices__duration=service.duration
               button.prices__order.btn(type="button" data-popup-open=service.type)=service.btn

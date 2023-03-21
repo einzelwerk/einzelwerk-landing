@@ -6,6 +6,9 @@
   &__container {
     display: flex;
     gap: 120px;
+    @media (max-width: vars.$xxl) {
+      gap: 48px;
+    }
   }
 
   &__list {
@@ -16,7 +19,7 @@
 
   &__item {
     margin-top: -1px;
-    padding: 30px 0;
+    padding: fn.clip-min(20, 30) 0;
     border-top: 1px solid vars.$grayscale200;
     border-bottom: 1px solid vars.$grayscale200;
   }
@@ -24,10 +27,17 @@
   &__head {
     position: relative;
     display: flex;
+    gap: 12px;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     color: vars.$grayscale500;
+
+    @media (max-width: vars.$sm) {
+      flex-direction: column;
+      align-items: unset;
+      justify-content: unset;
+    }
 
     & * {
       transition: color 0.3s ease-in-out;
@@ -43,20 +53,17 @@
 
   &__trigger {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
   }
 
   &__name-block {
     display: flex;
-    gap: 12px;
+    gap: fn.clip-min(8, 12);
     align-items: center;
     @include mix.h4;
 
     &::before {
-      min-width: 48px;
+      min-width: fn.clip-min(36, 48);
       content: counter(accCounter, decimal-leading-zero);
       counter-increment: accCounter;
     }
@@ -64,18 +71,35 @@
 
   &__payment {
     font-weight: 400;
+    white-space: nowrap;
   }
 
-  &__body-content {
-    padding-top: 32px;
+  &__body {
+    &-img-block {
+      @media (min-width: vars.$min-lg) {
+        display: none;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: fn.clip-min(20, 32);
+    }
   }
 
   &__desc {
+    @include mix.p18-big;
+
     font-weight: 400;
   }
 
   &__img-block {
     flex: none;
+    @media (max-width: vars.$lg) {
+      display: none;
+    }
   }
 
   &__img {

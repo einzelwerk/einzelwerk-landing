@@ -8,7 +8,7 @@
   display: inline-flex;
   gap: 20px;
   align-items: center;
-  padding: 8px 20px;
+  padding: 8px fn.clip-min(12,20);
   color: vars.$grayscale900;
   background: vars.$grayscale100;
   border-radius: 12px;

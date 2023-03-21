@@ -5,20 +5,20 @@
 .footer {
   @include mix.p16;
 
-  padding-top: 60px;
+  padding-top: fn.clip-min(40, 60);
   padding-bottom: 32px;
   font-weight: 400;
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: fn.clip-min(40, 80);
   }
 
   &__top {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
     justify-content: space-between;
   }
 
@@ -32,14 +32,24 @@
   }
 
   &__contacts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: fn.clip-max(24, 48);
+
+    @media (max-width: vars.$md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      width: 100%;
+    }
 
     &-block {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      min-width: 180px;
+      @media (max-width: vars.$md) {
+        min-width: unset;
+      }
     }
 
     &-title {
@@ -63,9 +73,16 @@
     gap: 20px;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: vars.$md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__rights {
     color: vars.$grayscale400;
+    @media (max-width: vars.$md) {
+      order: 2;
+    }
   }
 }

@@ -1,0 +1,150 @@
+include ../partials/fields
+
+mixin popup-discuss
+      .popup(data-popup="discuss")
+        button.popup__close(type="button" data-popup-close)
+          svg.popup__close-icon
+            use(xlink:href="./assets/sprite.svg#close")
+        .popup__content 
+          .popup__top
+            h2.popup__title Обсудить проект
+            p.popup__desc Наш проджект свяжется с вами в течение одного рабочего дня!
+          form.popup__form(action="#") 
+            .popup__field-block 
+              +input({
+                name: 'name',
+                placeholder: 'Ваше имя*',
+                type: 'text',
+                required: true
+              })
+              .contacts__field-row
+                +input({
+                  name: 'email',
+                  placeholder: 'E-mail*',
+                  type: 'email',
+                  required: true
+                })
+                +input({
+                  name: 'tel',
+                  placeholder: 'Телефон*',
+                  type: 'tel',
+                  required: true
+                })
+              +textarea({
+                name: 'message',
+                placeholder: 'Сообщение',
+              })
+            .popup__submit-block 
+              button.popup__submit.btn(type="submit") Оставить заявку
+              span.popup__agreement 
+                |Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой
+                a.popup__agreement_link(href="#") обработки персональных данных
+        
+mixin popup-landing
+      .popup(data-popup="landing")
+        button.popup__close(type="button" data-popup-close)
+          svg.popup__close-icon
+            use(xlink:href="./assets/sprite.svg#close")
+        .popup__content 
+          .popup__top
+            h2.popup__title Заявка на лендинг
+            p.popup__desc Наш проджект свяжется с вами в течение одного рабочего дня!
+          form.popup__form(action="#") 
+            .popup__field-block 
+              +input({
+                name: 'name',
+                placeholder: 'Ваше имя*',
+                type: 'text',
+                required: true
+              })
+              .contacts__field-row
+                +input({
+                  name: 'email',
+                  placeholder: 'E-mail*',
+                  type: 'email',
+                  required: true
+                })
+                +input({
+                  name: 'tel',
+                  placeholder: 'Телефон*',
+                  type: 'tel',
+                  required: true
+                })
+            .popup__submit-block 
+              button.popup__submit.btn(type="submit") Оставить заявку
+              span.popup__agreement 
+                |Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой
+                a.popup__agreement_link(href="#") обработки персональных данных
+          
+mixin popup-site
+      .popup(data-popup="site")
+        button.popup__close(type="button" data-popup-close)
+          svg.popup__close-icon
+            use(xlink:href="./assets/sprite.svg#close")
+        .popup__content 
+          .popup__top
+            h2.popup__title Заявка на сайт
+            p.popup__desc Наш проджект свяжется с вами в течение одного рабочего дня!
+          form.popup__form(action="#") 
+            .popup__field-block 
+              +input({
+                name: 'name',
+                placeholder: 'Ваше имя*',
+                type: 'text',
+                required: true
+              })
+              .contacts__field-row
+                +input({
+                  name: 'email',
+                  placeholder: 'E-mail*',
+                  type: 'email',
+                  required: true
+                })
+                +input({
+                  name: 'tel',
+                  placeholder: 'Телефон*',
+                  type: 'tel',
+                  required: true
+                })
+            .popup__submit-block 
+              button.popup__submit.btn(type="submit") Оставить заявку
+              span.popup__agreement 
+                |Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой
+                a.popup__agreement_link(href="#") обработки персональных данных
+          
+mixin popup-ecommerce
+      .popup(data-popup="ecommerce")
+        button.popup__close(type="button" data-popup-close)
+          svg.popup__close-icon
+            use(xlink:href="./assets/sprite.svg#close")
+        .popup__content 
+          .popup__top
+            h2.popup__title Заявка на E-commerce
+            p.popup__desc Наш проджект свяжется с вами в течение одного рабочего дня!
+          form.popup__form(action="#") 
+            .popup__field-block 
+              +input({
+                name: 'name',
+                placeholder: 'Ваше имя*',
+                type: 'text',
+                required: true
+              })
+              .contacts__field-row
+                +input({
+                  name: 'email',
+                  placeholder: 'E-mail*',
+                  type: 'email',
+                  required: true
+                })
+                +input({
+                  name: 'tel',
+                  placeholder: 'Телефон*',
+                  type: 'tel',
+                  required: true
+                })
+            .popup__submit-block 
+              button.popup__submit.btn(type="submit") Оставить заявку
+              span.popup__agreement 
+                |Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой
+                a.popup__agreement_link(href="#") обработки персональных данных
+          

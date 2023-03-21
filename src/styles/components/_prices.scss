@@ -10,12 +10,12 @@
     flex-wrap: wrap;
     gap: 16px;
     justify-content: space-between;
-  }
 
-  &__info {
-    display: flex;
-    gap: 16px;
-    align-items: center;
+    &-info {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
   }
 
   &__list {
@@ -30,8 +30,7 @@
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 86px;
-    padding: 30px;
+    padding: fn.clip-min(16, 30) fn.clip-min(16, 30) fn.clip-min(20, 30);
     border: 1px solid vars.$grayscale300;
     border-radius: 16px;
 
@@ -54,14 +53,10 @@
 
     &-top {
       display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    &-bottom {
-      display: flex;
-      flex-direction: column;
-      margin-top: auto;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
@@ -76,11 +71,18 @@
   }
 
   &__benefits {
+    @include mix.p16;
+
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-top: 30px;
+    padding-bottom: 86px;
 
-    @include mix.p16;
+    @media (max-width: vars.$xl) {
+      padding-top: 20px;
+      padding-bottom: 0;
+    }
 
     &-item {
       display: flex;
@@ -93,17 +95,27 @@
     }
   }
 
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    @media (max-width: vars.$xl) {
+      margin-top: 24px;
+    }
+  }
+
   &__payment {
     @include mix.h3-bold;
 
-    margin-bottom: 8px;
+    margin-bottom: fn.clip-min(4, 8);
   }
 
   &__duration {
-    @include mix.p16-heading;
+    @include mix.p16;
 
-    margin-bottom: 16px;
+    margin-bottom: fn.clip-min(8, 16);
     color: vars.$grayscale500;
+    font-weight: 400;
   }
 
   &__order {
@@ -113,6 +125,48 @@
     &:focus-visible,
     &:active {
       background: vars.$grayscale0;
+    }
+  }
+
+  &__acc {
+    display: flex;
+    flex-direction: column;
+    gap: fn.clip-min(8, 20);
+
+    @media (min-width: vars.$min-xl) {
+      display: none;
+    }
+
+    &-btn {
+      @include mix.p14;
+
+      display: flex;
+      color: vars.$grayscale500;
+
+      &-item {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        &_close {
+          display: none;
+        }
+      }
+
+      &.is-active {
+        .prices__acc-btn-item_open {
+          display: none;
+        }
+
+        .prices__acc-btn-item_close {
+          display: flex;
+        }
+      }
+
+      &-icon {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }

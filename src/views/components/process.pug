@@ -44,13 +44,16 @@ mixin process
             ];
           each process, idx in processList
             li.process__item 
-              button.process__head(type="button" data-hc-control=idx)
+              button.process__head(type="button" data-img-src="@/assets/img/process.jpg" data-hc-control=`process-${idx}`)
                 span.process__name-block 
                   span.process__name=process.name
                 span.process__payment=process.payment
-              .process__body(data-hc-content=idx)
+              .process__body(data-hc-content=`process-${idx}`)
                 .process__body-content
                   p.process__desc=process.desc
+                  .process__body-img-block
+                    picture.process__img-wrap
+                      img.process__img-wrap(src="@/assets/img/process.jpg" alt="")
       .process__img-block 
         picture.process__img-wrap 
-          img.process__img(src="@/assets/img/process.jpg" alt="")
+          img.process__img(src="#" alt="")

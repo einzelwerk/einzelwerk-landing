@@ -12,10 +12,12 @@
 @use './partials/tooltip';
 @use './partials/toggle';
 @use './partials/fields';
+@use './partials/fixed';
 
 //  Components
 @use './components/header';
 @use './components/footer';
+@use './components/popups';
 @use './components/hero';
 @use './components/benefits';
 @use './components/about';

@@ -33,10 +33,7 @@
 
     &::before {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset: 0;
       z-index: 0;
       background: url('@/assets/img/hero-grid.png') no-repeat top center / 100% auto;
       content: '';
@@ -44,7 +41,7 @@
   }
 
   &__content {
-    max-width: 1031px;
+    max-width: 980px;
     margin: 0 auto;
   }
 
@@ -108,7 +105,7 @@
         width: 100%;
       }
       @media (max-width: vars.$md) {
-        margin-top: 30px;
+        margin-top: 40px;
       }
     }
 

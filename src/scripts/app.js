@@ -1,8 +1,11 @@
 import HandyCollapse from 'handy-collapse';
 import { Select } from './vendor/Select';
+import { initAccImgTabs } from './modules/initImgTabs';
 import { toggle } from './modules/toggle';
 import { tooltip } from './modules/tooltip';
+import { fixed } from './modules/fixed';
 import { headerBlur, headerHide } from './vendor/header';
+import { closePopup, openPopup } from './modules/popups';
 
 import 'normalize.css';
 
@@ -11,12 +14,20 @@ window.onload = () => {
   headerBlur();
   headerHide();
 
+  // Popups
+  openPopup();
+  closePopup();
+
   // Accordion
   new HandyCollapse(); // eslint-disable-line
+  // Acc Image Tabs
+  initAccImgTabs();
+
   // Select
   new Select('.select'); // eslint-disable-line
 
-  // Toggle, Tooltip
+  // Toggle, Tooltip, Fixed Block
+  fixed();
   toggle();
   tooltip();
 };
