@@ -1,62 +1,21 @@
-// Breakpoints
-$xxl-num: 1440;
-$xl-num: 1200;
-$lg-num: 992;
-$md-num: 768;
-$sm-num: 576;
-$min: 360;
-
-// Min Width
-$min-xxl: $xxl-num * 1px;
-$min-xl: $xl-num * 1px;
-$min-lg: $lg-num * 1px;
-$min-md: $md-num * 1px;
-$min-sm: $sm-num * 1px;
-
-// Max Width
-$xxl: $min-xxl - 0.02px;
-$xl: $min-xl - 0.02px;
-$lg: $min-lg - 0.02px;
-$md: $min-md - 0.02px;
-$sm: $min-sm - 0.02px;
-
-// Colors
-$grayscale0: #fff;
-$black: #000;
-$grayscale100: #f2f2f2;
-$grayscale200: #e8e8e8;
-$grayscale300: #d8d8d8;
-$grayscale400: #b4b4b4;
-$grayscale500: #949494;
-$grayscale600: #6c6c6c;
-$grayscale900: #1a1a1a;
-$lime: #e6fe51;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1520px
+);
 
 :root {
-  --container: 1360px;
-  --cont-padding: 40px;
-
-  @media (max-width: $xxl) {
-    --container: 1140px;
-    --cont-padding: 30px;
-  }
-
-  @media (max-width: $xl) {
-    --container: 950px;
-    --cont-padding: 25px;
-  }
-
-  @media (max-width: $lg) {
-    --container: 720px;
-    --cont-padding: 20px;
-  }
-
-  @media (max-width: $md) {
-    --container: 530px;
-    --cont-padding: 16px;
-  }
-
-  @media (max-width: $sm) {
-    --container: 100%;
-  }
+  --dark-color:#16171a;
+  --white-color:#fff;
+  --gray-color:#95989b;
+  --dark-border:#dedede;
+  --lt-gray-color:#f3f3f3;
+  --bs-body-font-family:'Inter', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --bs-body-font-size:16px;
+  --bs-body-font-weight:400;
+  --bs-body-line-height:1.1;
+  --bs-body-bg:var(--white-color);
 }
+

@@ -1,10 +1,9 @@
-import HandyCollapse from 'handy-collapse';
+
 import { Select } from './vendor/Select';
 import { toggle } from './modules/toggle';
 import { tooltip } from './modules/tooltip';
 import { headerBlur, headerHide } from './vendor/header';
 
-import 'normalize.css';
 
 window.onload = () => {
   // Header

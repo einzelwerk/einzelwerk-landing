@@ -1,5 +1,4 @@
-include ../components/header
-include ../components/footer
+
 
 block vars
   - const title = 'Document'
@@ -19,7 +18,7 @@ html(lang=lang)
     title #{title}
   body
     div(class="app " + pageName)
-      +header
+      include ../components/header
       .main
         block content
-      +footer
+      include ../components/footer

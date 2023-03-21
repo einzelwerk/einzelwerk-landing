@@ -1,25 +1,5 @@
-mixin header
-  header#header.header
-    .header__container.container
-      a.header__logo(href="#hero") 
-        svg.header__logo-icon
-          use(xlink:href="./assets/sprite.svg#logo")
-      nav.header__nav 
-        ul.header__nav-list 
-          li.header__nav-item 
-            a.header__nav-link(href="#benefits") Почему
-          li.header__nav-item 
-            a.header__nav-link(href="#prices") Цены
-          li.header__nav-item 
-            a.header__nav-link(href="#cases") Кейсы
-          li.header__nav-item 
-            a.header__nav-link(href="#process") Процесс
-          li.header__nav-item 
-            a.header__nav-link(href="#contacts") Контакты
-      .header__contacts
-        a.header__contacts-tel(href="+79119892442") +7 911 989-24-42
-        button.header__contacts-discuss(type="button" data-popup-open="discuss") Заполнить бриф
-      button.header__burger(type="button")
-        span.header__burger-item
-        span.header__burger-item
-        span.header__burger-item
+header.header.container 
+  .header__logo.logo 
+    a.logo__link(href="/") 
+      picture.logo__picture 
+        img(src="@", alt="")

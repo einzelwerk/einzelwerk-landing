@@ -2,106 +2,26 @@
 @use './variables' as vars;
 @use './functions' as fn;
 
-@mixin h1 {
-  font-weight: 400;
-  font-size: fn.clip-min(35, 64);
-  font-family: HeadingNow, sans-serif;
-  font-style: normal;
-  line-height: fn.clip-min(40, 72);
+$breakpoints: (
+  full: 1920px,
+  xxl: 1440px,
+  xl: 1280px,
+  lg: 1025px,
+  md: 769px,
+  sm: 576px,
+  xs: 340px,
+);
+
+@mixin media($breakpoint, $minmax: max-width) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media ( $minmax: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn 'err: wrong breakpoint, check breakpoint in _mixins.scss';
+  }
 }
 
-@mixin h2 {
-  font-weight: 300;
-  font-size: fn.clip-min(24, 40);
-  font-family: HeadingNow, sans-serif;
-  font-style: normal;
-  line-height: fn.clip-min(32, 52);
-}
-
-@mixin h3 {
-  font-weight: 300;
-  font-size: fn.clip-min(16, 24);
-  font-family: HeadingNow, sans-serif;
-  font-style: normal;
-  line-height: fn.clip-min(24, 32);
-}
-
-@mixin h3-bold {
-  font-weight: 400;
-  font-size: fn.clip-min(16, 24);
-  font-family: HeadingNow, sans-serif;
-  font-style: normal;
-  line-height: fn.clip-min(24, 32);
-}
-
-@mixin h4 {
-  font-weight: 300;
-  font-size: fn.clip-min(16, 20);
-  font-family: HeadingNow, sans-serif;
-  font-style: normal;
-  line-height: fn.clip-min(24, 30);
-}
-
-@mixin p18 {
-  font-weight: 500;
-  font-size: fn.clip-min(14, 18);
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  line-height: fn.clip-min(20, 28);
-}
-
-@mixin p18-big {
-  font-weight: 500;
-  font-size: fn.clip-min(16, 18);
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  line-height: fn.clip-min(24, 28);
-}
-
-@mixin p18-desktop {
-  font-weight: 500;
-  font-size: 18px;
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  line-height: 28px;
-}
-
-@mixin p16 {
-  font-weight: 500;
-  font-size: 16px;
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  line-height: 24px;
-}
-
-@mixin p16-heading {
-  font-weight: 300;
-  font-size: 16px;
-  font-family: HeadingNow, sans-serif;
-  font-style: normal;
-  line-height: 24px;
-}
-
-@mixin p14 {
-  font-weight: 500;
-  font-size: 14px;
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  line-height: 22px;
-}
-
-@mixin p14-heading {
-  font-weight: 300;
-  font-size: 14px;
-  font-family: HeadingNow, sans-serif;
-  font-style: normal;
-  line-height: 22px;
-}
-
-@mixin p12 {
-  font-weight: 400;
-  font-size: 12px;
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  line-height: 18px;
+@function rem($px) {
+  @return calc($px / 16px * 1rem);
 }

@@ -58,8 +58,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "handy-collapse": "^1.1.0",
-    "normalize.css": "^8.0.1",
+    "bootstrap": "^5.2.3",
     "swiper": "^9.0.5"
   }
 }

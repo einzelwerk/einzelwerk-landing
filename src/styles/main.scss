@@ -1,26 +1,5 @@
-//  Base
-@use './base/reset';
-@use './base/grid';
-@use './base/typography';
 
-//  Vendor
-@use './vendor/swiper';
-@use './vendor/select';
 
-//  Partials
-@use './base/base';
-@use './partials/tooltip';
-@use './partials/toggle';
-@use './partials/fields';
+@use './vendor/bootstrap.scss';
+@use './utils/variables';
 
-//  Components
-@use './components/header';
-@use './components/footer';
-@use './components/hero';
-@use './components/benefits';
-@use './components/about';
-@use './components/prices';
-@use './components/cases';
-@use './components/process';
-@use './components/contacts';
-@use './components/additional';
