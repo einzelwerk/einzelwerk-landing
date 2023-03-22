@@ -9,9 +9,10 @@
 
 //  Partials
 @use './base/base';
+@use './partials/buttons';
+@use './partials/fields';
 @use './partials/tooltip';
 @use './partials/toggle';
-@use './partials/fields';
 @use './partials/fixed';
 
 //  Components
@@ -26,3 +27,4 @@
 @use './components/process';
 @use './components/contacts';
 @use './components/additional';
+@use './components/single';

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/resources/favicon.ico">
+    <link rel="stylesheet" href="./assets/styles/libs.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <script defer src="./assets/scripts/main.js"> </script>
+    <title>Cпасибо за заявку</title>
+  </head>
+  <body>
+    <div class="app thanks-page">
+      <div class="overlay">
+              <div class="popup" data-popup="discuss">
+                <button class="popup__close" type="button" data-popup-close>
+                  <svg class="popup__close-icon">
+                    <use xlink:href="./assets/sprite.svg#close"></use>
+                  </svg>
+                </button>
+                <div class="popup__content"> 
+                  <div class="popup__top">
+                    <h2 class="popup__title">Обсудить проект</h2>
+                    <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+                  </div>
+                  <form class="popup__form" action="#"> 
+                    <div class="popup__field-block"> 
+                            <div class="input">
+                              <label class="visually-hidden" for="name"> </label>
+                              <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required autocomplete="off">
+                            </div>
+                      <div class="contacts__field-row">
+                              <div class="input">
+                                <label class="visually-hidden" for="email"> </label>
+                                <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required autocomplete="off">
+                              </div>
+                              <div class="input">
+                                <label class="visually-hidden" for="tel"> </label>
+                                <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required autocomplete="off">
+                              </div>
+                      </div>
+                            <div class="input">
+                              <label class="visually-hidden" for="message"> </label>
+                              <textarea class="input__field" id="message" name="message" placeholder="Сообщение" rows="1" autocomplete="off"></textarea>
+                            </div>
+                    </div>
+                    <div class="popup__submit-block"> 
+                      <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                         Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+      </div>
+            <header class="header header_dark" id="header">
+              <div class="header__container container"><a class="header__logo" href="#hero"> 
+                  <svg class="header__logo-icon">
+                    <use xlink:href="./assets/sprite.svg#logo"></use>
+                  </svg></a>
+                <nav class="header__nav"> 
+                  <ul class="header__nav-list"> 
+                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#benefits">Почему</a></li>
+                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#prices">Цены</a></li>
+                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#cases">Кейсы</a></li>
+                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#process">Процесс</a></li>
+                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#contacts">Контакты</a></li>
+                  </ul>
+                </nav>
+                <div class="header__contacts"><a class="header__contacts-tel" href="+79119892442">+7 911 989-24-42</a>
+                  <button class="header__contacts-discuss" type="button" data-popup-open="discuss">Заполнить бриф</button>
+                </div>
+                <button class="header__burger" type="button"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></button>
+              </div>
+            </header>
+      <main class="main">
+              <section class="single first-section">
+                <div class="single__container container">
+                  <div class="single__content">
+                    <h1 class="single__title">Класс, спасибо за заявочку!</h1>
+                    <div class="single__link-block"><a class="single__link btn" href="#">На главную</a><a class="btn-social" href="#"> 
+                        <svg class="btn-social__icon">
+                          <use xlink:href="./assets/sprite.svg#telegram"></use>
+                        </svg></a><a class="btn-social" href="#"> 
+                        <svg class="btn-social__icon">
+                          <use xlink:href="./assets/sprite.svg#whatsapp"></use>
+                        </svg></a></div>
+                  </div>
+                </div>
+              </section>
+      </main>
+            <footer class="footer" id="footer">
+              <div class="footer__container container"> 
+                <div class="footer__top"> <a class="footer__logo" href="#hero"> 
+                    <svg class="footer__logo-icon">
+                      <use xlink:href="./assets/sprite.svg#logo"></use>
+                    </svg></a>
+                  <div class="footer__contacts">
+                    <div class="footer__contacts-block"> <strong class="footer__contacts-title">Соцсети</strong>
+                      <ul class="footer__contacts-list"> 
+                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">Behance</a></li>
+                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">Telegram</a></li>
+                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">WhatsApp</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer__contacts-block"> <strong class="footer__contacts-title">Контакты</strong>
+                      <ul class="footer__contacts-list"> 
+                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="+79119892442">+7 911 989-24-42</a></li>
+                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="hi@einzelwerk.ru">hi@einzelwerk.ru</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer__bottom"><span class="footer__rights">Все права защищены © Einzelwerk</span><a class="footer__agreement" href="#">Политика конфиденциальности</a></div>
+              </div>
+            </footer>
+    </div>
+  </body>
+</html>

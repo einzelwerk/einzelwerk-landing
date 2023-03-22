@@ -1,0 +1,50 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.btn {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 32px;
+  color: vars.$black;
+  white-space: nowrap;
+  text-align: center;
+  background: vars.$lime;
+  border-radius: 12px;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  @include mix.p16;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: vars.$lime;
+    background: vars.$grayscale900;
+  }
+}
+
+.btn-social {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  padding: fn.clip-max(13, 17) fn.clip-max(15, 27);
+  background: vars.$grayscale0;
+  border: 1px solid vars.$grayscale300;
+  border-radius: 12px;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    background: vars.$grayscale300;
+    border-color: vars.$grayscale300;
+  }
+
+  &__icon {
+    width: fn.clip-max(20, 24);
+    height: fn.clip-max(20, 24);
+    color: vars.$grayscale900;
+  }
+}

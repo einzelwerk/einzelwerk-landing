@@ -7,7 +7,7 @@ mixin prices
       .prices__top
         h2.prices__title.section__title Стоимость работы
         .prices__top-info 
-          +toggle('На основе фирменного конструктора')
+          +toggle('На основе фирменного конструктора', 'prices__toggle')
           +tooltip
       -
         const pricesList = [
@@ -24,6 +24,7 @@ mixin prices
               'Инструкция по работе',
             ],
             payment: 'от 95 000 руб',
+            paymentDiscount: 'от 59 000 руб',
             duration: '7-10 дней',
             btn: 'Заказать лендинг',
             type: 'landing'
@@ -42,6 +43,7 @@ mixin prices
               'Инструкция по работе',
             ],
             payment: 'от 220 000 руб',
+            paymentDiscount: 'от 139 000 руб',
             duration: 'от 14 дней',
             btn: 'Заказать сайт',
             type: 'site'
@@ -79,12 +81,17 @@ mixin prices
                     use(xlink:href="./assets/sprite.svg#check")
                   span.prices__benefits-text=benefit
             .prices__info 
-              span.prices__payment=service.payment
+              if service.paymentDiscount
+                span.prices__payment.prices__payment_normal=service.payment
+                span.prices__payment.prices__payment_discount=service.paymentDiscount
+              else 
+                span.prices__payment=service.payment
               span.prices__duration=service.duration
               button.prices__order.btn(type="button" data-popup-open=service.type)=service.btn
       ul.prices__acc
         each service, idx in pricesList
           li.prices__item(class=service.class)
+            button.prices__acc-btn-full(type="button" data-hc-control=`price-${idx}`)
             .prices__item-top
               .prices__name-block
                 .prices__name=service.name 
@@ -105,7 +112,11 @@ mixin prices
                     svg.prices__benefits-icon
                       use(xlink:href="./assets/sprite.svg#check")
                     span.prices__benefits-text=benefit
-            .prices__info 
-              span.prices__payment=service.payment
+            .prices__info
+              if service.paymentDiscount
+                span.prices__payment.prices__payment_normal=service.payment
+                span.prices__payment.prices__payment_discount=service.paymentDiscount
+              else 
+                span.prices__payment=service.payment
               span.prices__duration=service.duration
               button.prices__order.btn(type="button" data-popup-open=service.type)=service.btn

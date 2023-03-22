@@ -5,6 +5,10 @@ block vars
   - const pageName = 'home-page';
 
 block content
+  include ../components/popups
+  include ../components/header
+  include ../components/footer
+  include ../partials/fixed
   include ../components/hero
   include ../components/benefits
   include ../components/about
@@ -14,12 +18,21 @@ block content
   include ../components/contacts
   include ../components/additional
 
-  +hero
-  +benefits
-  +about
-  +prices
-  +cases
-  +process
-  +contacts
-  +additional
+  .overlay
+    +popup-discuss
+    +popup-landing
+    +popup-site
+    +popup-ecommerce
+  +fixed
+  +header
+  main.main
+    +hero
+    +benefits
+    +about
+    +prices
+    +cases
+    +process
+    +contacts
+    +additional
+  +footer
 

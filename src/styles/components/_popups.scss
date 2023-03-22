@@ -114,6 +114,7 @@
     @include mix.p12;
 
     max-width: 400px;
+    margin: 0 auto;
     color: vars.$grayscale500;
 
     &_link {

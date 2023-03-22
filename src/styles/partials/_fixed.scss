@@ -27,34 +27,5 @@
 
   &__btn {
     padding: fn.clip-max(12, 18) fn.clip-max(30, 50);
-    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
-
-    &:hover,
-    &:focus-visible,
-    &:active {
-      color: vars.$lime;
-      background: vars.$grayscale900;
-    }
-  }
-
-  &__social {
-    display: inline-flex;
-    flex: none;
-    padding: fn.clip-max(14, 18) fn.clip-max(16, 28);
-    background: vars.$grayscale0;
-    border-radius: 12px;
-    transition: background-color 0.4s ease-in-out;
-
-    &:hover,
-    &:focus-visible,
-    &:active {
-      background: vars.$grayscale300;
-    }
-
-    &-icon {
-      width: fn.clip-max(20, 24);
-      height: fn.clip-max(20, 24);
-      color: vars.$grayscale900;
-    }
   }
 }

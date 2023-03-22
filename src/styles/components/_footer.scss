@@ -3,11 +3,15 @@
 @use '../utils/functions' as fn;
 
 .footer {
-  @include mix.p16;
-
   padding-top: fn.clip-min(40, 60);
   padding-bottom: 32px;
   font-weight: 400;
+  border-top: 1px solid vars.$grayscale200;
+  @include mix.p16;
+
+  @media (max-width: vars.$lg) {
+    padding-bottom: 80px;
+  }
 
   &__container {
     display: flex;

@@ -231,7 +231,10 @@ var classNames = {
   },
   toggle: {
     block: 'toggle',
-    active: 'toggle_active'
+    active: 'toggle_active',
+    prices: 'prices__toggle',
+    pricesDependent: 'prices',
+    pricesDependentActive: 'prices_discount'
   },
   tooltip: {
     block: 'tooltip',
@@ -266,6 +269,13 @@ function initAccImgTabs() {
 }
 ;// CONCATENATED MODULE: ./src/scripts/modules/toggle.js
 
+function togglePrices(toggleEl) {
+  if (!toggleEl.classList.contains(classNames.toggle.prices)) return;
+  var classPricesDependent = classNames.toggle.pricesDependent;
+  var classPricesDependentActive = classNames.toggle.pricesDependentActive;
+  var pricesDependent = document.querySelector(".".concat(classPricesDependent));
+  pricesDependent.classList.toggle(classPricesDependentActive);
+}
 function toggle() {
   var classToggle = classNames.toggle.block;
   var classToggleActive = classNames.toggle.active;
@@ -273,6 +283,7 @@ function toggle() {
     function handler(e) {
       if (!(e.type === 'click' || e.keyCode === 13)) return;
       toggleEl.classList.toggle(classToggleActive);
+      togglePrices(toggleEl);
     }
     toggleEl.addEventListener('click', handler);
     toggleEl.addEventListener('keydown', handler);

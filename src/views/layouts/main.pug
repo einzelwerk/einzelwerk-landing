@@ -1,8 +1,3 @@
-include ../components/popups
-include ../components/header
-include ../components/footer
-include ../partials/fixed
-
 block vars
   - const title = 'Document'
   - const lang = 'ru'
@@ -15,19 +10,11 @@ html(lang=lang)
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="icon", href="./assets/resources/favicon.ico")
     link(rel="stylesheet" href="./assets/styles/libs.css")
     link(rel="stylesheet" href="./assets/styles/main.css")
     script(defer src="./assets/scripts/main.js") 
     title #{title}
   body
     div(class="app " + pageName)
-      .overlay
-        +popup-discuss
-        +popup-landing
-        +popup-site
-        +popup-ecommerce
-      +fixed
-      +header
-      .main
-        block content
-      +footer
+      block content

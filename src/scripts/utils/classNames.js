@@ -13,6 +13,9 @@ export const classNames = {
   toggle: {
     block: 'toggle',
     active: 'toggle_active',
+    prices: 'prices__toggle',
+    pricesDependent: 'prices',
+    pricesDependentActive: 'prices_discount',
   },
   tooltip: {
     block: 'tooltip',

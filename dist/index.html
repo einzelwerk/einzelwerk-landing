@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/resources/favicon.ico">
     <link rel="stylesheet" href="./assets/styles/libs.css">
     <link rel="stylesheet" href="./assets/styles/main.css">
     <script defer src="./assets/scripts/main.js"> </script>
@@ -12,288 +13,480 @@
   <body>
     <div class="app home-page">
       <div class="overlay">
-        <div class="popup" data-popup="discuss">
-          <button class="popup__close" type="button" data-popup-close="data-popup-close">
-            <svg class="popup__close-icon">
-              <use xlink:href="./assets/sprite.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__content"> 
-            <div class="popup__top">
-              <h2 class="popup__title">Обсудить проект</h2>
-              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
-            </div>
-            <form class="popup__form" action="#"> 
-              <div class="popup__field-block"> 
-                <div class="input">
-                  <label class="visually-hidden" for="name"> </label>
-                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
-                </div>
-                <div class="contacts__field-row">
-                  <div class="input">
-                    <label class="visually-hidden" for="email"> </label>
-                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
+              <div class="popup" data-popup="discuss">
+                <button class="popup__close" type="button" data-popup-close>
+                  <svg class="popup__close-icon">
+                    <use xlink:href="./assets/sprite.svg#close"></use>
+                  </svg>
+                </button>
+                <div class="popup__content"> 
+                  <div class="popup__top">
+                    <h2 class="popup__title">Обсудить проект</h2>
+                    <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
                   </div>
-                  <div class="input">
-                    <label class="visually-hidden" for="tel"> </label>
-                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/>
-                  </div>
-                </div>
-                <div class="input">
-                  <label class="visually-hidden" for="message"> </label>
-                  <textarea class="input__field" id="message" name="message" placeholder="Сообщение" rows="1" autocomplete="off"></textarea>
+                  <form class="popup__form" action="#"> 
+                    <div class="popup__field-block"> 
+                            <div class="input">
+                              <label class="visually-hidden" for="name"> </label>
+                              <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required autocomplete="off">
+                            </div>
+                      <div class="contacts__field-row">
+                              <div class="input">
+                                <label class="visually-hidden" for="email"> </label>
+                                <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required autocomplete="off">
+                              </div>
+                              <div class="input">
+                                <label class="visually-hidden" for="tel"> </label>
+                                <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required autocomplete="off">
+                              </div>
+                      </div>
+                            <div class="input">
+                              <label class="visually-hidden" for="message"> </label>
+                              <textarea class="input__field" id="message" name="message" placeholder="Сообщение" rows="1" autocomplete="off"></textarea>
+                            </div>
+                    </div>
+                    <div class="popup__submit-block"> 
+                      <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                         Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+                    </div>
+                  </form>
                 </div>
               </div>
-              <div class="popup__submit-block"> 
-                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
-                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="popup" data-popup="landing">
-          <button class="popup__close" type="button" data-popup-close="data-popup-close">
-            <svg class="popup__close-icon">
-              <use xlink:href="./assets/sprite.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__content"> 
-            <div class="popup__top">
-              <h2 class="popup__title">Заявка на лендинг</h2>
-              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
-            </div>
-            <form class="popup__form" action="#"> 
-              <div class="popup__field-block"> 
-                <div class="input">
-                  <label class="visually-hidden" for="name"> </label>
-                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
-                </div>
-                <div class="contacts__field-row">
-                  <div class="input">
-                    <label class="visually-hidden" for="email"> </label>
-                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
+              <div class="popup" data-popup="landing">
+                <button class="popup__close" type="button" data-popup-close>
+                  <svg class="popup__close-icon">
+                    <use xlink:href="./assets/sprite.svg#close"></use>
+                  </svg>
+                </button>
+                <div class="popup__content"> 
+                  <div class="popup__top">
+                    <h2 class="popup__title">Заявка на лендинг</h2>
+                    <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
                   </div>
-                  <div class="input">
-                    <label class="visually-hidden" for="tel"> </label>
-                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/>
-                  </div>
-                </div>
-              </div>
-              <div class="popup__submit-block"> 
-                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
-                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="popup" data-popup="site">
-          <button class="popup__close" type="button" data-popup-close="data-popup-close">
-            <svg class="popup__close-icon">
-              <use xlink:href="./assets/sprite.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__content"> 
-            <div class="popup__top">
-              <h2 class="popup__title">Заявка на сайт</h2>
-              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
-            </div>
-            <form class="popup__form" action="#"> 
-              <div class="popup__field-block"> 
-                <div class="input">
-                  <label class="visually-hidden" for="name"> </label>
-                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
-                </div>
-                <div class="contacts__field-row">
-                  <div class="input">
-                    <label class="visually-hidden" for="email"> </label>
-                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
-                  </div>
-                  <div class="input">
-                    <label class="visually-hidden" for="tel"> </label>
-                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/>
-                  </div>
-                </div>
-              </div>
-              <div class="popup__submit-block"> 
-                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
-                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="popup" data-popup="ecommerce">
-          <button class="popup__close" type="button" data-popup-close="data-popup-close">
-            <svg class="popup__close-icon">
-              <use xlink:href="./assets/sprite.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__content"> 
-            <div class="popup__top">
-              <h2 class="popup__title">Заявка на E-commerce</h2>
-              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
-            </div>
-            <form class="popup__form" action="#"> 
-              <div class="popup__field-block"> 
-                <div class="input">
-                  <label class="visually-hidden" for="name"> </label>
-                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
-                </div>
-                <div class="contacts__field-row">
-                  <div class="input">
-                    <label class="visually-hidden" for="email"> </label>
-                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
-                  </div>
-                  <div class="input">
-                    <label class="visually-hidden" for="tel"> </label>
-                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/>
-                  </div>
-                </div>
-              </div>
-              <div class="popup__submit-block"> 
-                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
-                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="fixed"> 
-        <div class="fixed__container container"> 
-          <button class="fixed__btn btn" type="button" data-popup-open="discuss">Оставить заявку</button><a class="fixed__social" href="#"> 
-            <svg class="fixed__social-icon">
-              <use xlink:href="./assets/sprite.svg#telegram"></use>
-            </svg></a><a class="fixed__social" href="#"> 
-            <svg class="fixed__social-icon">
-              <use xlink:href="./assets/sprite.svg#whatsapp"></use>
-            </svg></a>
-        </div>
-      </div>
-      <header class="header" id="header">
-        <div class="header__container container"><a class="header__logo" href="#hero"> 
-            <svg class="header__logo-icon">
-              <use xlink:href="./assets/sprite.svg#logo"></use>
-            </svg></a>
-          <nav class="header__nav"> 
-            <ul class="header__nav-list"> 
-              <li class="header__nav-item"> <a class="header__nav-link" href="#benefits">Почему</a></li>
-              <li class="header__nav-item"> <a class="header__nav-link" href="#prices">Цены</a></li>
-              <li class="header__nav-item"> <a class="header__nav-link" href="#cases">Кейсы</a></li>
-              <li class="header__nav-item"> <a class="header__nav-link" href="#process">Процесс</a></li>
-              <li class="header__nav-item"> <a class="header__nav-link" href="#contacts">Контакты</a></li>
-            </ul>
-          </nav>
-          <div class="header__contacts"><a class="header__contacts-tel" href="+79119892442">+7 911 989-24-42</a>
-            <button class="header__contacts-discuss" type="button" data-popup-open="discuss">Заполнить бриф</button>
-          </div>
-          <button class="header__burger" type="button"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></button>
-        </div>
-      </header>
-      <div class="main">
-                <section class="hero" id="hero"> 
-                  <div class="hero__container container">
-                    <div class="hero__inner">
-                      <div class="hero__content">
-                        <div class="hero__title-block"> 
-                          <ul class="hero__workers">
-                            <li class="hero__workers-item"> 
-                              <picture class="hero__workers-img-wrap"><img class="hero__workers-img" src="./assets/img/workers/woker-1.png" alt=""></picture>
-                            </li>
-                            <li class="hero__workers-item"> 
-                              <picture class="hero__workers-img-wrap"><img class="hero__workers-img" src="./assets/img/workers/woker-2.png" alt=""></picture>
-                            </li>
-                            <li class="hero__workers-item"> 
-                              <picture class="hero__workers-img-wrap"><img class="hero__workers-img" src="./assets/img/workers/woker-3.png" alt=""></picture>
-                            </li>
-                            <li class="hero__workers-item"> 
-                              <picture class="hero__workers-img-wrap"><img class="hero__workers-img" src="./assets/img/workers/woker-4.png" alt=""></picture>
-                            </li>
-                            <li class="hero__workers-item"> 
-                              <picture class="hero__workers-img-wrap"><img class="hero__workers-img" src="./assets/img/workers/woker-5.png" alt=""></picture>
-                            </li>
-                            <li class="hero__workers-item hero__workers-item_more"> <span>+10</span></li>
-                          </ul>
-                          <h1 class="hero__title">Офигенные и продуманные сайты от немецкой студии</h1>
-                        </div>
-                        <div class="hero__desc">Делаем продукты, которые радуют не только глаз, но и ваших сейлзов</div>
-                        <button class="hero__btn btn" type="button" data-popup-open="discuss">Обсудить проект</button>
+                  <form class="popup__form" action="#"> 
+                    <div class="popup__field-block"> 
+                            <div class="input">
+                              <label class="visually-hidden" for="name"> </label>
+                              <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required autocomplete="off">
+                            </div>
+                      <div class="contacts__field-row">
+                              <div class="input">
+                                <label class="visually-hidden" for="email"> </label>
+                                <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required autocomplete="off">
+                              </div>
+                              <div class="input">
+                                <label class="visually-hidden" for="tel"> </label>
+                                <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required autocomplete="off">
+                              </div>
                       </div>
                     </div>
-                  </div>
-                  <picture class="hero__bg-wrap">
-                    <source media="(max-width:767.98px)" srcset="./assets/img/hero/poster-mobile.png"><img class="hero__bg" src="./assets/img/hero/poster.png" alt="">
-                  </picture>
-                </section>
-                <section class="benefits section" id="benefits"> 
-                  <div class="benefits__container container"> 
-                    <div class="benefits__title-wrap">
-                      <h2 class="benefits__title section__title">Чем мы лучше конкурентов</h2>
+                    <div class="popup__submit-block"> 
+                      <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                         Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
                     </div>
-                    <ul class="benefits__list">
-                      <li class="benefits__item">
-                        <svg class="benefits__icon">
-                          <use xlink:href="./assets/sprite.svg#benefits--benefit-1"></use>
-                        </svg>
-                        <h3 class="benefits__name">Запуск за 5-7 дней</h3>
-                        <p class="benefits__desc">Если немецкий Mercedes разгоняется до «сотки» за пару секунд, то запустить проект за неделю для немецкого агентства — точно не проблема.</p>
-                      </li>
-                      <li class="benefits__item">
-                        <svg class="benefits__icon">
-                          <use xlink:href="./assets/sprite.svg#benefits--benefit-2"></use>
-                        </svg>
-                        <h3 class="benefits__name">Выполняем обязательства</h3>
-                        <p class="benefits__desc">Держим баланс между немецкими стандартами и русской смекалкой — без творческих кризисов накануне дедлайна.</p>
-                      </li>
-                      <li class="benefits__item">
-                        <svg class="benefits__icon">
-                          <use xlink:href="./assets/sprite.svg#benefits--benefit-3"></use>
-                        </svg>
-                        <h3 class="benefits__name">Действуем предсказуемо</h3>
-                        <p class="benefits__desc">Скажем, сколько времени и денег реально нужно на запуск, разделим задачу на спринты и будем планомерно идти к результату. </p>
-                      </li>
-                      <li class="benefits__item">
-                        <svg class="benefits__icon">
-                          <use xlink:href="./assets/sprite.svg#benefits--benefit-4"></use>
-                        </svg>
-                        <h3 class="benefits__name">Играем с клиентами «в открытую»</h3>
-                        <p class="benefits__desc">Мы не играем в «испорченный телефон», а вы напрямую общаетесь с любым специалистом на проекте (если этого хотите). </p>
-                      </li>
-                      <li class="benefits__item">
-                        <svg class="benefits__icon">
-                          <use xlink:href="./assets/sprite.svg#benefits--benefit-5"></use>
-                        </svg>
-                        <h3 class="benefits__name">Умеем встраиваться в команду</h3>
-                        <p class="benefits__desc">Мы умеем говорить на разных языках — поэтому без труда заговорим и на вашем, чтобы синхронизировать процессы и задачи на 100%.</p>
-                      </li>
-                      <li class="benefits__item">
-                        <svg class="benefits__icon">
-                          <use xlink:href="./assets/sprite.svg#benefits--benefit-6"></use>
-                        </svg>
-                        <h3 class="benefits__name">Держим высокую планку качества</h3>
-                        <p class="benefits__desc">Наша команда собрана с немецкой педантичностью: здесь топовые специалисты со всего мира, готовые внедрять свой опыт вам. </p>
-                      </li>
+                  </form>
+                </div>
+              </div>
+              <div class="popup" data-popup="site">
+                <button class="popup__close" type="button" data-popup-close>
+                  <svg class="popup__close-icon">
+                    <use xlink:href="./assets/sprite.svg#close"></use>
+                  </svg>
+                </button>
+                <div class="popup__content"> 
+                  <div class="popup__top">
+                    <h2 class="popup__title">Заявка на сайт</h2>
+                    <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+                  </div>
+                  <form class="popup__form" action="#"> 
+                    <div class="popup__field-block"> 
+                            <div class="input">
+                              <label class="visually-hidden" for="name"> </label>
+                              <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required autocomplete="off">
+                            </div>
+                      <div class="contacts__field-row">
+                              <div class="input">
+                                <label class="visually-hidden" for="email"> </label>
+                                <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required autocomplete="off">
+                              </div>
+                              <div class="input">
+                                <label class="visually-hidden" for="tel"> </label>
+                                <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required autocomplete="off">
+                              </div>
+                      </div>
+                    </div>
+                    <div class="popup__submit-block"> 
+                      <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                         Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="popup" data-popup="ecommerce">
+                <button class="popup__close" type="button" data-popup-close>
+                  <svg class="popup__close-icon">
+                    <use xlink:href="./assets/sprite.svg#close"></use>
+                  </svg>
+                </button>
+                <div class="popup__content"> 
+                  <div class="popup__top">
+                    <h2 class="popup__title">Заявка на E-commerce</h2>
+                    <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+                  </div>
+                  <form class="popup__form" action="#"> 
+                    <div class="popup__field-block"> 
+                            <div class="input">
+                              <label class="visually-hidden" for="name"> </label>
+                              <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required autocomplete="off">
+                            </div>
+                      <div class="contacts__field-row">
+                              <div class="input">
+                                <label class="visually-hidden" for="email"> </label>
+                                <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required autocomplete="off">
+                              </div>
+                              <div class="input">
+                                <label class="visually-hidden" for="tel"> </label>
+                                <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required autocomplete="off">
+                              </div>
+                      </div>
+                    </div>
+                    <div class="popup__submit-block"> 
+                      <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                         Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+      </div>
+            <div class="fixed"> 
+              <div class="fixed__container container"> 
+                <button class="fixed__btn btn" type="button" data-popup-open="discuss">Оставить заявку</button><a class="btn-social" href="#"> 
+                  <svg class="btn-social__icon">
+                    <use xlink:href="./assets/sprite.svg#telegram"></use>
+                  </svg></a><a class="btn-social" href="#"> 
+                  <svg class="btn-social__icon">
+                    <use xlink:href="./assets/sprite.svg#whatsapp"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <header class="header" id="header">
+              <div class="header__container container"><a class="header__logo" href="#hero"> 
+                  <svg class="header__logo-icon">
+                    <use xlink:href="./assets/sprite.svg#logo"></use>
+                  </svg></a>
+                <nav class="header__nav"> 
+                  <ul class="header__nav-list"> 
+                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#benefits">Почему</a></li>
+                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#prices">Цены</a></li>
+                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#cases">Кейсы</a></li>
+                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#process">Процесс</a></li>
+                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#contacts">Контакты</a></li>
+                  </ul>
+                </nav>
+                <div class="header__contacts"><a class="header__contacts-tel" href="+79119892442">+7 911 989-24-42</a>
+                  <button class="header__contacts-discuss" type="button" data-popup-open="discuss">Заполнить бриф</button>
+                </div>
+                <button class="header__burger" type="button"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></button>
+              </div>
+            </header>
+      <main class="main">
+              <section class="hero first-section" id="hero">
+                <div class="hero__container container">
+                  <div class="hero__inner">
+                    <div class="hero__content">
+                      <div class="hero__title-block"> 
+                        <ul class="hero__workers">
+                          <li class="hero__workers-item"> 
+                            <picture class="hero__workers-img-wrap"><img class="hero__workers-img" src="./assets/img/workers/woker-1.png" alt=""></picture>
+                          </li>
+                          <li class="hero__workers-item"> 
+                            <picture class="hero__workers-img-wrap"><img class="hero__workers-img" src="./assets/img/workers/woker-2.png" alt=""></picture>
+                          </li>
+                          <li class="hero__workers-item"> 
+                            <picture class="hero__workers-img-wrap"><img class="hero__workers-img" src="./assets/img/workers/woker-3.png" alt=""></picture>
+                          </li>
+                          <li class="hero__workers-item"> 
+                            <picture class="hero__workers-img-wrap"><img class="hero__workers-img" src="./assets/img/workers/woker-4.png" alt=""></picture>
+                          </li>
+                          <li class="hero__workers-item"> 
+                            <picture class="hero__workers-img-wrap"><img class="hero__workers-img" src="./assets/img/workers/woker-5.png" alt=""></picture>
+                          </li>
+                          <li class="hero__workers-item hero__workers-item_more"> <span>+10</span></li>
+                        </ul>
+                        <h1 class="hero__title">Офигенные и продуманные сайты от немецкой студии</h1>
+                      </div>
+                      <div class="hero__desc">Делаем продукты, которые радуют не только глаз, но и ваших сейлзов</div>
+                      <button class="hero__btn btn" type="button" data-popup-open="discuss">Обсудить проект</button>
+                    </div>
+                  </div>
+                </div>
+                <picture class="hero__bg-wrap">
+                  <source media="(max-width:767.98px)" srcset="./assets/img/hero/poster-mobile.png"><img class="hero__bg" src="./assets/img/hero/poster.png" alt="">
+                </picture>
+              </section>
+              <section class="benefits section" id="benefits"> 
+                <div class="benefits__container container"> 
+                  <div class="benefits__title-wrap">
+                    <h2 class="benefits__title section__title">Чем мы лучше конкурентов</h2>
+                  </div>
+                  <ul class="benefits__list">
+                    <li class="benefits__item">
+                      <svg class="benefits__icon">
+                        <use xlink:href="./assets/sprite.svg#benefits--benefit-1"></use>
+                      </svg>
+                      <h3 class="benefits__name">Запуск за 5-7 дней</h3>
+                      <p class="benefits__desc">Если немецкий Mercedes разгоняется до «сотки» за пару секунд, то запустить проект за неделю для немецкого агентства — точно не проблема.</p>
+                    </li>
+                    <li class="benefits__item">
+                      <svg class="benefits__icon">
+                        <use xlink:href="./assets/sprite.svg#benefits--benefit-2"></use>
+                      </svg>
+                      <h3 class="benefits__name">Выполняем обязательства</h3>
+                      <p class="benefits__desc">Держим баланс между немецкими стандартами и русской смекалкой — без творческих кризисов накануне дедлайна.</p>
+                    </li>
+                    <li class="benefits__item">
+                      <svg class="benefits__icon">
+                        <use xlink:href="./assets/sprite.svg#benefits--benefit-3"></use>
+                      </svg>
+                      <h3 class="benefits__name">Действуем предсказуемо</h3>
+                      <p class="benefits__desc">Скажем, сколько времени и денег реально нужно на запуск, разделим задачу на спринты и будем планомерно идти к результату. </p>
+                    </li>
+                    <li class="benefits__item">
+                      <svg class="benefits__icon">
+                        <use xlink:href="./assets/sprite.svg#benefits--benefit-4"></use>
+                      </svg>
+                      <h3 class="benefits__name">Играем с клиентами «в открытую»</h3>
+                      <p class="benefits__desc">Мы не играем в «испорченный телефон», а вы напрямую общаетесь с любым специалистом на проекте (если этого хотите). </p>
+                    </li>
+                    <li class="benefits__item">
+                      <svg class="benefits__icon">
+                        <use xlink:href="./assets/sprite.svg#benefits--benefit-5"></use>
+                      </svg>
+                      <h3 class="benefits__name">Умеем встраиваться в команду</h3>
+                      <p class="benefits__desc">Мы умеем говорить на разных языках — поэтому без труда заговорим и на вашем, чтобы синхронизировать процессы и задачи на 100%.</p>
+                    </li>
+                    <li class="benefits__item">
+                      <svg class="benefits__icon">
+                        <use xlink:href="./assets/sprite.svg#benefits--benefit-6"></use>
+                      </svg>
+                      <h3 class="benefits__name">Держим высокую планку качества</h3>
+                      <p class="benefits__desc">Наша команда собрана с немецкой педантичностью: здесь топовые специалисты со всего мира, готовые внедрять свой опыт вам. </p>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="about" id="about">
+                <div class="about__container container"> 
+                  <div class="about__content">
+                    <h2 class="about__title section__title">Наша студия в цифрах</h2>
+                    <ul class="about__list">
+                      <li class="about__item"> <span class="about__num">2</span><span class="about__name">Награды</span></li>
+                      <li class="about__item"> <span class="about__num">16</span><span class="about__name">Человек в команде</span></li>
+                      <li class="about__item"> <span class="about__num">15</span><span class="about__name">Лет в бизнесе</span></li>
+                      <li class="about__item"> <span class="about__num">85</span><span class="about__name">Сайтов запущено</span></li>
                     </ul>
                   </div>
-                </section>
-                <section class="about" id="about">
-                  <div class="about__container container"> 
-                    <div class="about__content">
-                      <h2 class="about__title section__title">Наша студия в цифрах</h2>
-                      <ul class="about__list">
-                        <li class="about__item"> <span class="about__num">2</span><span class="about__name">Награды</span></li>
-                        <li class="about__item"> <span class="about__num">16</span><span class="about__name">Человек в команде</span></li>
-                        <li class="about__item"> <span class="about__num">15</span><span class="about__name">Лет в бизнесе</span></li>
-                        <li class="about__item"> <span class="about__num">85</span><span class="about__name">Сайтов запущено</span></li>
-                      </ul>
+                  <div class="about__img-wrap"> <img class="about__img" src="./assets/img/about.png" alt=""></div>
+                </div>
+              </section>
+              <section class="prices section" id="prices">
+                <div class="prices__container section__container container"> 
+                  <div class="prices__top">
+                    <h2 class="prices__title section__title">Стоимость работы</h2>
+                    <div class="prices__top-info"> 
+                            <button class="toggle prices__toggle" type="button"><span>На основе фирменного конструктора</span><span class="toggle__switch"></span></button>
+                            <div class="tooltip">
+                              <button class="tooltip__btn" type="button">
+                                <svg class="tooltip__icon">
+                                  <use xlink:href="./assets/sprite.svg#tooltip"></use>
+                                </svg>
+                              </button>
+                              <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
+                            </div>
                     </div>
-                    <div class="about__img-wrap"> <img class="about__img" src="./assets/img/about.png" alt=""></div>
                   </div>
-                </section>
-                <section class="prices section" id="prices">
-                  <div class="prices__container section__container container"> 
-                    <div class="prices__top">
-                      <h2 class="prices__title section__title">Стоимость работы</h2>
-                      <div class="prices__top-info"> 
-                                <button class="toggle" type="button"><span>На основе фирменного конструктора</span><span class="toggle__switch"></span></button>
+                  <ul class="prices__list">
+                    <li class="prices__item">
+                      <div class="prices__name-block">
+                        <div class="prices__name">Лендинг</div>
+                              <div class="tooltip">
+                                <button class="tooltip__btn" type="button">
+                                  <svg class="tooltip__icon">
+                                    <use xlink:href="./assets/sprite.svg#tooltip"></use>
+                                  </svg>
+                                </button>
+                                <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
+                              </div>
+                      </div>
+                      <ul class="prices__benefits"> 
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Анализ ниши и конкурентов</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Прототипирование</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Уникальный дизайн</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Фронтенд и бэкенд сайта</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Подключение домена</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Тестирование</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Инструкция по работе</span>
+                        </li>
+                      </ul>
+                      <div class="prices__info"> <span class="prices__payment prices__payment_normal">от 95 000 руб</span><span class="prices__payment prices__payment_discount">от 59 000 руб</span><span class="prices__duration">7-10 дней</span>
+                        <button class="prices__order btn" type="button" data-popup-open="landing">Заказать лендинг</button>
+                      </div>
+                    </li>
+                    <li class="prices__item prices__item_gray">
+                      <div class="prices__name-block">
+                        <div class="prices__name">Сайт</div>
+                              <div class="tooltip">
+                                <button class="tooltip__btn" type="button">
+                                  <svg class="tooltip__icon">
+                                    <use xlink:href="./assets/sprite.svg#tooltip"></use>
+                                  </svg>
+                                </button>
+                                <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
+                              </div>
+                      </div>
+                      <ul class="prices__benefits"> 
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Анализ ниши и конкурентов</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Прототипирование</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Уникальный дизайн</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Фронтенд и бэкенд сайта</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Подключение домена</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Тестирование</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Базовая настройка SEO</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Инструкция по работе</span>
+                        </li>
+                      </ul>
+                      <div class="prices__info"> <span class="prices__payment prices__payment_normal">от 220 000 руб</span><span class="prices__payment prices__payment_discount">от 139 000 руб</span><span class="prices__duration">от 14 дней</span>
+                        <button class="prices__order btn" type="button" data-popup-open="site">Заказать сайт</button>
+                      </div>
+                    </li>
+                    <li class="prices__item prices__item_dark">
+                      <div class="prices__name-block">
+                        <div class="prices__name">E-commerce</div>
+                              <div class="tooltip">
+                                <button class="tooltip__btn" type="button">
+                                  <svg class="tooltip__icon">
+                                    <use xlink:href="./assets/sprite.svg#tooltip"></use>
+                                  </svg>
+                                </button>
+                                <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
+                              </div>
+                      </div>
+                      <ul class="prices__benefits"> 
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Анализ ниши и конкурентов</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Прототипирование</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Уникальный дизайн</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Фронтенд и бэкенд сайта</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Подключение домена</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Подключение платежных сервисов</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Тестирование</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Базовая настройка SEO</span>
+                        </li>
+                        <li class="prices__benefits-item"> 
+                          <svg class="prices__benefits-icon">
+                            <use xlink:href="./assets/sprite.svg#check"></use>
+                          </svg><span class="prices__benefits-text">Инструкция по работе</span>
+                        </li>
+                      </ul>
+                      <div class="prices__info"> <span class="prices__payment">от 325 000 руб</span><span class="prices__duration">от 25 дней</span>
+                        <button class="prices__order btn" type="button" data-popup-open="ecommerce">Заказать интернет-магазин</button>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="prices__acc">
+                    <li class="prices__item">
+                      <button class="prices__acc-btn-full" type="button" data-hc-control="price-0"></button>
+                      <div class="prices__item-top">
+                        <div class="prices__name-block">
+                          <div class="prices__name">Лендинг</div>
                                 <div class="tooltip">
                                   <button class="tooltip__btn" type="button">
                                     <svg class="tooltip__icon">
@@ -302,22 +495,19 @@
                                   </button>
                                   <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
                                 </div>
-                      </div>
-                    </div>
-                    <ul class="prices__list">
-                      <li class="prices__item">
-                        <div class="prices__name-block">
-                          <div class="prices__name">Лендинг</div>
-                                  <div class="tooltip">
-                                    <button class="tooltip__btn" type="button">
-                                      <svg class="tooltip__icon">
-                                        <use xlink:href="./assets/sprite.svg#tooltip"></use>
-                                      </svg>
-                                    </button>
-                                    <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
-                                  </div>
                         </div>
-                        <ul class="prices__benefits"> 
+                        <button class="prices__acc-btn" type="button" data-hc-control="price-0"><span class="prices__acc-btn-item prices__acc-btn-item_open">
+                             Открыть
+                            <svg class="prices__acc-btn-icon">
+                              <use xlink:href="./assets/sprite.svg#plus"></use>
+                            </svg></span><span class="prices__acc-btn-item prices__acc-btn-item_close">
+                             Скрыть
+                            <svg class="prices__acc-btn-icon">
+                              <use xlink:href="./assets/sprite.svg#minus"></use>
+                            </svg></span></button>
+                      </div>
+                      <div class="prices__acc-body" data-hc-content="price-0">
+                        <ul class="prices__benefits">
                           <li class="prices__benefits-item"> 
                             <svg class="prices__benefits-icon">
                               <use xlink:href="./assets/sprite.svg#check"></use>
@@ -354,23 +544,37 @@
                             </svg><span class="prices__benefits-text">Инструкция по работе</span>
                           </li>
                         </ul>
-                        <div class="prices__info"> <span class="prices__payment">от 95 000 руб</span><span class="prices__duration">7-10 дней</span>
-                          <button class="prices__order btn" type="button" data-popup-open="landing">Заказать лендинг</button>
-                        </div>
-                      </li>
-                      <li class="prices__item prices__item_gray">
+                      </div>
+                      <div class="prices__info"><span class="prices__payment prices__payment_normal">от 95 000 руб</span><span class="prices__payment prices__payment_discount">от 59 000 руб</span><span class="prices__duration">7-10 дней</span>
+                        <button class="prices__order btn" type="button" data-popup-open="landing">Заказать лендинг</button>
+                      </div>
+                    </li>
+                    <li class="prices__item prices__item_gray">
+                      <button class="prices__acc-btn-full" type="button" data-hc-control="price-1"></button>
+                      <div class="prices__item-top">
                         <div class="prices__name-block">
                           <div class="prices__name">Сайт</div>
-                                  <div class="tooltip">
-                                    <button class="tooltip__btn" type="button">
-                                      <svg class="tooltip__icon">
-                                        <use xlink:href="./assets/sprite.svg#tooltip"></use>
-                                      </svg>
-                                    </button>
-                                    <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
-                                  </div>
+                                <div class="tooltip">
+                                  <button class="tooltip__btn" type="button">
+                                    <svg class="tooltip__icon">
+                                      <use xlink:href="./assets/sprite.svg#tooltip"></use>
+                                    </svg>
+                                  </button>
+                                  <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
+                                </div>
                         </div>
-                        <ul class="prices__benefits"> 
+                        <button class="prices__acc-btn" type="button" data-hc-control="price-1"><span class="prices__acc-btn-item prices__acc-btn-item_open">
+                             Открыть
+                            <svg class="prices__acc-btn-icon">
+                              <use xlink:href="./assets/sprite.svg#plus"></use>
+                            </svg></span><span class="prices__acc-btn-item prices__acc-btn-item_close">
+                             Скрыть
+                            <svg class="prices__acc-btn-icon">
+                              <use xlink:href="./assets/sprite.svg#minus"></use>
+                            </svg></span></button>
+                      </div>
+                      <div class="prices__acc-body" data-hc-content="price-1">
+                        <ul class="prices__benefits">
                           <li class="prices__benefits-item"> 
                             <svg class="prices__benefits-icon">
                               <use xlink:href="./assets/sprite.svg#check"></use>
@@ -412,23 +616,37 @@
                             </svg><span class="prices__benefits-text">Инструкция по работе</span>
                           </li>
                         </ul>
-                        <div class="prices__info"> <span class="prices__payment">от 220 000 руб</span><span class="prices__duration">от 14 дней</span>
-                          <button class="prices__order btn" type="button" data-popup-open="site">Заказать сайт</button>
-                        </div>
-                      </li>
-                      <li class="prices__item prices__item_dark">
+                      </div>
+                      <div class="prices__info"><span class="prices__payment prices__payment_normal">от 220 000 руб</span><span class="prices__payment prices__payment_discount">от 139 000 руб</span><span class="prices__duration">от 14 дней</span>
+                        <button class="prices__order btn" type="button" data-popup-open="site">Заказать сайт</button>
+                      </div>
+                    </li>
+                    <li class="prices__item prices__item_dark">
+                      <button class="prices__acc-btn-full" type="button" data-hc-control="price-2"></button>
+                      <div class="prices__item-top">
                         <div class="prices__name-block">
                           <div class="prices__name">E-commerce</div>
-                                  <div class="tooltip">
-                                    <button class="tooltip__btn" type="button">
-                                      <svg class="tooltip__icon">
-                                        <use xlink:href="./assets/sprite.svg#tooltip"></use>
-                                      </svg>
-                                    </button>
-                                    <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
-                                  </div>
+                                <div class="tooltip">
+                                  <button class="tooltip__btn" type="button">
+                                    <svg class="tooltip__icon">
+                                      <use xlink:href="./assets/sprite.svg#tooltip"></use>
+                                    </svg>
+                                  </button>
+                                  <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
+                                </div>
                         </div>
-                        <ul class="prices__benefits"> 
+                        <button class="prices__acc-btn" type="button" data-hc-control="price-2"><span class="prices__acc-btn-item prices__acc-btn-item_open">
+                             Открыть
+                            <svg class="prices__acc-btn-icon">
+                              <use xlink:href="./assets/sprite.svg#plus"></use>
+                            </svg></span><span class="prices__acc-btn-item prices__acc-btn-item_close">
+                             Скрыть
+                            <svg class="prices__acc-btn-icon">
+                              <use xlink:href="./assets/sprite.svg#minus"></use>
+                            </svg></span></button>
+                      </div>
+                      <div class="prices__acc-body" data-hc-content="price-2">
+                        <ul class="prices__benefits">
                           <li class="prices__benefits-item"> 
                             <svg class="prices__benefits-icon">
                               <use xlink:href="./assets/sprite.svg#check"></use>
@@ -475,433 +693,219 @@
                             </svg><span class="prices__benefits-text">Инструкция по работе</span>
                           </li>
                         </ul>
-                        <div class="prices__info"> <span class="prices__payment">от 325 000 руб</span><span class="prices__duration">от 25 дней</span>
-                          <button class="prices__order btn" type="button" data-popup-open="ecommerce">Заказать интернет-магазин</button>
-                        </div>
-                      </li>
-                    </ul>
-                    <ul class="prices__acc">
-                      <li class="prices__item">
-                        <div class="prices__item-top">
-                          <div class="prices__name-block">
-                            <div class="prices__name">Лендинг</div>
-                                    <div class="tooltip">
-                                      <button class="tooltip__btn" type="button">
-                                        <svg class="tooltip__icon">
-                                          <use xlink:href="./assets/sprite.svg#tooltip"></use>
-                                        </svg>
-                                      </button>
-                                      <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
-                                    </div>
-                          </div>
-                          <button class="prices__acc-btn" type="button" data-hc-control="price-0"><span class="prices__acc-btn-item prices__acc-btn-item_open">
-                               Открыть
-                              <svg class="prices__acc-btn-icon">
-                                <use xlink:href="./assets/sprite.svg#plus"></use>
-                              </svg></span><span class="prices__acc-btn-item prices__acc-btn-item_close">
-                               Скрыть
-                              <svg class="prices__acc-btn-icon">
-                                <use xlink:href="./assets/sprite.svg#minus"></use>
-                              </svg></span></button>
-                        </div>
-                        <div class="prices__acc-body" data-hc-content="price-0">
-                          <ul class="prices__benefits">
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Анализ ниши и конкурентов</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Прототипирование</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Уникальный дизайн</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Фронтенд и бэкенд сайта</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Подключение домена</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Тестирование</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Инструкция по работе</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="prices__info"> <span class="prices__payment">от 95 000 руб</span><span class="prices__duration">7-10 дней</span>
-                          <button class="prices__order btn" type="button" data-popup-open="landing">Заказать лендинг</button>
-                        </div>
-                      </li>
-                      <li class="prices__item prices__item_gray">
-                        <div class="prices__item-top">
-                          <div class="prices__name-block">
-                            <div class="prices__name">Сайт</div>
-                                    <div class="tooltip">
-                                      <button class="tooltip__btn" type="button">
-                                        <svg class="tooltip__icon">
-                                          <use xlink:href="./assets/sprite.svg#tooltip"></use>
-                                        </svg>
-                                      </button>
-                                      <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
-                                    </div>
-                          </div>
-                          <button class="prices__acc-btn" type="button" data-hc-control="price-1"><span class="prices__acc-btn-item prices__acc-btn-item_open">
-                               Открыть
-                              <svg class="prices__acc-btn-icon">
-                                <use xlink:href="./assets/sprite.svg#plus"></use>
-                              </svg></span><span class="prices__acc-btn-item prices__acc-btn-item_close">
-                               Скрыть
-                              <svg class="prices__acc-btn-icon">
-                                <use xlink:href="./assets/sprite.svg#minus"></use>
-                              </svg></span></button>
-                        </div>
-                        <div class="prices__acc-body" data-hc-content="price-1">
-                          <ul class="prices__benefits">
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Анализ ниши и конкурентов</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Прототипирование</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Уникальный дизайн</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Фронтенд и бэкенд сайта</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Подключение домена</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Тестирование</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Базовая настройка SEO</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Инструкция по работе</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="prices__info"> <span class="prices__payment">от 220 000 руб</span><span class="prices__duration">от 14 дней</span>
-                          <button class="prices__order btn" type="button" data-popup-open="site">Заказать сайт</button>
-                        </div>
-                      </li>
-                      <li class="prices__item prices__item_dark">
-                        <div class="prices__item-top">
-                          <div class="prices__name-block">
-                            <div class="prices__name">E-commerce</div>
-                                    <div class="tooltip">
-                                      <button class="tooltip__btn" type="button">
-                                        <svg class="tooltip__icon">
-                                          <use xlink:href="./assets/sprite.svg#tooltip"></use>
-                                        </svg>
-                                      </button>
-                                      <div class="tooltip__body"><span>Lorem ipsum dolor sit </span></div>
-                                    </div>
-                          </div>
-                          <button class="prices__acc-btn" type="button" data-hc-control="price-2"><span class="prices__acc-btn-item prices__acc-btn-item_open">
-                               Открыть
-                              <svg class="prices__acc-btn-icon">
-                                <use xlink:href="./assets/sprite.svg#plus"></use>
-                              </svg></span><span class="prices__acc-btn-item prices__acc-btn-item_close">
-                               Скрыть
-                              <svg class="prices__acc-btn-icon">
-                                <use xlink:href="./assets/sprite.svg#minus"></use>
-                              </svg></span></button>
-                        </div>
-                        <div class="prices__acc-body" data-hc-content="price-2">
-                          <ul class="prices__benefits">
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Анализ ниши и конкурентов</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Прототипирование</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Уникальный дизайн</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Фронтенд и бэкенд сайта</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Подключение домена</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Подключение платежных сервисов</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Тестирование</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Базовая настройка SEO</span>
-                            </li>
-                            <li class="prices__benefits-item"> 
-                              <svg class="prices__benefits-icon">
-                                <use xlink:href="./assets/sprite.svg#check"></use>
-                              </svg><span class="prices__benefits-text">Инструкция по работе</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="prices__info"> <span class="prices__payment">от 325 000 руб</span><span class="prices__duration">от 25 дней</span>
-                          <button class="prices__order btn" type="button" data-popup-open="ecommerce">Заказать интернет-магазин</button>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-                <section class="cases section" id="cases">
-                  <div class="cases__container section__container container"> 
-                    <h2 class="cases__title section__title">Кейсики на Behance</h2>
-                    <ul class="cases__list"> 
-                      <li class="cases__item"> <a class="cases__link" href="#"> 
-                          <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-1.jpg" alt=""></picture>
-                          <div class="cases__text-block"> 
-                            <h3 class="cases__name">Printegy</h3><span class="cases__type">Сайт</span>
-                          </div></a></li>
-                      <li class="cases__item"> <a class="cases__link" href="#"> 
-                          <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-2.jpg" alt=""></picture>
-                          <div class="cases__text-block"> 
-                            <h3 class="cases__name">bulthaup</h3><span class="cases__type">Сайт</span>
-                          </div></a></li>
-                      <li class="cases__item"> <a class="cases__link" href="#"> 
-                          <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-3.jpg" alt=""></picture>
-                          <div class="cases__text-block"> 
-                            <h3 class="cases__name">Duesseldorf Business School</h3><span class="cases__type">Сайт</span>
-                          </div></a></li>
-                      <li class="cases__item"> <a class="cases__link" href="#"> 
-                          <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-4.jpg" alt=""></picture>
-                          <div class="cases__text-block"> 
-                            <h3 class="cases__name">Kids Fun Palace</h3><span class="cases__type">Сайт</span>
-                          </div></a></li>
-                      <li class="cases__item"> <a class="cases__link" href="#"> 
-                          <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-5.jpg" alt=""></picture>
-                          <div class="cases__text-block"> 
-                            <h3 class="cases__name">Stena Glovis</h3><span class="cases__type">Сайт</span>
-                          </div></a></li>
-                      <li class="cases__item"> <a class="cases__link" href="#"> 
-                          <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-6.jpg" alt=""></picture>
-                          <div class="cases__text-block"> 
-                            <h3 class="cases__name">KFP Architekten</h3><span class="cases__type">Сайт</span>
-                          </div></a></li>
-                    </ul>
-                  </div>
-                </section>
-                <section class="process section" id="process">
-                  <div class="process__container container"> 
-                    <div class="process__content section__container">
-                      <h2 class="process__title section__title">Процесс работы</h2>
-                      <ul class="process__list">
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-0"><span class="process__name-block"> <span class="process__name">Брифим</span></span><span class="process__payment">Бесплатно</span></button>
-                          <div class="process__body" data-hc-content="process-0">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                              <div class="process__body-img-block">
-                                <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-1"><span class="process__name-block"> <span class="process__name">Исследуем бизнес</span></span><span class="process__payment">Бесплатно</span></button>
-                          <div class="process__body" data-hc-content="process-1">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                              <div class="process__body-img-block">
-                                <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-2"><span class="process__name-block"> <span class="process__name">Пишем тексты</span></span><span class="process__payment">150 000 ₽</span></button>
-                          <div class="process__body" data-hc-content="process-2">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                              <div class="process__body-img-block">
-                                <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-3"><span class="process__name-block"> <span class="process__name">Прототипируем</span></span><span class="process__payment">100 000 ₽</span></button>
-                          <div class="process__body" data-hc-content="process-3">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                              <div class="process__body-img-block">
-                                <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-4"><span class="process__name-block"> <span class="process__name">Дизайним</span></span><span class="process__payment">100 000 ₽</span></button>
-                          <div class="process__body" data-hc-content="process-4">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                              <div class="process__body-img-block">
-                                <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-5"><span class="process__name-block"> <span class="process__name">Верстаем</span></span><span class="process__payment">100 000 ₽</span></button>
-                          <div class="process__body" data-hc-content="process-5">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                              <div class="process__body-img-block">
-                                <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="process__item"> 
-                          <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-6"><span class="process__name-block"> <span class="process__name">Тестируем и запускаемся</span></span><span class="process__payment">100 000 ₽</span></button>
-                          <div class="process__body" data-hc-content="process-6">
-                            <div class="process__body-content">
-                              <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
-                              <div class="process__body-img-block">
-                                <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="process__img-block"> 
-                      <picture class="process__img-wrap"> <img class="process__img" src="#" alt=""></picture>
-                    </div>
-                  </div>
-                </section>
-                <section class="contacts section" id="contacts">
-                  <div class="contacts__container container">
-                    <div class="contacts__content">
-                      <div class="contacts__text-block">
-                        <h2 class="contacts__title section__title">Оставляйте заявку</h2>
-                        <p class="contacts__desc">Наш проджект свяжется с вами в течение рабочего дня!</p>
                       </div>
-                      <form class="contacts__form" action="#"> 
-                        <div class="contacts__field-block">
-                                  <div class="input input_dark">
-                                    <label class="visually-hidden" for="name"> </label>
-                                    <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required autocomplete="off">
-                                  </div>
-                          <div class="contacts__field-row">
-                                    <div class="input input_dark">
-                                      <label class="visually-hidden" for="email"> </label>
-                                      <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required autocomplete="off">
-                                    </div>
-                                    <div class="input input_dark">
-                                      <label class="visually-hidden" for="tel"> </label>
-                                      <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required autocomplete="off">
-                                    </div>
+                      <div class="prices__info"><span class="prices__payment">от 325 000 руб</span><span class="prices__duration">от 25 дней</span>
+                        <button class="prices__order btn" type="button" data-popup-open="ecommerce">Заказать интернет-магазин</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="cases section" id="cases">
+                <div class="cases__container section__container container"> 
+                  <h2 class="cases__title section__title">Кейсики на Behance</h2>
+                  <ul class="cases__list"> 
+                    <li class="cases__item"> <a class="cases__link" href="#"> 
+                        <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-1.jpg" alt=""></picture>
+                        <div class="cases__text-block"> 
+                          <h3 class="cases__name">Printegy</h3><span class="cases__type">Сайт</span>
+                        </div></a></li>
+                    <li class="cases__item"> <a class="cases__link" href="#"> 
+                        <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-2.jpg" alt=""></picture>
+                        <div class="cases__text-block"> 
+                          <h3 class="cases__name">bulthaup</h3><span class="cases__type">Сайт</span>
+                        </div></a></li>
+                    <li class="cases__item"> <a class="cases__link" href="#"> 
+                        <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-3.jpg" alt=""></picture>
+                        <div class="cases__text-block"> 
+                          <h3 class="cases__name">Duesseldorf Business School</h3><span class="cases__type">Сайт</span>
+                        </div></a></li>
+                    <li class="cases__item"> <a class="cases__link" href="#"> 
+                        <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-4.jpg" alt=""></picture>
+                        <div class="cases__text-block"> 
+                          <h3 class="cases__name">Kids Fun Palace</h3><span class="cases__type">Сайт</span>
+                        </div></a></li>
+                    <li class="cases__item"> <a class="cases__link" href="#"> 
+                        <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-5.jpg" alt=""></picture>
+                        <div class="cases__text-block"> 
+                          <h3 class="cases__name">Stena Glovis</h3><span class="cases__type">Сайт</span>
+                        </div></a></li>
+                    <li class="cases__item"> <a class="cases__link" href="#"> 
+                        <picture class="cases__img-wrap wh100"><img class="cases__img wh100" src="./assets/img/cases/case-6.jpg" alt=""></picture>
+                        <div class="cases__text-block"> 
+                          <h3 class="cases__name">KFP Architekten</h3><span class="cases__type">Сайт</span>
+                        </div></a></li>
+                  </ul>
+                </div>
+              </section>
+              <section class="process section" id="process">
+                <div class="process__container container"> 
+                  <div class="process__content section__container">
+                    <h2 class="process__title section__title">Процесс работы</h2>
+                    <ul class="process__list">
+                      <li class="process__item"> 
+                        <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-0"><span class="process__name-block"> <span class="process__name">Брифим</span></span><span class="process__payment">Бесплатно</span></button>
+                        <div class="process__body" data-hc-content="process-0">
+                          <div class="process__body-content">
+                            <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
+                            <div class="process__body-img-block">
+                              <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
+                            </div>
                           </div>
-                                  <div class="input input_dark">
-                                    <label class="visually-hidden" for="message"> </label>
-                                    <textarea class="input__field" id="message" name="message" placeholder="Сообщение" rows="1" autocomplete="off"></textarea>
-                                  </div>
                         </div>
-                        <div class="contacts__btn-block"> 
-                          <button class="contacts__submit btn" type="submit">Оставить заявку</button>
-                          <div class="contacts__agreement"><span>Нажимая на кнопку “Оставить заявку” вы соглашаетесь с политикой </span><a class="contacts__agreement_link" href="#">обработки персональных данных</a></div>
+                      </li>
+                      <li class="process__item"> 
+                        <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-1"><span class="process__name-block"> <span class="process__name">Исследуем бизнес</span></span><span class="process__payment">Бесплатно</span></button>
+                        <div class="process__body" data-hc-content="process-1">
+                          <div class="process__body-content">
+                            <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
+                            <div class="process__body-img-block">
+                              <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
+                            </div>
+                          </div>
                         </div>
-                      </form>
-                    </div>
+                      </li>
+                      <li class="process__item"> 
+                        <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-2"><span class="process__name-block"> <span class="process__name">Пишем тексты</span></span><span class="process__payment">150 000 ₽</span></button>
+                        <div class="process__body" data-hc-content="process-2">
+                          <div class="process__body-content">
+                            <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
+                            <div class="process__body-img-block">
+                              <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="process__item"> 
+                        <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-3"><span class="process__name-block"> <span class="process__name">Прототипируем</span></span><span class="process__payment">100 000 ₽</span></button>
+                        <div class="process__body" data-hc-content="process-3">
+                          <div class="process__body-content">
+                            <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
+                            <div class="process__body-img-block">
+                              <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="process__item"> 
+                        <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-4"><span class="process__name-block"> <span class="process__name">Дизайним</span></span><span class="process__payment">100 000 ₽</span></button>
+                        <div class="process__body" data-hc-content="process-4">
+                          <div class="process__body-content">
+                            <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
+                            <div class="process__body-img-block">
+                              <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="process__item"> 
+                        <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-5"><span class="process__name-block"> <span class="process__name">Верстаем</span></span><span class="process__payment">100 000 ₽</span></button>
+                        <div class="process__body" data-hc-content="process-5">
+                          <div class="process__body-content">
+                            <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
+                            <div class="process__body-img-block">
+                              <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="process__item"> 
+                        <button class="process__head" type="button" data-img-src="./assets/img/process.jpg" data-hc-control="process-6"><span class="process__name-block"> <span class="process__name">Тестируем и запускаемся</span></span><span class="process__payment">100 000 ₽</span></button>
+                        <div class="process__body" data-hc-content="process-6">
+                          <div class="process__body-content">
+                            <p class="process__desc">Смотрим на ваш продукт с разных ракурсов, глазами бренда и клиента — чтобы найти ту точку, где ваши интересы встретятся. </p>
+                            <div class="process__body-img-block">
+                              <picture class="process__img-wrap"><img class="process__img-wrap" src="./assets/img/process.jpg" alt=""></picture>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
-                  <picture class="contacts__img-wrap"> 
-                    <source media="(max-width: 991.98px)" srcset="./assets/img/contacts/contacts-mobile.png"><img class="contacts__img" src="./assets/img/contacts/contacts.png" alt="">
-                  </picture>
-                </section>
-                <section class="additional section" id="additional">
-                  <div class="additional__container container">
-                    <div class="additional__title-block">
-                      <h2 class="additional__title section__title">Дополнительные услуги</h2>
-                      <ul class="additional__services">  
-                        <li class="additional__services-item">брендинг</li>
-                        <li class="additional__services-item">креативы</li>
-                        <li class="additional__services-item">моушн</li>
-                        <li class="additional__services-item">смм/сео</li>
+                  <div class="process__img-block"> 
+                    <picture class="process__img-wrap"> <img class="process__img" src="#" alt=""></picture>
+                  </div>
+                </div>
+              </section>
+              <section class="contacts section" id="contacts">
+                <div class="contacts__container container">
+                  <div class="contacts__content">
+                    <div class="contacts__text-block">
+                      <h2 class="contacts__title section__title">Оставляйте заявку</h2>
+                      <p class="contacts__desc">Наш проджект свяжется с вами в течение рабочего дня!</p>
+                    </div>
+                    <form class="contacts__form" action="#"> 
+                      <div class="contacts__field-block">
+                              <div class="input input_dark">
+                                <label class="visually-hidden" for="name"> </label>
+                                <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required autocomplete="off">
+                              </div>
+                        <div class="contacts__field-row">
+                                <div class="input input_dark">
+                                  <label class="visually-hidden" for="email"> </label>
+                                  <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required autocomplete="off">
+                                </div>
+                                <div class="input input_dark">
+                                  <label class="visually-hidden" for="tel"> </label>
+                                  <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required autocomplete="off">
+                                </div>
+                        </div>
+                              <div class="input input_dark">
+                                <label class="visually-hidden" for="message"> </label>
+                                <textarea class="input__field" id="message" name="message" placeholder="Сообщение" rows="1" autocomplete="off"></textarea>
+                              </div>
+                      </div>
+                      <div class="contacts__btn-block"> 
+                        <button class="contacts__submit btn" type="submit">Оставить заявку</button>
+                        <div class="contacts__agreement"><span>Нажимая на кнопку “Оставить заявку” вы соглашаетесь с политикой </span><a class="contacts__agreement_link" href="#">обработки персональных данных</a></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <picture class="contacts__img-wrap"> 
+                  <source media="(max-width: 991.98px)" srcset="./assets/img/contacts/contacts-mobile.png"><img class="contacts__img" src="./assets/img/contacts/contacts.png" alt="">
+                </picture>
+              </section>
+              <section class="additional section" id="additional">
+                <div class="additional__container container">
+                  <div class="additional__title-block">
+                    <h2 class="additional__title section__title">Дополнительные услуги</h2>
+                    <ul class="additional__services">  
+                      <li class="additional__services-item">брендинг</li>
+                      <li class="additional__services-item">креативы</li>
+                      <li class="additional__services-item">моушн</li>
+                      <li class="additional__services-item">смм/сео</li>
+                    </ul>
+                  </div>
+                  <div class="additional__contact-block"> <span class="additional__interested">Заинтересованы?</span><a class="additional__contact link-underline" href="#contacts">Свяжитесь с нами</a></div>
+                </div>
+              </section>
+      </main>
+            <footer class="footer" id="footer">
+              <div class="footer__container container"> 
+                <div class="footer__top"> <a class="footer__logo" href="#hero"> 
+                    <svg class="footer__logo-icon">
+                      <use xlink:href="./assets/sprite.svg#logo"></use>
+                    </svg></a>
+                  <div class="footer__contacts">
+                    <div class="footer__contacts-block"> <strong class="footer__contacts-title">Соцсети</strong>
+                      <ul class="footer__contacts-list"> 
+                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">Behance</a></li>
+                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">Telegram</a></li>
+                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">WhatsApp</a></li>
                       </ul>
                     </div>
-                    <div class="additional__contact-block"> <span class="additional__interested">Заинтересованы?</span><a class="additional__contact" href="#contacts">Свяжитесь с нами</a></div>
+                    <div class="footer__contacts-block"> <strong class="footer__contacts-title">Контакты</strong>
+                      <ul class="footer__contacts-list"> 
+                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="+79119892442">+7 911 989-24-42</a></li>
+                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="hi@einzelwerk.ru">hi@einzelwerk.ru</a></li>
+                      </ul>
+                    </div>
                   </div>
-                </section>
-      </div>
-      <footer class="footer" id="footer">
-        <div class="footer__container container"> 
-          <div class="footer__top"> <a class="footer__logo" href="#hero"> 
-              <svg class="footer__logo-icon">
-                <use xlink:href="./assets/sprite.svg#logo"></use>
-              </svg></a>
-            <div class="footer__contacts">
-              <div class="footer__contacts-block"> <strong class="footer__contacts-title">Соцсети</strong>
-                <ul class="footer__contacts-list"> 
-                  <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">Behance</a></li>
-                  <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">Telegram</a></li>
-                  <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">WhatsApp</a></li>
-                </ul>
+                </div>
+                <div class="footer__bottom"><span class="footer__rights">Все права защищены © Einzelwerk</span><a class="footer__agreement" href="#">Политика конфиденциальности</a></div>
               </div>
-              <div class="footer__contacts-block"> <strong class="footer__contacts-title">Контакты</strong>
-                <ul class="footer__contacts-list"> 
-                  <li class="footer__contacts-item"><a class="footer__contacts-link" href="+79119892442">+7 911 989-24-42</a></li>
-                  <li class="footer__contacts-item"><a class="footer__contacts-link" href="hi@einzelwerk.ru">hi@einzelwerk.ru</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer__bottom"><span class="footer__rights">Все права защищены © Einzelwerk</span><a class="footer__agreement" href="#">Политика конфиденциальности</a></div>
-        </div>
-      </footer>
+            </footer>
     </div>
   </body>
 </html>

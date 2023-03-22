@@ -1,0 +1,44 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.single {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: fn.clip-min(40, 48);
+    align-items: center;
+    justify-content: center;
+    padding-top: fn.clip-min(40, 80);
+    padding-bottom: fn.clip-min(80, 120);
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: fn.clip-min(24, 40);
+    align-items: center;
+  }
+
+  &__title {
+    @include mix.h1;
+  }
+
+  &__link-block {
+    display: flex;
+    gap: fn.clip-min(8, 9);
+  }
+
+  &__link {
+    @media (max-width: vars.$md) {
+      flex-grow: 1;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
