@@ -107,7 +107,7 @@ exports.fontStyle = function fontStyle() {
             }
             fs.appendFile(
               fontsFile,
-              `@font-face {\n\tfont-weight: ${fontWeight};\n\tfont-family: ${fontName};\n\tfont-style: ${fontStyle};\n\tsrc: url('@/assets/fonts/${fontFileName}.woff2') format('woff2'), url('@/assets/fonts/${fontFileName}.woff') format('woff');\n\tfont-display: swap;\n}\r\n`,
+              `@font-face {\n\tfont-weight: ${fontWeight};\n\tfont-family: ${fontName};\n\tfont-style: ${fontStyle};\n\tsrc: url('@//fonts/${fontFileName}.woff2') format('woff2'), url('@//fonts/${fontFileName}.woff') format('woff');\n\tfont-display: swap;\n}\r\n`,
               cb
             );
             newFileOnly = fontFileName;

@@ -8,6 +8,7 @@ import { headerBlur, headerHide } from './vendor/header';
 import { closePopup, openPopup } from './modules/popups';
 
 import 'normalize.css';
+import { initWidget } from './modules/widget';
 
 window.onload = () => {
   // Header
@@ -17,6 +18,9 @@ window.onload = () => {
   // Popups
   openPopup();
   closePopup();
+
+  // Widget
+  initWidget();
 
   // Accordion
   new HandyCollapse(); // eslint-disable-line

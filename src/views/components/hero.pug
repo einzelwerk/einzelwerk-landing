@@ -6,11 +6,11 @@ mixin hero
           .hero__title-block 
             -
               const workersList = [ 
-                '@/assets/img/workers/woker-1.png',
-                '@/assets/img/workers/woker-2.png',
-                '@/assets/img/workers/woker-3.png',
-                '@/assets/img/workers/woker-4.png',
-                '@/assets/img/workers/woker-5.png',
+                '@//img/workers/woker-1.png',
+                '@//img/workers/woker-2.png',
+                '@//img/workers/woker-3.png',
+                '@//img/workers/woker-4.png',
+                '@//img/workers/woker-5.png',
               ]
             ul.hero__workers
               each worker in workersList
@@ -23,6 +23,6 @@ mixin hero
           .hero__desc Делаем продукты, которые радуют не только глаз, но и ваших сейлзов
           button.hero__btn.btn(type="button" data-popup-open="discuss") Обсудить проект
     picture.hero__bg-wrap
-      source(media="(max-width:767.98px)", srcset="@/assets/img/hero/poster-mobile.png")
-      img.hero__bg(src="@/assets/img/hero/poster.png", alt="")
+      source(media="(max-width:767.98px)", srcset="@//img/hero/poster-mobile.png")
+      img.hero__bg(src="@//img/hero/poster.png", alt="")
 

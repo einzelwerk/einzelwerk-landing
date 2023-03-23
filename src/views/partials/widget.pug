@@ -1,0 +1,18 @@
+mixin widget
+  .widget
+    button.widget__record(type="button")
+    button.widget__open(type="button")
+    button.widget__close(type="button")
+      svg.widget__close-icon
+        use(xlink:href="./assets/sprite.svg#widget-close")
+    .widget__control-block
+      button.widget__small(type="button")
+        svg.widget__small-icon
+          use(xlink:href="./assets/sprite.svg#widget-close")
+      button.widget__sound(type="button")
+        svg.widget__sound-icon.widget__sound-icon_on
+          use(xlink:href="./assets/sprite.svg#widget-sound-on")
+        svg.widget__sound-icon.widget__sound-icon_off
+          use(xlink:href="./assets/sprite.svg#widget-sound-off")
+    .widget__content
+      video.widget__video(src="@/resources/video.mp4" muted loop autoplay) 

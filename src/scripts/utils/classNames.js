@@ -34,4 +34,16 @@ export const classNames = {
     active: 'fixed_active',
     dependent: 'hero',
   },
+  widget: {
+    widget: 'widget',
+    widgetClosed: 'widget_closed',
+    widgetActive: 'widget_active',
+    open: 'widget__open',
+    close: 'widget__close',
+    small: 'widget__small',
+    sound: 'widget__sound',
+    soundMuted: 'widget__sound_muted',
+    video: 'widget__video',
+    record: 'widget__record',
+  }
 };
