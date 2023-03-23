@@ -250,6 +250,18 @@ var classNames = {
     block: 'fixed',
     active: 'fixed_active',
     dependent: 'hero'
+  },
+  widget: {
+    widget: 'widget',
+    widgetClosed: 'widget_closed',
+    widgetActive: 'widget_active',
+    open: 'widget__open',
+    close: 'widget__close',
+    small: 'widget__small',
+    sound: 'widget__sound',
+    soundMuted: 'widget__sound_muted',
+    video: 'widget__video',
+    record: 'widget__record'
   }
 };
 ;// CONCATENATED MODULE: ./src/scripts/modules/initImgTabs.js
@@ -399,7 +411,61 @@ function closePopup() {
     });
   });
 }
+;// CONCATENATED MODULE: ./src/scripts/modules/widget.js
+
+function initWidget() {
+  var classWidget = classNames.widget.widget;
+  var classWidgetClosed = classNames.widget.widgetClosed;
+  var classWidgetActive = classNames.widget.widgetActive;
+  var classOpen = classNames.widget.open;
+  var classClose = classNames.widget.close;
+  var classSmall = classNames.widget.small;
+  var classSound = classNames.widget.sound;
+  var classSoundMuted = classNames.widget.soundMuted;
+  var classVideo = classNames.widget.video;
+  var classRecord = classNames.widget.record;
+  var widget = document.querySelector(".".concat(classWidget));
+  var open = widget.querySelector(".".concat(classOpen));
+  var close = widget.querySelector(".".concat(classClose));
+  var small = widget.querySelector(".".concat(classSmall));
+  var sound = widget.querySelector(".".concat(classSound));
+  var video = widget.querySelector(".".concat(classVideo));
+  var record = widget.querySelector(".".concat(classRecord));
+  close.addEventListener('click', function () {
+    widget.classList.add(classWidgetClosed);
+    video.pause();
+  });
+  open.addEventListener('click', function () {
+    widget.classList.add(classWidgetActive);
+    video.currentTime = 0;
+    video.play();
+    video.muted = false;
+    sound.classList.remove(classSoundMuted);
+  });
+  small.addEventListener('click', function () {
+    widget.classList.remove(classWidgetActive);
+    video.muted = true;
+    sound.classList.add(classSoundMuted);
+  });
+  sound.addEventListener('click', function () {
+    if (video.muted) {
+      video.muted = false;
+      sound.classList.remove(classSoundMuted);
+    } else {
+      video.muted = true;
+      sound.classList.add(classSoundMuted);
+    }
+  });
+  record.addEventListener('click', function () {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+}
 ;// CONCATENATED MODULE: ./src/scripts/app.js
+
 
 
 
@@ -417,6 +483,9 @@ window.onload = function () {
   // Popups
   openPopup();
   closePopup();
+
+  // Widget
+  initWidget();
 
   // Accordion
   new p(); // eslint-disable-line
