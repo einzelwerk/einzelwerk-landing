@@ -1,18 +1,10 @@
-extends ../layouts/main
+extends ../layouts/main-light
 
 block vars
   - const title = 'Страница не найдена';
   - const pageName = 'error-page';
 
 block content
-  include ../components/popups
-  include ../components/header
-  include ../components/footer
   include ../components/error
 
-  .overlay
-    +popup-discuss
-  +header(true)
-  main.main
-    +error
-  +footer
+  +error

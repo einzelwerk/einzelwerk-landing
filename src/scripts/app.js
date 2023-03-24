@@ -6,14 +6,19 @@ import { tooltip } from './modules/tooltip';
 import { fixed } from './modules/fixed';
 import { headerBlur, headerHide } from './vendor/header';
 import { closePopup, openPopup } from './modules/popups';
+import { initWidget } from './modules/widget';
+import { burgerMenu } from './modules/burger-menu';
+import { initSwiperSlides } from './modules/swiper';
 
 import 'normalize.css';
-import { initWidget } from './modules/widget';
 
 window.onload = () => {
   // Header
   headerBlur();
   headerHide();
+
+  // Burger Menu
+  burgerMenu();
 
   // Popups
   openPopup();
@@ -21,6 +26,9 @@ window.onload = () => {
 
   // Widget
   initWidget();
+
+  // Swiper
+  initSwiperSlides();
 
   // Accordion
   new HandyCollapse(); // eslint-disable-line

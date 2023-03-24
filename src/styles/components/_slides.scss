@@ -1,0 +1,18 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.slides {
+  &__item {
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+}

@@ -3,73 +3,77 @@
 @use '../utils/functions' as fn;
 
 .about {
-  padding: 10px 0;
-  overflow: hidden;
-  background: vars.$grayscale100;
-  @media (max-width: vars.$xl) {
-    padding: 30px 0 50px;
-  }
-
   &__container {
     display: flex;
-    gap: 32px fn.clip-max(32, 120);
+    flex-direction: column;
     align-items: center;
-    @media (max-width: vars.$xl) {
-      flex-direction: column;
-      align-items: unset;
-    }
   }
 
   &__content {
     display: flex;
-    flex: none;
     flex-direction: column;
-    gap: 214px;
-    padding: 70px 0;
-    @media (max-width: vars.$xl) {
-      gap: 32px;
-      order: 2;
-      padding: 0;
-    }
+    gap: fn.clip-min(32, 48);
+    align-items: center;
+    width: 100%;
+    max-width: 976px;
+    text-align: center;
   }
 
-  &__title {
-    max-width: 366px;
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: fn.clip-min(16, 32);
+  }
+
+  &__desc {
+    @include mix.p20;
+
+    font-weight: 400;
   }
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: fn.clip-max(24, 50) fn.clip-max(32, 110);
-    margin-top: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 20px;
+    align-items: center;
+
+    @media (max-width: vars.$md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  &__num {
-    @include mix.h2;
+    margin: -14px -7px;
+    border-radius: 15px;
   }
 
   &__name {
-    @include mix.p18;
+    @include mix.h3;
 
-    color: vars.$grayscale600;
-  }
+    position: relative;
+    z-index: 2;
+    padding: 14px 7px;
+    overflow: hidden;
+    border-radius: 48px;
 
-  &__img {
-    &-wrap {
-      width: 100%;
-      height: 100%;
-      margin-right: calc(-1 * fn.free-place() + 10px);
+    &:hover {
+      &::before {
+        transform: translate(-50%, -50%) scale(7, 1.5);
+      }
     }
 
-    width: 100%;
-    height: 100%;
-    max-height: 700px;
-    border-radius: 24px;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      width: 50px;
+      height: 50px;
+      background: vars.$lime;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.65s ease-in-out;
+      content: '';
+    }
   }
 }

@@ -15,24 +15,90 @@
     }
   }
 
-  &__link {
+  &__item {
     position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     background: linear-gradient(180deg, rgba(vars.$grayscale900, 0) 50.4%, rgba(vars.$grayscale900, 0.6) 100%);
     border-radius: 16px;
+    transition: border-radius 0.75s ease-in-out;
+
+    &:hover,
+    &:focus-visible,
+    &:focus-within {
+      border-radius: 48px;
+
+      .cases {
+        &__img,
+        &__more {
+          border-radius: 48px;
+        }
+
+        &__more {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 3;
+      background: linear-gradient(180deg, rgba(vars.$grayscale900, 0) 50.4%, rgba(vars.$grayscale900, 0.6) 100%);
+      content: '';
+      inset: 0;
+    }
+
+    & > * {
+      position: relative;
+    }
+  }
+
+  &__more {
+    @include mix.p18;
+
+    position: absolute;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(vars.$grayscale900, 0.8);
+    border-radius: 16px;
+    visibility: hidden;
+    opacity: 0;
+    backdrop-filter: blur(4px);
+    transition: border-radius 0.75s ease-in-out, opacity 0.75s ease-in-out, visibility 0.75s ease-in-out;
+    inset: 0;
+
+    &-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      &_lime {
+        color: vars.$lime;
+      }
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__img {
     border-radius: 16px;
+    transition: border-radius 0.75s ease-in-out;
   }
 
   &__text-block {
     position: absolute;
     bottom: fn.clip-min(16, 30);
     left: fn.clip-min(16, 30);
-    z-index: 2;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     gap: fn.clip-min(4, 16);

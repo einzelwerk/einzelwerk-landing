@@ -1,32 +1,14 @@
-mixin about
-  section#about.about
+mixin about 
+  section.about.section
     .about__container.container 
       .about__content
-        h2.about__title.section__title Наша студия в цифрах
-        - 
-          const aboutList = [
-            {
-              num: '2',
-              name: 'Награды',
-            },
-            {
-              num: '16',
-              name: 'Человек в команде',
-            },
-            {
-              num: '15',
-              name: 'Лет в бизнесе',
-            },
-              {
-              num: '85',
-              name: 'Сайтов запущено',
-            },
-          ]
-        ul.about__list
-          each about in aboutList
-            li.about__item 
-              span.about__num=about.num 
-              span.about__name=about.name 
-      .about__img-wrap 
-        img.about__img(src="@//img/about.png", alt="")
-        
+        .about__text-block
+          h2.about__title.section__title Einzelwerk  - первая немецкая диджитал студия в России и СНГ 
+          p.about__desc Объединяем лучшие традиционные немецкие ценности и передовые технологии для создания высококачественных сайтов под ключ. Мы гордимся своим немецким подходом к деталям и страстью к идеальному исполнению каждого проекта.
+        ul.about__list 
+          li.about__item
+            h3.about__name Пунктуальность
+          li.about__item
+            h3.about__name Точность 
+          li.about__item
+            h3.about__name Надежность

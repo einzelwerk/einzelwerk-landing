@@ -5,36 +5,25 @@ block vars
   - const pageName = 'home-page';
 
 block content
-  include ../components/popups
-  include ../components/header
-  include ../components/footer
-  include ../partials/fixed
-  include ../partials/widget
   include ../components/hero
-  include ../components/benefits
   include ../components/about
+  include ../components/slides
+  include ../components/benefits
+  include ../components/studia
   include ../components/prices
   include ../components/cases
   include ../components/process
   include ../components/contacts
   include ../components/additional
 
-  .overlay
-    +popup-discuss
-    +popup-landing
-    +popup-site
-    +popup-ecommerce
-  +fixed
-  +widget
-  +header
-  main.main
-    +hero
-    +benefits
-    +about
-    +prices
-    +cases
-    +process
-    +contacts
-    +additional
-  +footer
+  +hero
+  +about
+  +slides
+  +benefits
+  +studia
+  +prices
+  +cases
+  +process
+  +contacts
+  +additional
 

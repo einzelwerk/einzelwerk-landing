@@ -42,6 +42,14 @@
   line-height: fn.clip-min(24, 30);
 }
 
+@mixin p20 {
+  font-weight: 500;
+  font-size: fn.clip-min(16, 20);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: fn.clip-min(24, 30);
+}
+
 @mixin p18 {
   font-weight: 500;
   font-size: fn.clip-min(14, 18);

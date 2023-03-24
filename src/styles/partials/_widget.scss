@@ -17,9 +17,14 @@
   transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, opacity 0.3s ease-in-out,
     visibility 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
 
+  @media(max-width: vars.$md) {
+    bottom: 95px;
+  }
+
   &:not(.widget_active) {
     &:hover,
-    &:focus-within {
+    &:focus-within,
+    &.widget_active {
       border-color: transparent;
       transform: scale(1.1);
 
@@ -84,6 +89,7 @@
     &-icon {
       width: 12px;
       height: 12px;
+      color: vars.$grayscale0;
     }
   }
 
@@ -122,6 +128,7 @@
     &-icon {
       width: 16px;
       height: 16px;
+      color: vars.$grayscale0;
     }
   }
 

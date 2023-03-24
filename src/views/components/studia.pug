@@ -1,0 +1,32 @@
+mixin studia
+  section#studia.studia
+    .studia__container.container 
+      .studia__content
+        h2.studia__title.section__title Наша студия в цифрах
+        - 
+          const studiaList = [
+            {
+              num: '2',
+              name: 'Награды',
+            },
+            {
+              num: '16',
+              name: 'Человек в команде',
+            },
+            {
+              num: '15',
+              name: 'Лет в бизнесе',
+            },
+              {
+              num: '85',
+              name: 'Сайтов запущено',
+            },
+          ]
+        ul.studia__list
+          each studia in studiaList
+            li.studia__item 
+              span.studia__num=studia.num 
+              span.studia__name=studia.name 
+      .studia__img-wrap 
+        img.studia__img(src="@//img/studia.png", alt="")
+        

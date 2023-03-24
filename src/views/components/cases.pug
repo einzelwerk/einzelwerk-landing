@@ -6,41 +6,50 @@ mixin cases
         -
           const casesList = [
             {
-              src: '@//img/cases/case-1.jpg',
+              src: '@/img/cases/case-1.jpg',
               name: 'Printegy',
               type: 'Сайт',
             },
             {
-              src: '@//img/cases/case-2.jpg',
+              src: '@/img/cases/case-2.jpg',
               name: 'bulthaup',
               type: 'Сайт',
             },
             {
-              src: '@//img/cases/case-3.jpg',
+              src: '@/img/cases/case-3.jpg',
               name: 'Duesseldorf Business School',
               type: 'Сайт',
             },
             {
-              src: '@//img/cases/case-4.jpg',
+              src: '@/img/cases/case-4.jpg',
               name: 'Kids Fun Palace',
               type: 'Сайт',
             },
             {
-              src: '@//img/cases/case-5.jpg',
+              src: '@/img/cases/case-5.jpg',
               name: 'Stena Glovis',
               type: 'Сайт',
             },
             {
-              src: '@//img/cases/case-6.jpg',
+              src: '@/img/cases/case-6.jpg',
               name: 'KFP Architekten',
               type: 'Сайт',
             },
           ];
         each caseItem in casesList
-          li.cases__item 
-            a.cases__link(href="#") 
-              picture.cases__img-wrap.wh100
-                img.cases__img.wh100(src=caseItem.src, alt="")
-              .cases__text-block 
-                h3.cases__name=caseItem.name 
-                span.cases__type=caseItem.type
+          li.cases__item(tabindex="0")
+            .cases__more
+              a.cases__more-item.cases__more-item_lime(href="") 
+                | Перейти на сайт
+                svg.cases__more-icon
+                  use(xlink:href="./assets/sprite.svg#goto")
+              a.cases__more-item(href="#") 
+                | Смотреть на Behance
+                svg.cases__more-icon
+                  use(xlink:href="./assets/sprite.svg#behance")
+
+            picture.cases__img-wrap.wh100
+              img.cases__img.wh100(src=caseItem.src, alt="")
+            .cases__text-block 
+              h3.cases__name=caseItem.name 
+              span.cases__type=caseItem.type

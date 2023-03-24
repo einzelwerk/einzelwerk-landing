@@ -18,9 +18,23 @@ mixin header(isDark)
           li.header__nav-item 
             a.header__nav-link.link-underline(href="#contacts") Контакты
       .header__contacts
-        a.header__contacts-tel(href="+79119892442") +7 911 989-24-42
-        button.header__contacts-discuss(type="button" data-popup-open="discuss") Заполнить бриф
-      button.header__burger(type="button")
-        span.header__burger-item
-        span.header__burger-item
-        span.header__burger-item
+        a.header__contacts-tel.link-underline(href="+79119892442") +7 911 989-24-42
+        button.header__contacts-discuss.link-underline(type="button" data-popup-open="discuss") Заполнить бриф
+      .header__menu-block
+        button.header__burger(type="button")
+          span.header__burger-item
+          span.header__burger-item
+          span.header__burger-item
+        .header__menu
+          nav.header__menu-nav
+            ul.header__nav-list 
+              li.header__nav-item 
+                a.header__nav-link.link-underline(href="#benefits") Почему
+              li.header__nav-item 
+                a.header__nav-link.link-underline(href="#prices") Цены
+              li.header__nav-item 
+                a.header__nav-link.link-underline(href="#cases") Кейсы
+              li.header__nav-item 
+                a.header__nav-link.link-underline(href="#process") Процесс
+              li.header__nav-item 
+                a.header__nav-link.link-underline(href="#contacts") Контакты

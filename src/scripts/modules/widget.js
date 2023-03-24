@@ -4,6 +4,7 @@ export function initWidget() {
   const classWidget = classNames.widget.widget;
   const classWidgetClosed = classNames.widget.widgetClosed;
   const classWidgetActive = classNames.widget.widgetActive;
+  const classWidgetHover = classNames.widget.widgetHover;
   const classOpen = classNames.widget.open;
   const classClose = classNames.widget.close;
   const classSmall = classNames.widget.small;
@@ -20,12 +21,23 @@ export function initWidget() {
   const video = widget.querySelector(`.${classVideo}`);
   const record = widget.querySelector(`.${classRecord}`);
 
+  function handlerSmall() {
+    widget.classList.remove(classWidgetHover);
+    widget.classList.remove(classWidgetActive);
+    video.muted = true;
+    sound.classList.add(classSoundMuted);
+  }
+
   close.addEventListener('click', () => {
     widget.classList.add(classWidgetClosed);
     video.pause();
   });
 
   open.addEventListener('click', () => {
+    if (!widget.classList.contains(classWidgetHover)) {
+      widget.classList.add(classWidgetHover);
+      return;
+    }
     widget.classList.add(classWidgetActive);
     video.currentTime = 0;
     video.play();
@@ -33,11 +45,7 @@ export function initWidget() {
     sound.classList.remove(classSoundMuted);
   });
 
-  small.addEventListener('click', () => {
-    widget.classList.remove(classWidgetActive);
-    video.muted = true;
-    sound.classList.add(classSoundMuted);
-  });
+  small.addEventListener('click', handlerSmall);
 
   sound.addEventListener('click', () => {
     if (video.muted) {
@@ -54,6 +62,14 @@ export function initWidget() {
       video.play();
     } else {
       video.pause();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!(widget.classList.contains(classWidgetActive) || widget.classList.contains(classWidgetHover))) return;
+    
+    if (!widget.contains(e.target)) {
+      handlerSmall();
     }
   });
 }

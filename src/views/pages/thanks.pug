@@ -1,18 +1,10 @@
-extends ../layouts/main
+extends ../layouts/main-light
 
 block vars
   - const title = 'Cпасибо за заявку';
   - const pageName = 'thanks-page';
 
 block content
-  include ../components/popups
-  include ../components/header
-  include ../components/footer
   include ../components/thanks
 
-  .overlay
-    +popup-discuss
-  +header(true)
-  main.main
-    +thanks
-  +footer
+  +thanks

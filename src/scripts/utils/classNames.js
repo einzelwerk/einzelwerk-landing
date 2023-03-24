@@ -38,6 +38,7 @@ export const classNames = {
     widget: 'widget',
     widgetClosed: 'widget_closed',
     widgetActive: 'widget_active',
+    widgetHover: 'widget_hover',
     open: 'widget__open',
     close: 'widget__close',
     small: 'widget__small',
@@ -45,5 +46,16 @@ export const classNames = {
     soundMuted: 'widget__sound_muted',
     video: 'widget__video',
     record: 'widget__record',
+  },
+  burgerMenu: {
+    block: 'header__menu-block',
+    burger: 'header__burger',
+    burgerActive: 'header__burger_active',
+    menu: 'header__menu',
+    menuActive: 'header__menu_active',
+    menuContent: 'header__menu__content',
+  },
+  swiper: {
+    slides: 'slides__slider'
   }
 };
