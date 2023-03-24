@@ -13,107 +13,263 @@
   <body>
     <div class="app thanks-page">
       <div class="overlay">
-              <div class="popup" data-popup="discuss">
-                <button class="popup__close" type="button" data-popup-close>
-                  <svg class="popup__close-icon">
-                    <use xlink:href="./assets/sprite.svg#close"></use>
-                  </svg>
-                </button>
-                <div class="popup__content"> 
-                  <div class="popup__top">
-                    <h2 class="popup__title">Обсудить проект</h2>
-                    <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+        <div class="popup" data-popup="discuss">
+          <button class="popup__close" type="button" data-popup-close="data-popup-close">
+            <svg class="popup__close-icon">
+              <use xlink:href="./assets/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content"> 
+            <div class="popup__top">
+              <h2 class="popup__title">Обсудить проект</h2>
+              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+            </div>
+            <form class="popup__form" action="#"> 
+              <div class="popup__field-block"> 
+                <div class="input">
+                  <label class="visually-hidden" for="name"> </label>
+                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
+                </div>
+                <div class="contacts__field-row">
+                  <div class="input">
+                    <label class="visually-hidden" for="email"> </label>
+                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
                   </div>
-                  <form class="popup__form" action="#"> 
-                    <div class="popup__field-block"> 
-                            <div class="input">
-                              <label class="visually-hidden" for="name"> </label>
-                              <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required autocomplete="off">
-                            </div>
-                      <div class="contacts__field-row">
-                              <div class="input">
-                                <label class="visually-hidden" for="email"> </label>
-                                <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required autocomplete="off">
-                              </div>
-                              <div class="input">
-                                <label class="visually-hidden" for="tel"> </label>
-                                <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required autocomplete="off">
-                              </div>
-                      </div>
-                            <div class="input">
-                              <label class="visually-hidden" for="message"> </label>
-                              <textarea class="input__field" id="message" name="message" placeholder="Сообщение" rows="1" autocomplete="off"></textarea>
-                            </div>
-                    </div>
-                    <div class="popup__submit-block"> 
-                      <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
-                         Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
-                    </div>
-                  </form>
+                  <div class="input">
+                    <label class="visually-hidden" for="tel"> </label>
+                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/>
+                  </div>
+                </div>
+                <div class="input">
+                  <label class="visually-hidden" for="message"> </label>
+                  <textarea class="input__field" id="message" name="message" placeholder="Сообщение" rows="1" autocomplete="off"></textarea>
                 </div>
               </div>
+              <div class="popup__submit-block"> 
+                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="popup" data-popup="landing">
+          <button class="popup__close" type="button" data-popup-close="data-popup-close">
+            <svg class="popup__close-icon">
+              <use xlink:href="./assets/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content"> 
+            <div class="popup__top">
+              <h2 class="popup__title">Заявка на лендинг</h2>
+              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+            </div>
+            <form class="popup__form" action="#"> 
+              <div class="popup__field-block"> 
+                <div class="input">
+                  <label class="visually-hidden" for="name"> </label>
+                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
+                </div>
+                <div class="contacts__field-row">
+                  <div class="input">
+                    <label class="visually-hidden" for="email"> </label>
+                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
+                  </div>
+                  <div class="input">
+                    <label class="visually-hidden" for="tel"> </label>
+                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__submit-block"> 
+                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="popup" data-popup="site">
+          <button class="popup__close" type="button" data-popup-close="data-popup-close">
+            <svg class="popup__close-icon">
+              <use xlink:href="./assets/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content"> 
+            <div class="popup__top">
+              <h2 class="popup__title">Заявка на сайт</h2>
+              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+            </div>
+            <form class="popup__form" action="#"> 
+              <div class="popup__field-block"> 
+                <div class="input">
+                  <label class="visually-hidden" for="name"> </label>
+                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
+                </div>
+                <div class="contacts__field-row">
+                  <div class="input">
+                    <label class="visually-hidden" for="email"> </label>
+                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
+                  </div>
+                  <div class="input">
+                    <label class="visually-hidden" for="tel"> </label>
+                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__submit-block"> 
+                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="popup" data-popup="ecommerce">
+          <button class="popup__close" type="button" data-popup-close="data-popup-close">
+            <svg class="popup__close-icon">
+              <use xlink:href="./assets/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content"> 
+            <div class="popup__top">
+              <h2 class="popup__title">Заявка на E-commerce</h2>
+              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+            </div>
+            <form class="popup__form" action="#"> 
+              <div class="popup__field-block"> 
+                <div class="input">
+                  <label class="visually-hidden" for="name"> </label>
+                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
+                </div>
+                <div class="contacts__field-row">
+                  <div class="input">
+                    <label class="visually-hidden" for="email"> </label>
+                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
+                  </div>
+                  <div class="input">
+                    <label class="visually-hidden" for="tel"> </label>
+                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__submit-block"> 
+                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-            <header class="header header_dark" id="header">
-              <div class="header__container container"><a class="header__logo" href="#hero"> 
-                  <svg class="header__logo-icon">
-                    <use xlink:href="./assets/sprite.svg#logo"></use>
-                  </svg></a>
-                <nav class="header__nav"> 
-                  <ul class="header__nav-list"> 
-                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#benefits">Почему</a></li>
-                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#prices">Цены</a></li>
-                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#cases">Кейсы</a></li>
-                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#process">Процесс</a></li>
-                    <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#contacts">Контакты</a></li>
-                  </ul>
-                </nav>
-                <div class="header__contacts"><a class="header__contacts-tel" href="+79119892442">+7 911 989-24-42</a>
-                  <button class="header__contacts-discuss" type="button" data-popup-open="discuss">Заполнить бриф</button>
-                </div>
-                <button class="header__burger" type="button"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></button>
-              </div>
-            </header>
+      <div class="fixed"> 
+        <div class="fixed__container container"> 
+          <button class="fixed__btn btn" type="button" data-popup-open="discuss">Оставить заявку</button><a class="btn-social" href="#"> 
+            <svg class="btn-social__icon">
+              <use xlink:href="./assets/sprite.svg#telegram"></use>
+            </svg></a><a class="btn-social" href="#"> 
+            <svg class="btn-social__icon">
+              <use xlink:href="./assets/sprite.svg#whatsapp"></use>
+            </svg></a>
+        </div>
+      </div>
+      <div class="widget">
+        <button class="widget__record" type="button"></button>
+        <button class="widget__open" type="button"></button>
+        <button class="widget__close" type="button">
+          <svg class="widget__close-icon">
+            <use xlink:href="./assets/sprite.svg#widget-close"></use>
+          </svg>
+        </button>
+        <div class="widget__control-block">
+          <button class="widget__small" type="button">
+            <svg class="widget__small-icon">
+              <use xlink:href="./assets/sprite.svg#widget-close"></use>
+            </svg>
+          </button>
+          <button class="widget__sound" type="button">
+            <svg class="widget__sound-icon widget__sound-icon_on">
+              <use xlink:href="./assets/sprite.svg#widget-sound-on"></use>
+            </svg>
+            <svg class="widget__sound-icon widget__sound-icon_off">
+              <use xlink:href="./assets/sprite.svg#widget-sound-off"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="widget__content">
+          <video class="widget__video" src="./assets/resources/video.mp4" muted="muted" loop="loop" autoplay="autoplay"> </video>
+        </div>
+      </div>
+      <header class="header header_dark" id="header">
+        <div class="header__container container"><a class="header__logo" href="#hero"> 
+            <svg class="header__logo-icon">
+              <use xlink:href="./assets/sprite.svg#logo"></use>
+            </svg></a>
+          <nav class="header__nav"> 
+            <ul class="header__nav-list"> 
+              <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#benefits">Почему</a></li>
+              <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#prices">Цены</a></li>
+              <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#cases">Кейсы</a></li>
+              <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#process">Процесс</a></li>
+              <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header__contacts"><a class="header__contacts-tel link-underline" href="+79119892442">+7 911 989-24-42</a>
+            <button class="header__contacts-discuss link-underline" type="button" data-popup-open="discuss">Заполнить бриф</button>
+          </div>
+          <div class="header__menu-block">
+            <button class="header__burger" type="button"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></button>
+            <div class="header__menu">
+              <nav class="header__menu-nav">
+                <ul class="header__nav-list"> 
+                  <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#benefits">Почему</a></li>
+                  <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#prices">Цены</a></li>
+                  <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#cases">Кейсы</a></li>
+                  <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#process">Процесс</a></li>
+                  <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#contacts">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
       <main class="main">
-              <section class="single first-section">
-                <div class="single__container container">
-                  <div class="single__content">
-                    <h1 class="single__title">Класс, спасибо за заявочку!</h1>
-                    <div class="single__link-block"><a class="single__link btn" href="#">На главную</a><a class="btn-social" href="#"> 
-                        <svg class="btn-social__icon">
-                          <use xlink:href="./assets/sprite.svg#telegram"></use>
-                        </svg></a><a class="btn-social" href="#"> 
-                        <svg class="btn-social__icon">
-                          <use xlink:href="./assets/sprite.svg#whatsapp"></use>
-                        </svg></a></div>
+                <section class="single first-section">
+                  <div class="single__container container">
+                    <div class="single__content">
+                      <h1 class="single__title">Класс, спасибо за заявочку!</h1>
+                      <div class="single__link-block"><a class="single__link btn" href="#">На главную</a><a class="btn-social" href="#"> 
+                          <svg class="btn-social__icon">
+                            <use xlink:href="./assets/sprite.svg#telegram"></use>
+                          </svg></a><a class="btn-social" href="#"> 
+                          <svg class="btn-social__icon">
+                            <use xlink:href="./assets/sprite.svg#whatsapp"></use>
+                          </svg></a></div>
+                    </div>
                   </div>
-                </div>
-              </section>
+                </section>
       </main>
-            <footer class="footer" id="footer">
-              <div class="footer__container container"> 
-                <div class="footer__top"> <a class="footer__logo" href="#hero"> 
-                    <svg class="footer__logo-icon">
-                      <use xlink:href="./assets/sprite.svg#logo"></use>
-                    </svg></a>
-                  <div class="footer__contacts">
-                    <div class="footer__contacts-block"> <strong class="footer__contacts-title">Соцсети</strong>
-                      <ul class="footer__contacts-list"> 
-                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">Behance</a></li>
-                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">Telegram</a></li>
-                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="#">WhatsApp</a></li>
-                      </ul>
-                    </div>
-                    <div class="footer__contacts-block"> <strong class="footer__contacts-title">Контакты</strong>
-                      <ul class="footer__contacts-list"> 
-                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="+79119892442">+7 911 989-24-42</a></li>
-                        <li class="footer__contacts-item"><a class="footer__contacts-link" href="hi@einzelwerk.ru">hi@einzelwerk.ru</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="footer__bottom"><span class="footer__rights">Все права защищены © Einzelwerk</span><a class="footer__agreement" href="#">Политика конфиденциальности</a></div>
+      <footer class="footer" id="footer">
+        <div class="footer__container container"> 
+          <div class="footer__top"> <a class="footer__logo" href="#hero"> 
+              <svg class="footer__logo-icon">
+                <use xlink:href="./assets/sprite.svg#logo"></use>
+              </svg></a>
+            <div class="footer__contacts">
+              <div class="footer__contacts-block"> <strong class="footer__contacts-title">Соцсети</strong>
+                <ul class="footer__contacts-list"> 
+                  <li class="footer__contacts-item"><a class="footer__contacts-link link-underline" href="#">Behance</a></li>
+                  <li class="footer__contacts-item"><a class="footer__contacts-link link-underline" href="#">Telegram</a></li>
+                  <li class="footer__contacts-item"><a class="footer__contacts-link link-underline" href="#">WhatsApp</a></li>
+                </ul>
               </div>
-            </footer>
+              <div class="footer__contacts-block"> <strong class="footer__contacts-title">Контакты</strong>
+                <ul class="footer__contacts-list"> 
+                  <li class="footer__contacts-item"><a class="footer__contacts-link link-underline" href="+79119892442">+7 911 989-24-42</a></li>
+                  <li class="footer__contacts-item"><a class="footer__contacts-link link-underline" href="hi@einzelwerk.ru">hi@einzelwerk.ru</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom"><span class="footer__rights">Все права защищены © Einzelwerk</span><a class="footer__agreement link-underline" href="#">Политика конфиденциальности</a></div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
