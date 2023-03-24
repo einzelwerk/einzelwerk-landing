@@ -34,7 +34,6 @@
     vertical-align: middle;
     border-bottom: 1px solid rgba(vars.$grayscale900, 0.2);
     transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    resize: vertical;
 
     &::placeholder {
       color: vars.$grayscale400;

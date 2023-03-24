@@ -1,19 +1,22 @@
 mixin slides
   section.slides
-    .slides__slider.swiper
-      ul.swiper-wrapper
-        li.swiper-slide
-          .slides__item
-            img.slides__img(src="@/img/slides/slide-1.jpg" alt="")
-        li.swiper-slide
-          .slides__item
-            img.slides__img(src="@/img/slides/slide-2.jpg" alt="")
-        li.swiper-slide
-          .slides__item
-            img.slides__img(src="@/img/slides/slide-3.jpg" alt="")
-        li.swiper-slide
-          .slides__item
-            img.slides__img(src="@/img/slides/slide-4.jpg" alt="")
-        li.swiper-slide
-          .slides__item
-            img.slides__img(src="@/img/slides/slide-5.jpg" alt="")
+    .glide.slides__slider
+      .glide__track(data-glide-el="track")
+        ul.glide__slides
+          li.glide__slide
+            .slides__item
+              img.slides__img(src="@/img/slides/slide-1.jpg" alt="")
+          li.glide__slide
+            .slides__item
+              img.slides__img(src="@/img/slides/slide-2.jpg" alt="")
+          li.glide__slide
+            .slides__item
+              img.slides__img(src="@/img/slides/slide-3.jpg" alt="")
+          li.glide__slide
+            .slides__item
+              img.slides__img(src="@/img/slides/slide-4.jpg" alt="")
+          li.glide__slide
+            .slides__item
+              img.slides__img(src="@/img/slides/slide-5.jpg" alt="")
+
+

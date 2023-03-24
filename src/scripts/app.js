@@ -8,7 +8,7 @@ import { headerBlur, headerHide } from './vendor/header';
 import { closePopup, openPopup } from './modules/popups';
 import { initWidget } from './modules/widget';
 import { burgerMenu } from './modules/burger-menu';
-import { initSwiperSlides } from './modules/swiper';
+import { initSliderSlides } from './modules/slider';
 
 import 'normalize.css';
 
@@ -27,8 +27,8 @@ window.onload = () => {
   // Widget
   initWidget();
 
-  // Swiper
-  initSwiperSlides();
+  // Slider
+  initSliderSlides();
 
   // Accordion
   new HandyCollapse(); // eslint-disable-line

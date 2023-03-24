@@ -39,15 +39,14 @@ mixin cases
         each caseItem in casesList
           li.cases__item(tabindex="0")
             .cases__more
-              a.cases__more-item.cases__more-item_lime(href="") 
+              a.cases__more-link(href="#" target="_blank") 
                 | Перейти на сайт
                 svg.cases__more-icon
                   use(xlink:href="./assets/sprite.svg#goto")
-              a.cases__more-item(href="#") 
+              a.cases__more-link(href="#" target="_blank") 
                 | Смотреть на Behance
                 svg.cases__more-icon
                   use(xlink:href="./assets/sprite.svg#behance")
-
             picture.cases__img-wrap.wh100
               img.cases__img.wh100(src=caseItem.src, alt="")
             .cases__text-block 

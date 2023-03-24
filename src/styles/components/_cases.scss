@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
     background: linear-gradient(180deg, rgba(vars.$grayscale900, 0) 50.4%, rgba(vars.$grayscale900, 0.6) 100%);
     border-radius: 16px;
     transition: border-radius 0.75s ease-in-out;
@@ -59,26 +60,33 @@
     @include mix.p18;
 
     position: absolute;
+    top: 50%;
+    left: 50%;
     z-index: 8;
     display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: center;
     justify-content: center;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
     background: rgba(vars.$grayscale900, 0.8);
     border-radius: 16px;
+    transform: translate(-50%, -50%);
     visibility: hidden;
     opacity: 0;
     backdrop-filter: blur(4px);
     transition: border-radius 0.75s ease-in-out, opacity 0.75s ease-in-out, visibility 0.75s ease-in-out;
-    inset: 0;
 
-    &-item {
+    &-link {
       display: flex;
       gap: 12px;
       align-items: center;
+      transition: color 0.3s ease-in-out;
 
-      &_lime {
+      &:hover,
+      &:focus-visible,
+      &:active {
         color: vars.$lime;
       }
     }
