@@ -438,6 +438,7 @@ function initWidget() {
   var classVideo = classNames.widget.video;
   var classRecord = classNames.widget.record;
   var widget = document.querySelector(".".concat(classWidget));
+  if (!widget) return;
   var open = widget.querySelector(".".concat(classOpen));
   var close = widget.querySelector(".".concat(classClose));
   var small = widget.querySelector(".".concat(classSmall));
