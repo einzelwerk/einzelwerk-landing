@@ -14,6 +14,9 @@ export function initWidget() {
   const classRecord = classNames.widget.record;
 
   const widget = document.querySelector(`.${classWidget}`);
+
+  if(!widget) return
+
   const open = widget.querySelector(`.${classOpen}`);
   const close = widget.querySelector(`.${classClose}`);
   const small = widget.querySelector(`.${classSmall}`);
