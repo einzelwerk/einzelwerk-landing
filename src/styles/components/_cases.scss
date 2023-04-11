@@ -25,34 +25,67 @@
     border-radius: 16px;
     transition: border-radius 0.75s ease-in-out;
 
-    &:hover,
-    &:focus-visible,
-    &:focus-within {
-      border-radius: 48px;
-
-      .cases {
-        &__img,
-        &__more {
-          border-radius: 48px;
-        }
-
-        &__more {
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-    }
-
     &::before {
       position: absolute;
-      z-index: 3;
+      z-index: 2;
       background: linear-gradient(180deg, rgba(vars.$grayscale900, 0) 50.4%, rgba(vars.$grayscale900, 0.6) 100%);
       content: '';
       inset: 0;
     }
 
+    &:not(&_soon) {
+      &:hover,
+      &:focus-visible,
+      &:focus-within {
+        border-radius: 48px;
+
+        .cases {
+          &__img,
+          &__more {
+            border-radius: 48px;
+          }
+
+          &__more {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &_soon {
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        background: rgba(#11120c7a, 0.48);
+        border-radius: 16px;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(4px);
+        content: '';
+      }
+    }
+
     & > * {
       position: relative;
+    }
+  }
+
+  &__soon {
+    position: absolute;
+    top: fn.clip-min(12, 16);
+    right: fn.clip-min(12, 16);
+    z-index: 9;
+    padding: 8px 12px;
+    color: vars.$grayscale900;
+    background: #fff;
+    border-radius: 16px;
+    @include mix.p16;
+    @media (max-width: vars.$md) {
+      @include mix.p14;
     }
   }
 
@@ -62,7 +95,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 8;
+    z-index: 7;
     display: flex;
     flex-direction: column;
     gap: 12px;

@@ -3,10 +3,14 @@
 @use '../utils/functions' as fn;
 
 .input {
-  @include mix.p16;
+  @include mix.p14;
 
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   width: 100%;
   font-weight: 400;
+  text-align: left;
 
   &_dark {
     .input {
@@ -27,7 +31,19 @@
     }
   }
 
+  &_error {
+    color: vars.$red;
+
+    .input {
+      &__field {
+        border-color: vars.$red;
+      }
+    }
+  }
+
   &__field {
+    @include mix.p16;
+
     width: 100%;
     padding-bottom: 15px;
     color: vars.$grayscale900;

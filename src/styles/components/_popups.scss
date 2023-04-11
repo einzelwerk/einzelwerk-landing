@@ -121,4 +121,33 @@
       color: vars.$grayscale900;
     }
   }
+
+  &__select {
+    text-align: left;
+
+    .select {
+      &__head {
+        padding-bottom: 15px;
+        border: none;
+      }
+
+      &__body {
+        color: vars.$grayscale300;
+        background: vars.$grayscale0;
+        border-color: vars.$grayscale300;
+      }
+
+      &__option_body {
+        padding: 5px 16px;
+        border: none;
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+          color: vars.$grayscale900;
+          background: none;
+        }
+      }
+    }
+  }
 }

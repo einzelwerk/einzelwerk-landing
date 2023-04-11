@@ -9,6 +9,14 @@
     align-items: center;
   }
 
+  &__title {
+    &_flag {
+      width: fn.clip-min(32, 50);
+      height: fn.clip-min(24, 40);
+      border-radius: 8px;
+    }
+  }
+
   &__content {
     display: flex;
     flex-direction: column;

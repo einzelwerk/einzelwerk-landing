@@ -49,7 +49,7 @@ mixin prices
             type: 'site'
           },
           {
-            class: 'prices__item_dark',
+            class: 'prices__item_dark prices__item_soon',
             name: 'E-commerce',
             list: [
               'Анализ ниши и конкурентов',
@@ -68,7 +68,7 @@ mixin prices
             type: 'ecommerce'
           },
         ];
-      ul.prices__list
+      ul.prices__list.prices__content
         each service in pricesList
           li.prices__item(class=service.class)
             .prices__name-block
@@ -88,7 +88,7 @@ mixin prices
                 span.prices__payment=service.payment
               span.prices__duration=service.duration
               button.prices__order.btn(type="button" data-popup-open=service.type)=service.btn
-      ul.prices__acc
+      ul.prices__acc.prices__content
         each service, idx in pricesList
           li.prices__item(class=service.class)
             button.prices__acc-btn-full(type="button" data-hc-control=`price-${idx}`)

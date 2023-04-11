@@ -13,9 +13,9 @@ export const classNames = {
   toggle: {
     block: 'toggle',
     active: 'toggle_active',
-    prices: 'prices__toggle',
     pricesDependent: 'prices',
     pricesDependentActive: 'prices_discount',
+    pricesList: 'prices__content',
   },
   tooltip: {
     block: 'tooltip',
@@ -56,6 +56,6 @@ export const classNames = {
     menuContent: 'header__menu__content',
   },
   swiper: {
-    slides: 'slides__slider'
-  }
+    slides: 'slides__slider',
+  },
 };

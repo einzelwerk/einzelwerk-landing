@@ -7,37 +7,58 @@ mixin cases
           const casesList = [
             {
               src: '@/img/cases/case-1.jpg',
-              name: 'Printegy',
+              name: 'bulthaup',
               type: 'Сайт',
+              isCompleted: true,
             },
             {
               src: '@/img/cases/case-2.jpg',
-              name: 'bulthaup',
+              name: 'Printegy',
               type: 'Сайт',
+              isCompleted: true,
             },
             {
               src: '@/img/cases/case-3.jpg',
-              name: 'Duesseldorf Business School',
-              type: 'Сайт',
+              name: 'Kids Fun Palace',
+              type: 'Лендинг, брендинг',
+              isCompleted: true,
             },
             {
               src: '@/img/cases/case-4.jpg',
-              name: 'Kids Fun Palace',
+              name: 'Duesseldorf Business School',
               type: 'Сайт',
+              isCompleted: true,
             },
             {
               src: '@/img/cases/case-5.jpg',
-              name: 'Stena Glovis',
-              type: 'Сайт',
+              name: 'AVB Team',
+              type: 'UX/UI дизайн',
+              isCompleted: true,
             },
             {
               src: '@/img/cases/case-6.jpg',
+              name: 'Stena Glovis',
+              type: 'Сайт',
+              isCompleted: false,
+            },
+            {
+              src: '@/img/cases/case-7.jpg',
+              name: 'WaildWorld',
+              type: 'Портал',
+              isCompleted: false,
+            },
+            {
+              src: '@/img/cases/case-8.jpg',
               name: 'KFP Architekten',
               type: 'Сайт',
+              isCompleted: false,
             },
           ];
         each caseItem in casesList
-          li.cases__item(tabindex="0")
+          - const classCompleted = caseItem.isCompleted ? '' : 'cases__item_soon'
+          li.cases__item(class=classCompleted tabindex="0")
+            if !caseItem.isCompleted
+              span.cases__soon Кейс в разработке
             .cases__more
               a.cases__more-link(href="#" target="_blank") 
                 | Перейти на сайт

@@ -1,4 +1,5 @@
 import { classNames } from '../utils/classNames';
+import { getScrollbarWidth } from './scrollBarWidth';
 
 export function tooltip() {
   const classTooltip = classNames.tooltip.block;
@@ -12,9 +13,9 @@ export function tooltip() {
 
     const rect = tooltipBody.getBoundingClientRect();
     if (rect.right > window.innerWidth) {
-      tooltipBody.style.marginLeft = `${-1 * (rect.right - window.innerWidth) - 5}px`;
+      tooltipBody.style.marginLeft = `${-1 * (rect.right - window.innerWidth) - (getScrollbarWidth() + 5)}px`;
     } else if (rect.left < 0) {
-      tooltipBody.style.marginLeft = `${-1 * rect.left + 5}px`;
+      tooltipBody.style.marginLeft = `${-1 * rect.left + (getScrollbarWidth() + 5)}px`;
     }
 
     tooltipBtn.addEventListener('click', () => {

@@ -9,7 +9,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 20;
+  z-index: 60;
   display: flex;
   align-items: center;
   height: 80px;
@@ -18,8 +18,7 @@
 
   @media (max-width: vars.$md) {
     height: 64px;
-    font-size: 12px;
-    line-height: 18px;
+    @include mix.p12;
   }
 
   &_dark {
@@ -65,6 +64,10 @@
     }
 
     &-list {
+      @media (max-width: vars.$lg) {
+        @include mix.p16;
+      }
+
       display: flex;
       gap: fn.clip-min(10, 24);
       align-items: center;
@@ -124,9 +127,8 @@
     position: absolute;
     top: calc(100% + 4px);
     right: 0;
-    min-width: 124px;
-    padding: 12px;
-    padding-bottom: 14px;
+    min-width: 135px;
+    padding: 12px 16px 14px;
     color: vars.$grayscale900;
     background: rgba(vars.$grayscale0, 92%);
     border-radius: 8px;

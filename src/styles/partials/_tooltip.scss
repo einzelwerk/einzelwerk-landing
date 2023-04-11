@@ -3,7 +3,10 @@
 @use '../utils/functions' as fn;
 
 .tooltip {
+  @include mix.p14;
+
   position: relative;
+  z-index: 20;
   display: inline-flex;
   flex: none;
 

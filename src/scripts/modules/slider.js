@@ -10,9 +10,8 @@ export function initSliderSlides() {
 
   const glide = new Glide(`.${classSwiper}`, {
     type: 'carousel',
-    autoplay: 1,
-    animationDuration: 5000,
-    animationTimingFunc: 'linear',
+    autoplay: 2000,
+    animationDuration: 1000,
     bound: true,
     perTouch: 3,
     startAt: 0,

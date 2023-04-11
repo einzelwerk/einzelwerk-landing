@@ -12,6 +12,7 @@ mixin popup-discuss
           form.popup__form(action="#") 
             .popup__field-block 
               +input({
+                isError: true,
                 name: 'name',
                 placeholder: 'Ваше имя*',
                 type: 'text',
@@ -34,6 +35,12 @@ mixin popup-discuss
                 name: 'message',
                 placeholder: 'Сообщение',
               })
+              select.popup__select.select
+                option(value="") Предпочтительный способ связи
+                option(value="telegram") Telegram
+                option(value="whatsApp") WhatsApp
+                option(value="tel") Телефон
+                option(value="viber") Viber
             .popup__submit-block 
               button.popup__submit.btn(type="submit") Оставить заявку
               span.popup__agreement 
@@ -65,6 +72,7 @@ mixin popup-landing
                   required: true
                 })
                 +input({
+                  isError: true,
                   name: 'tel',
                   placeholder: 'Телефон*',
                   type: 'tel',
@@ -101,6 +109,7 @@ mixin popup-site
                   required: true
                 })
                 +input({
+                  isError: true,
                   name: 'tel',
                   placeholder: 'Телефон*',
                   type: 'tel',
@@ -137,6 +146,7 @@ mixin popup-ecommerce
                   required: true
                 })
                 +input({
+                  isError: true,
                   name: 'tel',
                   placeholder: 'Телефон*',
                   type: 'tel',

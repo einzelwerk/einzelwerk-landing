@@ -3,8 +3,6 @@
 @use '../utils/functions' as fn;
 
 .prices {
-  overflow: hidden;
-
   &_discount {
     .prices {
       &__payment {
@@ -77,6 +75,44 @@
             color: vars.$grayscale900;
             background: vars.$grayscale0;
           }
+        }
+      }
+    }
+
+    &_soon {
+      &::before {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        z-index: 7;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background: rgba(vars.$grayscale100, 0.8);
+        border-radius: 16px;
+        backdrop-filter: blur(4px);
+        content: '';
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 9;
+        width: 100%;
+        color: vars.$grayscale900;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        content: 'В разработке';
+        @include mix.h3;
+      }
+
+      &.prices__item_dark {
+        &::after {
+          color: vars.$grayscale100;
+        }
+
+        &::before {
+          background: rgba(vars.$grayscale900, 0.8);
         }
       }
     }

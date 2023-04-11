@@ -1,5 +1,5 @@
 import HandyCollapse from 'handy-collapse';
-import { Select } from './vendor/Select';
+import { Select } from './vendor/select/Select';
 import { initAccImgTabs } from './modules/initImgTabs';
 import { toggle } from './modules/toggle';
 import { tooltip } from './modules/tooltip';
