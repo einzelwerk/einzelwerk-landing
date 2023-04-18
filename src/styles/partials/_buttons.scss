@@ -22,6 +22,15 @@
     color: vars.$lime;
     background: vars.$grayscale900;
   }
+
+  &_dark {
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: vars.$grayscale900;
+      background: vars.$grayscale0;
+    }
+  }
 }
 
 .btn-social {
