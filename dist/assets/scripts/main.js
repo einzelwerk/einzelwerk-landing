@@ -240,9 +240,8 @@ var classNames = {
   toggle: {
     block: 'toggle',
     active: 'toggle_active',
-    pricesDependent: 'prices',
-    pricesDependentActive: 'prices_discount',
-    pricesList: 'prices__content'
+    pricesContent: 'prices__content',
+    pricesContentActive: 'prices__content_active'
   },
   tooltip: {
     block: 'tooltip',
@@ -301,7 +300,7 @@ function initAccImgTabs() {
 }
 ;// CONCATENATED MODULE: ./src/scripts/modules/toggle.js
 
-function animPriceList(element) {
+function animTransform(element) {
   // Создаем объект с ключевыми кадрами для анимации
   var keyframes = [{
     transform: 'translateY(0)',
@@ -334,16 +333,14 @@ function animPriceList(element) {
   return animation;
 }
 function togglePrices() {
-  var classPricesDependent = classNames.toggle.pricesDependent;
-  var classPricesDependentActive = classNames.toggle.pricesDependentActive;
-  var classPriceList = classNames.toggle.pricesList;
-  var pricesDependent = document.querySelector(".".concat(classPricesDependent));
-  pricesDependent.querySelectorAll(".".concat(classPriceList)).forEach(function (list) {
-    animPriceList(list);
+  var classPriceContent = classNames.toggle.pricesContent;
+  var classPriceContentActive = classNames.toggle.pricesContentActive;
+  document.querySelectorAll(".".concat(classPriceContent)).forEach(function (content) {
+    animTransform(content);
+    setTimeout(function () {
+      content.classList.toggle(classPriceContentActive);
+    }, 250);
   });
-  setTimeout(function () {
-    pricesDependent.classList.toggle(classPricesDependentActive);
-  }, 500);
 }
 function toggle() {
   var classToggle = classNames.toggle.block;

@@ -3,23 +3,7 @@
 @use '../utils/functions' as fn;
 
 .prices {
-  &_discount {
-    .prices {
-      &__payment {
-        &_normal {
-          @include mix.p16;
-
-          color: vars.$grayscale300;
-          font-weight: 400;
-          text-decoration: line-through;
-        }
-
-        &_discount {
-          display: block;
-        }
-      }
-    }
-  }
+  overflow: hidden;
 
   &__top {
     display: flex;
@@ -39,6 +23,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     @media (max-width: vars.$xl) {
+      display: none;
+    }
+  }
+
+  &__content {
+    &:not(&_active) {
       display: none;
     }
   }
@@ -180,8 +170,12 @@
     width: fit-content;
     margin-bottom: fn.clip-min(4, 8);
 
-    &_discount {
-      display: none;
+    &_normal {
+      @include mix.p16;
+
+      color: vars.$grayscale300;
+      font-weight: 400;
+      text-decoration: line-through;
     }
   }
 

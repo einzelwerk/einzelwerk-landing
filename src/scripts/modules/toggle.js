@@ -1,6 +1,6 @@
 import { classNames } from '../utils/classNames';
 
-function animPriceList(element) {
+function animTransform(element) {
   // Создаем объект с ключевыми кадрами для анимации
   const keyframes = [
     { transform: 'translateY(0)', opacity: 1 },
@@ -29,19 +29,15 @@ function animPriceList(element) {
 }
 
 function togglePrices() {
-  const classPricesDependent = classNames.toggle.pricesDependent;
-  const classPricesDependentActive = classNames.toggle.pricesDependentActive;
-  const classPriceList = classNames.toggle.pricesList;
+  const classPriceContent = classNames.toggle.pricesContent;
+  const classPriceContentActive = classNames.toggle.pricesContentActive;
 
-  const pricesDependent = document.querySelector(`.${classPricesDependent}`);
-  pricesDependent.querySelectorAll(`.${classPriceList}`).forEach((list) => {
-    animPriceList(list);
+  document.querySelectorAll(`.${classPriceContent}`).forEach((content) => {
+    animTransform(content);
+    setTimeout(() => {
+      content.classList.toggle(classPriceContentActive);
+    }, 250);
   });
-  setTimeout(() => {
-    pricesDependent.classList.toggle(classPricesDependentActive);
-  }, 500);
-  
-
 }
 
 export function toggle() {
@@ -51,6 +47,7 @@ export function toggle() {
   document.querySelectorAll(`.${classToggle}`).forEach((toggleEl) => {
     function handler(e) {
       if (!(e.type === 'click' || e.keyCode === 13)) return;
+
       toggleEl.classList.toggle(classToggleActive);
       togglePrices();
     }

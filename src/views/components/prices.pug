@@ -24,7 +24,6 @@ mixin prices
               'Инструкция по работе',
             ],
             payment: 'от 95 000 руб',
-            paymentDiscount: 'от 59 000 руб',
             duration: '7-10 дней',
             btn: 'Заказать лендинг',
             type: 'landing'
@@ -43,7 +42,65 @@ mixin prices
               'Инструкция по работе',
             ],
             payment: 'от 220 000 руб',
-            paymentDiscount: 'от 139 000 руб',
+            duration: 'от 14 дней',
+            btn: 'Заказать сайт',
+            type: 'site'
+          },
+          {
+            class: 'prices__item_dark',
+            name: 'E-commerce',
+            list: [
+              'Анализ ниши и конкурентов',
+              'Прототипирование',
+              'Уникальный дизайн',
+              'Фронтенд и бэкенд сайта',
+              'Подключение домена',
+              'Подключение платежных сервисов',
+              'Тестирование',
+              'Базовая настройка SEO',
+              'Инструкция по работе',
+            ],
+            payment: 'от 325 000 руб',
+            duration: 'от 25 дней',
+            btn: 'Заказать интернет-магазин',
+            type: 'ecommerce'
+          },
+        ];
+      -
+        const pricesListConstructor = [
+          {
+            class: '',
+            name: 'Лендинг',
+            list: [
+              'Анализ ниши и конкурентов',
+              'Прототипирование',
+              'Уникальный дизайн',
+              'Фронтенд и бэкенд сайта',
+              'Подключение домена',
+              'Тестирование',
+              'Инструкция по работе',
+            ],
+            payment: 'от 95 000 руб',
+            paymentConstructor: 'от 59 000 руб',
+            duration: '7-10 дней',
+            btn: 'Заказать лендинг',
+            type: 'landing'
+          },
+          {
+            class: 'prices__item_gray',
+            name: 'Сайт',
+            list: [
+              'Анализ ниши и конкурентов',
+              'Прототипирование',
+              'Уникальный дизайн',
+              'Фронтенд и бэкенд сайта',
+              'Подключение домена',
+              'Тестирование',
+              'Базовая настройка SEO',
+              'Инструкция по работе',
+            ],
+            payment: 'от 220 000 руб',
+            paymentConstructor: 'от 139 000 руб',
             duration: 'от 14 дней',
             btn: 'Заказать сайт',
             type: 'site'
@@ -68,7 +125,8 @@ mixin prices
             type: 'ecommerce'
           },
         ];
-      ul.prices__list.prices__content
+
+      ul.prices__list.prices__content.prices__content_active
         each service in pricesList
           li.prices__item(class=service.class)
             .prices__name-block
@@ -81,14 +139,32 @@ mixin prices
                     use(xlink:href="./assets/sprite.svg#check")
                   span.prices__benefits-text=benefit
             .prices__info 
-              if service.paymentDiscount
-                span.prices__payment.prices__payment_normal=service.payment
-                span.prices__payment.prices__payment_discount=service.paymentDiscount
-              else 
-                span.prices__payment=service.payment
+              span.prices__payment=service.payment
               span.prices__duration=service.duration
               button.prices__order.btn(type="button" data-popup-open=service.type)=service.btn
-      ul.prices__acc.prices__content
+      ul.prices__list.prices__content
+        each service in pricesListConstructor
+          li.prices__item(class=service.class)
+            .prices__name-block
+              .prices__name=service.name 
+              +tooltip
+            ul.prices__benefits 
+              each benefit in service.list
+                li.prices__benefits-item 
+                  svg.prices__benefits-icon
+                    use(xlink:href="./assets/sprite.svg#check")
+                  span.prices__benefits-text=benefit
+            .prices__info 
+              if service.paymentConstructor
+                span.prices__payment.prices__payment_normal=service.payment
+                span.prices__payment.prices__payment_constructor=service.paymentConstructor
+              else 
+                span.prices__payment.prices__payment_constructor=service.payment
+              span.prices__duration=service.duration
+              button.prices__order.btn(type="button" data-popup-open=service.type)=service.btn
+      
+      
+      ul.prices__acc.prices__content.prices__content_active
         each service, idx in pricesList
           li.prices__item(class=service.class)
             button.prices__acc-btn-full(type="button" data-hc-control=`price-${idx}`)
@@ -113,9 +189,41 @@ mixin prices
                       use(xlink:href="./assets/sprite.svg#check")
                     span.prices__benefits-text=benefit
             .prices__info
-              if service.paymentDiscount
+              if service.paymentConstructor
                 span.prices__payment.prices__payment_normal=service.payment
-                span.prices__payment.prices__payment_discount=service.paymentDiscount
+                span.prices__payment.prices__payment_constructor=service.paymentConstructor
+              else 
+                span.prices__payment=service.payment
+              span.prices__duration=service.duration
+              button.prices__order.btn(type="button" data-popup-open=service.type)=service.btn
+      ul.prices__acc.prices__content
+        each service, idx in pricesListConstructor
+          li.prices__item(class=service.class)
+            button.prices__acc-btn-full(type="button" data-hc-control=`price-const-${idx}`)
+            .prices__item-top
+              .prices__name-block
+                .prices__name=service.name 
+                +tooltip
+              button.prices__acc-btn(type="button" data-hc-control=`price-const-${idx}`)
+                span.prices__acc-btn-item.prices__acc-btn-item_open 
+                  |Открыть
+                  svg.prices__acc-btn-icon
+                    use(xlink:href="./assets/sprite.svg#plus")
+                span.prices__acc-btn-item.prices__acc-btn-item_close 
+                  |Скрыть
+                  svg.prices__acc-btn-icon
+                    use(xlink:href="./assets/sprite.svg#minus")
+            .prices__acc-body(data-hc-content=`price-const-${idx}`)
+              ul.prices__benefits
+                each benefit in service.list
+                  li.prices__benefits-item 
+                    svg.prices__benefits-icon
+                      use(xlink:href="./assets/sprite.svg#check")
+                    span.prices__benefits-text=benefit
+            .prices__info
+              if service.paymentConstructor
+                span.prices__payment.prices__payment_normal=service.payment
+                span.prices__payment.prices__payment_constructor=service.paymentConstructor
               else 
                 span.prices__payment=service.payment
               span.prices__duration=service.duration
