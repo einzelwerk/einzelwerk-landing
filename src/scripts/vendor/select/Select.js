@@ -1,5 +1,7 @@
 import { SingleSelect } from './SingleSelect';
 
+import '@/../styles/vendor/select.scss'; // eslint-disable-line
+
 export class Select {
   constructor(selector) {
     this.selects = document.querySelectorAll(selector);

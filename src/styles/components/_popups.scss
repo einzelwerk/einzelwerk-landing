@@ -127,8 +127,19 @@
 
     .select {
       &__head {
-        padding-bottom: 15px;
+        gap: 10px;
+        justify-content: space-between;
+        padding-bottom: 16px;
         border: none;
+        border-bottom: 1px solid rgba(vars.$black, 0.2);
+
+        &::after {
+          width: 20px;
+          height: 20px;
+          background: url('@/img/chevron-down.svg') no-repeat center / contain;
+          transition: transform 0.3s ease-in-out;
+          content: '';
+        }
       }
 
       &__body {
@@ -146,6 +157,16 @@
         &:focus-visible {
           color: vars.$grayscale900;
           background: none;
+        }
+      }
+    }
+
+    &.is-open {
+      .select {
+        &__head {
+          &::after {
+            transform: rotate(180deg);
+          }
         }
       }
     }

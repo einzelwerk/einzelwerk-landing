@@ -26,6 +26,8 @@ export class SingleSelect {
   }
 
   changeOption(optionElement) {
+    if (this.selectHead.contains(optionElement)) return;
+
     this.optionsCollection.forEach((option) => {
       option.classList.toggle('is-selected', option === optionElement);
     });
@@ -48,30 +50,33 @@ export class SingleSelect {
     this.selectBody.classList.add('select__body');
     this.customSelect.append(this.selectBody);
 
-    this.optionsCollection = Array.from(this.originalSelect.querySelectorAll('option')).map((optionEl, index) => {
+    this.optionsCollection = Array.from(this.originalSelect.children).map((optionEl, index) => {
       const newOptionEl = document.createElement('div');
-      
+
       optionEl.getAttributeNames().forEach((attr) => {
-        if (attr === 'value') return;
         newOptionEl.setAttribute(attr, optionEl.getAttribute(attr));
       });
-      
+
       newOptionEl.classList.add('select__option', 'select__option_body');
 
-      newOptionEl.textContent = optionEl.textContent;
-      newOptionEl.dataset.value = optionEl.value;
+      newOptionEl.innerHTML = optionEl.innerHTML;
       newOptionEl.dataset.id = index + 1;
 
       this.selectBody.append(newOptionEl);
       return newOptionEl;
     });
 
-    const placehlderOption = this.optionsCollection.find(opt => !opt.dataset.value) || this.optionsCollection[0].cloneNode(true)
+    const placehlderOption =
+      this.optionsCollection.find((opt) => !opt.dataset.value) || this.optionsCollection[0].cloneNode(true);
     this.optionsCollection[0].classList.add('is-selected');
     placehlderOption.classList.replace('select__option_body', 'select__option_head');
     this.currentHeadOption = placehlderOption;
     this.selectHead.append(this.currentHeadOption);
 
     this.originalSelect.replaceWith(this.customSelect);
+
+    const widthCol = this.optionsCollection.map((opt) => opt.scrollWidth);
+    const maxWidth = Math.max(...widthCol);
+    this.customSelect.style.width = `${maxWidth}px`;
   }
 }
