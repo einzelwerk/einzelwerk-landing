@@ -35,12 +35,12 @@ mixin popup-discuss
                 name: 'message',
                 placeholder: 'Сообщение',
               })
-              select.popup__select.select
-                option(value="") Предпочтительный способ связи
-                option(value="telegram") Telegram
-                option(value="whatsApp") WhatsApp
-                option(value="tel") Телефон
-                option(value="viber") Viber
+              .popup__select.select
+                div(data-value="") Предпочтительный способ связи
+                div(data-value="telegram") Telegram
+                div(data-value="whatsApp") WhatsApp
+                div(data-value="tel") Телефон
+                div(data-value="viber") Viber
             .popup__submit-block 
               button.popup__submit.btn(type="submit") Оставить заявку
               span.popup__agreement 
