@@ -132,12 +132,15 @@ function _classPrivateMethodInitSpec(obj, privateSet) { _checkPrivateRedeclarati
 function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
 function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
 var _initializeStructure = /*#__PURE__*/new WeakSet();
+var _initializeOriginStructure = /*#__PURE__*/new WeakSet();
 var SingleSelect = /*#__PURE__*/function () {
   function SingleSelect(selectElement) {
     var _this = this;
     _classCallCheck(this, SingleSelect);
+    _classPrivateMethodInitSpec(this, _initializeOriginStructure);
     _classPrivateMethodInitSpec(this, _initializeStructure);
-    this.originalSelect = selectElement;
+    this.originSelect = selectElement;
+    this.select = null;
     this.customSelect = null;
     this.selectHead = null;
     this.selectBody = null;
@@ -160,15 +163,24 @@ var SingleSelect = /*#__PURE__*/function () {
     }
   }, {
     key: "changeOption",
-    value: function changeOption(optionElement) {
-      if (this.selectHead.contains(optionElement)) return;
+    value: function changeOption(currentOption) {
+      if (this.selectHead.contains(currentOption)) return;
       this.optionsCollection.forEach(function (option) {
-        option.classList.toggle('is-selected', option === optionElement);
+        option.classList.toggle('is-selected', option === currentOption);
       });
-      var newHeadOption = optionElement.cloneNode(true);
-      newHeadOption.classList.replace('select__option_body', 'select__option_head');
-      this.currentHeadOption.replaceWith(newHeadOption);
+      var newHeadOption = currentOption.cloneNode(true);
+      newHeadOption.classList.remove('select__option_body');
+      newHeadOption.classList.add('select__option_head');
+      if (this.currentHeadOption) {
+        this.currentHeadOption.replaceWith(newHeadOption);
+      } else {
+        this.selectHead.append(newHeadOption);
+      }
       this.currentHeadOption = newHeadOption;
+      var selectedOption = _toConsumableArray(this.select.options).find(function (option) {
+        return option.dataset.id === currentOption.dataset.id;
+      }) || this.optionsCollection[0];
+      selectedOption.selected = true;
     }
   }]);
   return SingleSelect;
@@ -176,37 +188,41 @@ var SingleSelect = /*#__PURE__*/function () {
 function _initializeStructure2() {
   var _this2 = this;
   this.customSelect = document.createElement('div');
-  this.customSelect.className = this.originalSelect.className;
+  this.customSelect.className = this.originSelect.className;
   this.selectHead = document.createElement('div');
   this.selectHead.classList.add('select__head');
-  this.customSelect.append(this.selectHead);
   this.selectBody = document.createElement('div');
   this.selectBody.classList.add('select__body');
+  this.customSelect.append(this.selectHead);
   this.customSelect.append(this.selectBody);
-  this.optionsCollection = Array.from(this.originalSelect.children).map(function (optionEl, index) {
-    var newOptionEl = document.createElement('div');
-    optionEl.getAttributeNames().forEach(function (attr) {
-      newOptionEl.setAttribute(attr, optionEl.getAttribute(attr));
-    });
-    newOptionEl.classList.add('select__option', 'select__option_body');
-    newOptionEl.innerHTML = optionEl.innerHTML;
-    newOptionEl.dataset.id = index + 1;
-    _this2.selectBody.append(newOptionEl);
-    return newOptionEl;
+  this.optionsCollection = _toConsumableArray(this.originSelect.children).filter(function (option) {
+    return option.dataset.value;
+  }).map(function (option, idx) {
+    var newOption = option.cloneNode(true);
+    newOption.classList.add('select__option', 'select__option_body');
+    newOption.dataset.id = idx + 1;
+    _this2.selectBody.append(newOption);
+    return newOption;
   });
-  var placehlderOption = this.optionsCollection.find(function (opt) {
+  _classPrivateMethodGet(this, _initializeOriginStructure, _initializeOriginStructure2).call(this);
+  var placehlderOption = _toConsumableArray(this.originSelect.children).find(function (opt) {
     return !opt.dataset.value;
-  }) || this.optionsCollection[0].cloneNode(true);
-  this.optionsCollection[0].classList.add('is-selected');
-  placehlderOption.classList.replace('select__option_body', 'select__option_head');
-  this.currentHeadOption = placehlderOption;
-  this.selectHead.append(this.currentHeadOption);
-  this.originalSelect.replaceWith(this.customSelect);
-  var widthCol = this.optionsCollection.map(function (opt) {
-    return opt.scrollWidth;
+  }) || this.optionsCollection[0];
+  this.changeOption(placehlderOption);
+  this.originSelect.replaceWith(this.customSelect);
+}
+function _initializeOriginStructure2() {
+  var select = document.createElement('select');
+  select.classList.add('visually-hidden');
+  this.optionsCollection.forEach(function (rawOption) {
+    var option = document.createElement('option');
+    option.textContent = rawOption.textContent;
+    option.dataset.id = rawOption.dataset.id;
+    option.setAttribute('value', rawOption.dataset.value);
+    select.append(option);
   });
-  var maxWidth = Math.max.apply(Math, _toConsumableArray(widthCol));
-  this.customSelect.style.width = "".concat(maxWidth, "px");
+  this.select = select;
+  this.customSelect.prepend(select);
 }
 ;// CONCATENATED MODULE: ./src/scripts/vendor/select/Select.js
 function Select_typeof(obj) { "@babel/helpers - typeof"; return Select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, Select_typeof(obj); }
