@@ -32,6 +32,8 @@ export function initSliderSlides() {
   });
 
   const glideEl = document.querySelector(`.${classSwiper}`);
+  if (!glideEl) return null;
+
   glideEl.addEventListener('mouseover', () => {
     glide.pause();
   });

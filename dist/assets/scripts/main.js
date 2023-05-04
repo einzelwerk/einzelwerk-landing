@@ -4538,6 +4538,7 @@ function initSliderSlides() {
     }), _breakpoints)
   });
   var glideEl = document.querySelector(".".concat(classSwiper));
+  if (!glideEl) return null;
   glideEl.addEventListener('mouseover', function () {
     glide.pause();
   });
