@@ -1,2 +1,2 @@
-# Einzelwerk Landing - https://github.com/grade33/einzelwerk-landing
+# Einzelwerk Landing - https://grade33.github.io/einzelwerk-landing/
  
