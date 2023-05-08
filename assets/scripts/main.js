@@ -213,6 +213,7 @@ function _initializeStructure2() {
 }
 function _initializeOriginStructure2() {
   var select = document.createElement('select');
+  select.setAttribute('name', this.originSelect.dataset.name || '');
   select.classList.add('visually-hidden');
   this.optionsCollection.forEach(function (rawOption) {
     var option = document.createElement('option');
