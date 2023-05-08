@@ -3,7 +3,8 @@
 @use '../utils/functions' as fn;
 
 .prices {
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 
   &__top {
     display: flex;
@@ -188,6 +189,10 @@
     margin-bottom: fn.clip-min(8, 16);
     color: vars.$grayscale500;
     font-weight: 400;
+  }
+
+  &__order {
+    z-index: 3;
   }
 
   &__acc {

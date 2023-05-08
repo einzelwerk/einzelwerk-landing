@@ -85,6 +85,7 @@ export class SingleSelect {
 
   #initializeOriginStructure() {
     const select = document.createElement('select');
+    select.setAttribute('name', this.originSelect.dataset.name || '');
     select.classList.add('visually-hidden');
 
     this.optionsCollection.forEach((rawOption) => {
