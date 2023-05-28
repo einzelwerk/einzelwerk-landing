@@ -15,7 +15,7 @@ export function initWidget() {
 
   const widget = document.querySelector(`.${classWidget}`);
 
-  if(!widget) return
+  if (!widget) return;
 
   const open = widget.querySelector(`.${classOpen}`);
   const close = widget.querySelector(`.${classClose}`);
@@ -48,6 +48,21 @@ export function initWidget() {
     sound.classList.remove(classSoundMuted);
   });
 
+  open.addEventListener('mouseenter', () => {
+    setTimeout(() => {
+      if (!widget.classList.contains(classWidgetHover) && !widget.classList.contains(classWidgetActive)) {
+        widget.classList.add(classWidgetHover);
+      }
+    }, 0);
+  });
+  open.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (widget.classList.contains(classWidgetHover) && !widget.classList.contains(classWidgetActive)) {
+        widget.classList.remove(classWidgetHover);
+      }
+    }, 0);
+  });
+
   small.addEventListener('click', handlerSmall);
 
   sound.addEventListener('click', () => {
@@ -70,7 +85,7 @@ export function initWidget() {
 
   document.addEventListener('click', (e) => {
     if (!(widget.classList.contains(classWidgetActive) || widget.classList.contains(classWidgetHover))) return;
-    
+
     if (!widget.contains(e.target)) {
       handlerSmall();
     }

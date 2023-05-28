@@ -106,7 +106,8 @@ mixin prices
             type: 'site'
           },
           {
-            class: 'prices__item_dark prices__item_soon',
+            class: 'prices__item_dark',
+            isSoon: true,
             name: 'E-commerce',
             list: [
               'Анализ ниши и конкурентов',
@@ -144,7 +145,10 @@ mixin prices
               button.prices__order.btn(type="button" data-popup-open=service.type)=service.btn
       ul.prices__list.prices__content
         each service in pricesListConstructor
-          li.prices__item(class=service.class)
+          - const classSoon = service.isSoon ? 'prices__item_soon' : ''
+          li.prices__item(class=`${service.class} ${classSoon}`)
+            if service.isSoon 
+              span.prices__soon В разработке
             .prices__name-block
               .prices__name=service.name 
               +tooltip
@@ -198,7 +202,10 @@ mixin prices
               button.prices__order.btn(type="button" data-popup-open=service.type)=service.btn
       ul.prices__acc.prices__content
         each service, idx in pricesListConstructor
-          li.prices__item(class=service.class)
+          - const classSoon = service.isSoon ? 'prices__item_soon' : ''
+          li.prices__item(class=`${service.class} ${classSoon}`)
+            if service.isSoon 
+              span.prices__soon В разработке
             button.prices__acc-btn-full(type="button" data-hc-control=`price-const-${idx}`)
             .prices__item-top
               .prices__name-block
