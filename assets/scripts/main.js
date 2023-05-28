@@ -561,6 +561,20 @@ function initWidget() {
     video.muted = false;
     sound.classList.remove(classSoundMuted);
   });
+  open.addEventListener('mouseenter', function () {
+    setTimeout(function () {
+      if (!widget.classList.contains(classWidgetHover) && !widget.classList.contains(classWidgetActive)) {
+        widget.classList.add(classWidgetHover);
+      }
+    }, 0);
+  });
+  open.addEventListener('mouseleave', function () {
+    setTimeout(function () {
+      if (widget.classList.contains(classWidgetHover) && !widget.classList.contains(classWidgetActive)) {
+        widget.classList.remove(classWidgetHover);
+      }
+    }, 0);
+  });
   small.addEventListener('click', handlerSmall);
   sound.addEventListener('click', function () {
     if (video.muted) {
