@@ -71,6 +71,8 @@
     }
 
     &_soon {
+      color: inherit;
+
       &::before {
         position: absolute;
         top: -1px;
