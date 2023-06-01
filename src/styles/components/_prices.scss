@@ -71,8 +71,6 @@
     }
 
     &_soon {
-      color: inherit;
-
       &::before {
         position: absolute;
         top: -1px;
@@ -113,6 +111,7 @@
     z-index: 9;
     width: 100%;
     color: vars.$grayscale100;
+    color: inherit;
     text-align: center;
     transform: translate(-50%, -50%);
     @include mix.h3;
