@@ -10,7 +10,42 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: fn.clip-min(40, 60);
+
+    &>h2 {
+      font-weight: 400;
+      font-size: fn.clip-min(20, 24);
+      font-family: HeadingNow, sans-serif;
+      line-height: fn.clip-min(30, 32);
+      margin-bottom: fn.clip-min(32, 40);
+    }
+
+    &>h3 {
+      font-weight: 400;
+      font-size: fn.clip-min(18, 20);
+      font-family: HeadingNow, sans-serif;
+      line-height: fn.clip-min(28, 30);
+      margin-bottom: fn.clip-min(24, 24);
+    }
+
+    &>h4 {
+      @include mix.p16-heading;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: HeadingNow, sans-serif;
+      line-height: fn.clip-min(24, 24);
+      margin-bottom: fn.clip-min(12, 12);
+    }
+
+
+    &>p {
+      @include mix.p16;
+      font-weight: 400;
+      font-size: fn.clip-min(16, 16);
+      line-height: fn.clip-min(24, 24);
+      margin-bottom: fn.clip-min(32, 32);
+      color: vars.$grayscale700;
+    }
+
   }
 
   &__title {
@@ -18,75 +53,9 @@
     font-size: fn.clip-min(20, 32);
     font-family: HeadingNow, sans-serif;
     line-height: fn.clip-min(30, 48);
+    margin-bottom: fn.clip-min(40, 60);
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: fn.clip-min(32, 40);
-    max-width: 777px;
 
-    &-item {
-      display: flex;
-      flex-direction: column;
-      gap: fn.clip-min(32, 40);
-    }
 
-    &-head {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    &-title {
-      font-weight: 400;
-      font-size: fn.clip-min(20, 24);
-      font-family: HeadingNow, sans-serif;
-      line-height: fn.clip-min(30, 32);
-    }
-
-    &-body {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-    }
-  }
-
-  &__block {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    &-title {
-      font-weight: 400;
-      font-size: fn.clip-min(18, 20);
-      font-family: HeadingNow, sans-serif;
-      line-height: fn.clip-min(28, 30);
-    }
-
-    &-content {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-  }
-
-  &__desc {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    &-title {
-      @include mix.p16-heading;
-    }
-
-    &-block {
-      @include mix.p16;
-
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      color: vars.$grayscale700;
-    }
-  }
 }
