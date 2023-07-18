@@ -12,6 +12,7 @@
 
   &__container {
     padding-top: 20px;
+
     @media (max-width: vars.$md) {
       padding-top: 0;
     }
@@ -21,7 +22,7 @@
     position: relative;
     padding-top: fn.clip-min(30, 40);
 
-    & > * {
+    &>* {
       position: relative;
       z-index: 5;
     }
@@ -37,6 +38,7 @@
       @media (max-width: vars.$xl) {
         margin: 0 calc(-1 * fn.free-place());
       }
+
       @media (max-width: vars.$lg) {
         background: linear-gradient(180deg, rgba(#4655d8, 0%) 75%, rgba(#4655d8, 100%) 100%),
           url('@//img/hero/hero-grid-mobile.png') no-repeat top center/100% 100%;
@@ -107,9 +109,11 @@
       position: relative;
       z-index: 2;
       margin-top: 22px;
+
       @media (max-width: vars.$xxl) {
         width: 100%;
       }
+
       @media (max-width: vars.$md) {
         margin-top: 40px;
       }

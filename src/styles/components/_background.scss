@@ -1,0 +1,41 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+
+.background {
+    background: var(--colors-grayscale-100, #F2F2F2);
+    padding-bottom: 60px;
+
+    &__title {
+        color: var(--colors-grayscale-900, #1A1A1A);
+        text-align: center;
+        font-family: HeadingNow, sans-serif;
+        font-size: fn.clip-min(24, 32);
+        font-weight: 300;
+        line-height: fn.clip-min(32, 40);
+        margin-bottom: 16px;
+    }
+
+    &__subtitle {
+        color: var(--colors-grayscale-700, #595959);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: fn.clip-min(16, 20);
+        font-weight: 400;
+        line-height: fn.clip-min(24, 30);
+    }
+
+    &__gallery {
+        padding-block: fn.clip-min(32, 60);
+    }
+
+    &__description {
+        color: var(--colors-grayscale-700, #595959);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: fn.clip-min(16, 20);
+        font-weight: 400;
+        line-height: fn.clip-min(24, 30);
+    }
+}
