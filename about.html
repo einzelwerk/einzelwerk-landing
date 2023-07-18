@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/resources/favicon.ico">
+    <link rel="stylesheet" href="./assets/styles/libs.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <script defer src="./assets/scripts/main.js"> </script>
+    <title>О нас</title>
+  </head>
+  <body>
+    <div class="app about-page">
+      <div class="overlay">
+        <div class="popup" data-popup="discuss">
+          <button class="popup__close" type="button" data-popup-close="data-popup-close">
+            <svg class="popup__close-icon">
+              <use xlink:href="./assets/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content"> 
+            <div class="popup__top">
+              <h2 class="popup__title">Обсудить проект</h2>
+              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+            </div>
+            <form class="popup__form" action="#"> 
+              <div class="popup__field-block"> 
+                <div class="input input_error ">
+                  <label class="visually-hidden" for="name">Ваше имя*</label>
+                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/><span>Это обязательное поле</span>
+                </div>
+                <div class="contacts__field-row">
+                  <div class="input  ">
+                    <label class="visually-hidden" for="email">E-mail*</label>
+                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
+                  </div>
+                  <div class="input  ">
+                    <label class="visually-hidden" for="tel">Телефон*</label>
+                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/>
+                  </div>
+                </div>
+                <div class="input  ">
+                  <label class="visually-hidden" for="message">Сообщение</label>
+                  <textarea class="input__field" id="message" name="message" placeholder="Сообщение" rows="1" autocomplete="off"></textarea>
+                </div>
+                <div class="popup__select select" data-name="contact">
+                  <div data-value="">Предпочтительный способ связи</div>
+                  <div data-value="telegram">Telegram</div>
+                  <div data-value="whatsApp">WhatsApp</div>
+                  <div data-value="tel">Телефон</div>
+                  <div data-value="viber">Viber</div>
+                </div>
+              </div>
+              <div class="popup__submit-block"> 
+                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="popup" data-popup="landing">
+          <button class="popup__close" type="button" data-popup-close="data-popup-close">
+            <svg class="popup__close-icon">
+              <use xlink:href="./assets/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content"> 
+            <div class="popup__top">
+              <h2 class="popup__title">Заявка на лендинг</h2>
+              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+            </div>
+            <form class="popup__form" action="#"> 
+              <div class="popup__field-block"> 
+                <div class="input  ">
+                  <label class="visually-hidden" for="name">Ваше имя*</label>
+                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
+                </div>
+                <div class="contacts__field-row">
+                  <div class="input  ">
+                    <label class="visually-hidden" for="email">E-mail*</label>
+                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
+                  </div>
+                  <div class="input input_error ">
+                    <label class="visually-hidden" for="tel">Телефон*</label>
+                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/><span>Это обязательное поле</span>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__submit-block"> 
+                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="popup" data-popup="site">
+          <button class="popup__close" type="button" data-popup-close="data-popup-close">
+            <svg class="popup__close-icon">
+              <use xlink:href="./assets/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content"> 
+            <div class="popup__top">
+              <h2 class="popup__title">Заявка на сайт</h2>
+              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+            </div>
+            <form class="popup__form" action="#"> 
+              <div class="popup__field-block"> 
+                <div class="input  ">
+                  <label class="visually-hidden" for="name">Ваше имя*</label>
+                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
+                </div>
+                <div class="contacts__field-row">
+                  <div class="input  ">
+                    <label class="visually-hidden" for="email">E-mail*</label>
+                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
+                  </div>
+                  <div class="input input_error ">
+                    <label class="visually-hidden" for="tel">Телефон*</label>
+                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/><span>Это обязательное поле</span>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__submit-block"> 
+                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="popup" data-popup="ecommerce">
+          <button class="popup__close" type="button" data-popup-close="data-popup-close">
+            <svg class="popup__close-icon">
+              <use xlink:href="./assets/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="popup__content"> 
+            <div class="popup__top">
+              <h2 class="popup__title">Заявка на E-commerce</h2>
+              <p class="popup__desc">Наш проджект свяжется с вами в течение одного рабочего дня!</p>
+            </div>
+            <form class="popup__form" action="#"> 
+              <div class="popup__field-block"> 
+                <div class="input  ">
+                  <label class="visually-hidden" for="name">Ваше имя*</label>
+                  <input class="input__field" id="name" name="name" type="text" placeholder="Ваше имя*" required="required" autocomplete="off"/>
+                </div>
+                <div class="contacts__field-row">
+                  <div class="input  ">
+                    <label class="visually-hidden" for="email">E-mail*</label>
+                    <input class="input__field" id="email" name="email" type="email" placeholder="E-mail*" required="required" autocomplete="off"/>
+                  </div>
+                  <div class="input input_error ">
+                    <label class="visually-hidden" for="tel">Телефон*</label>
+                    <input class="input__field" id="tel" name="tel" type="tel" placeholder="Телефон*" required="required" autocomplete="off"/><span>Это обязательное поле</span>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__submit-block"> 
+                <button class="popup__submit btn" type="submit">Оставить заявку</button><span class="popup__agreement">
+                   Нажимая на кнопку “Оставить заявку” отправить вы соглашаетесь с политикой<a class="popup__agreement_link" href="#">обработки персональных данных</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="fixed"> 
+        <div class="fixed__container container"> 
+          <button class="fixed__btn btn" type="button" data-popup-open="discuss">Оставить заявку</button><a class="btn-social" href="#"> 
+            <svg class="btn-social__icon">
+              <use xlink:href="./assets/sprite.svg#telegram"></use>
+            </svg></a><a class="btn-social" href="#"> 
+            <svg class="btn-social__icon">
+              <use xlink:href="./assets/sprite.svg#whatsapp"></use>
+            </svg></a>
+        </div>
+      </div>
+      <div class="widget">
+        <button class="widget__record" type="button"></button>
+        <button class="widget__open" type="button"></button>
+        <button class="widget__close" type="button">
+          <svg class="widget__close-icon">
+            <use xlink:href="./assets/sprite.svg#widget-close"></use>
+          </svg>
+        </button>
+        <div class="widget__control-block">
+          <button class="widget__small" type="button">
+            <svg class="widget__small-icon">
+              <use xlink:href="./assets/sprite.svg#widget-close"></use>
+            </svg>
+          </button>
+          <button class="widget__sound" type="button">
+            <svg class="widget__sound-icon widget__sound-icon_on">
+              <use xlink:href="./assets/sprite.svg#widget-sound-on"></use>
+            </svg>
+            <svg class="widget__sound-icon widget__sound-icon_off">
+              <use xlink:href="./assets/sprite.svg#widget-sound-off"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="widget__content">
+          <video class="widget__video" src="./assets/resources/video.mp4" muted="muted" loop="loop" autoplay="autoplay"> </video>
+        </div>
+      </div>
+      <header class="header header_dark" id="header">
+        <div class="header__container container"><a class="header__logo" href="#hero"> 
+            <svg class="header__logo-icon">
+              <use xlink:href="./assets/sprite.svg#logo"></use>
+            </svg></a>
+          <nav class="header__nav"> 
+            <ul class="header__nav-list"> 
+              <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#benefits">Почему</a></li>
+              <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#prices">Цены</a></li>
+              <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#cases">Кейсы</a></li>
+              <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#process">Процесс</a></li>
+              <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header__contacts"><a class="header__contacts-tel link-underline" href="+79119892442">+7 911 989-24-42</a>
+            <button class="header__contacts-discuss link-underline" type="button" data-popup-open="discuss">Заполнить бриф</button>
+          </div>
+          <div class="header__menu-block">
+            <button class="header__burger" type="button"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></button>
+            <div class="header__menu">
+              <nav class="header__menu-nav">
+                <ul class="header__nav-list"> 
+                  <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#benefits">Почему</a></li>
+                  <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#prices">Цены</a></li>
+                  <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#cases">Кейсы</a></li>
+                  <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#process">Процесс</a></li>
+                  <li class="header__nav-item"> <a class="header__nav-link link-underline" href="#contacts">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+                <section class="hero-about first-section" id="hero-about">
+                  <div class="hero-about__container container">
+                    <div class="hero-about__inner">
+                      <div class="hero-about__content">
+                        <div class="hero-about__title-block"> 
+                          <h1 class="hero-about__title">Мы - Einzelwerk</h1>
+                        </div>
+                        <div class="hero-about__desc">Ясно формулируем для себя, что наш главный ресурс и преимущество – сработанная команда. </div>
+                      </div>
+                    </div>
+                    <picture class="hero-about__bg-wrap">
+                      <source media="(max-width:767.98px)" srcset="./assets//img/hero/einzelwerk-team.jpg"><img class="hero-about__bg" src="./assets//img/hero/einzelwerk-team.jpg" alt="">
+                    </picture>
+                  </div>
+                </section>
+                <section class="team section" id="team">
+                  <div class="team__container container">
+                    <div class="team__title">Наша команда</div>
+                    <div class="slides" id="team-slides">
+                      <div class="team-slides__desktop">
+                        <div class="team-slides__members">
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/andrey.jpg"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Андрей</h3>
+                              <p class="team-slides__members-position">CEO</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/dmitriy.jpg"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Дмитрий</h3>
+                              <p class="team-slides__members-position">Арт-директор</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/poylar.jpg"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Александр</h3>
+                              <p class="team-slides__members-position">Фронтенд разработчик</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/boshnik.jpg"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Александр</h3>
+                              <p class="team-slides__members-position">Бэкенд разработчик</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/kseniya.jpg"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Ксения</h3>
+                              <p class="team-slides__members-position">Бренд-дизайнер</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/olga.jpg"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Ольга</h3>
+                              <p class="team-slides__members-position">UI/UX-дизайнер</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/mark.jpg"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Марк</h3>
+                              <p class="team-slides__members-position">Проджект-менеджер</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/daria.jpg"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Дарья Р.</h3>
+                              <p class="team-slides__members-position">Проджект-менеджер</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/anastasia.jpg"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Анастасия</h3>
+                              <p class="team-slides__members-position">Проджект-менеджер</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Арсен</h3>
+                              <p class="team-slides__members-position">Motion-дизайнер</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Алексей</h3>
+                              <p class="team-slides__members-position">Бэкенд разработчик</p>
+                            </div>
+                          </div>
+                          <div class="team-slides__members-item">
+                            <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/pasha.jpg"></picture>
+                            <div class="team-slides__members-info">
+                              <h3 class="team-slides__members-name">Паша</h3>
+                              <p class="team-slides__members-position">Junior UI/UX-дизайнер</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="team-slides__mobile team-slides__container container">
+                        <div class="team-slides__members slides">
+                          <div class="glide slides__slider">
+                            <div class="glide__track" data-glide-el="track">
+                              <ul class="glide__slides">
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/andrey.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Андрей</h3>
+                                    <p class="team-slides__members-position">CEO</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/dmitriy.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Дмитрий</h3>
+                                    <p class="team-slides__members-position">Арт-директор</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/poylar.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Александр</h3>
+                                    <p class="team-slides__members-position">Фронтенд разработчик</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/boshnik.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Александр</h3>
+                                    <p class="team-slides__members-position">Бэкенд разработчик</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/kseniya.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Ксения</h3>
+                                    <p class="team-slides__members-position">Бренд дизайнер</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/olga.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Ольга</h3>
+                                    <p class="team-slides__members-position">UI/UX-дизайнер</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/mark.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Марк</h3>
+                                    <p class="team-slides__members-position">Проджект-менеджер</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/daria.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Дарья</h3>
+                                    <p class="team-slides__members-position">Проджект-менеджер</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/anastasia.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Анастасия</h3>
+                                    <p class="team-slides__members-position">Проджект-менеджер</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/unknown.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Арсен</h3>
+                                    <p class="team-slides__members-position">Motion-дизайнер</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/unknown.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Алексей</h3>
+                                    <p class="team-slides__members-position">Бэкенд разработчик</p>
+                                  </div>
+                                </li>
+                                <li class="team-slides__members-item glide__slide">
+                                  <picture class="team-slides__members-img-wrap"><img class="team-slides__members-img" src="./assets//img/team/pasha.jpg"></picture>
+                                  <div class="team-slides__members-info">
+                                    <h3 class="team-slides__members-name">Паша</h3>
+                                    <p class="team-slides__members-position">Junior UI/UX-дизайнер</p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team-searching" id="team-searching">
+                      <div class="team-searching__container">
+                        <div class="team-searching__searching">
+                          <div class="team-searching__content">
+                            <h2 class="team-searching__content-title">Мы ищем именно тебя!</h2>
+                            <p class="team-searching__content-desc">Наша студия постоянно находится в поиске талантливых ребят, которые готовы разорвать диджитал-рынок</p>
+                            <div class="team-searching__content-cta">
+                              <p class="team-searching__content-cta__text">Отправляй резюме и короткий рассказ о себе прямо к нам на почту</p>
+                              <button class="team-searching__content-cta__btn">moin@einzelwerk.ru</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="background section" id="background">
+                  <div class="background__container container">
+                    <div class="background__title">Наш бэкграунд</div>
+                    <div class="background__subtitle">еще одна диджитал-студия</div>
+                  </div>
+                </section>
+                <section class="slides">
+                  <div class="glide slides__slider">
+                    <div class="glide__track" data-glide-el="track">
+                      <ul class="glide__slides">
+                        <li class="glide__slide">
+                          <div class="slides__item"><img class="slides__img" src="./assets/img/slides/slide-1.jpg" alt=""></div>
+                        </li>
+                        <li class="glide__slide">
+                          <div class="slides__item"><img class="slides__img" src="./assets/img/slides/slide-2.jpg" alt=""></div>
+                        </li>
+                        <li class="glide__slide">
+                          <div class="slides__item"><img class="slides__img" src="./assets/img/slides/slide-3.jpg" alt=""></div>
+                        </li>
+                        <li class="glide__slide">
+                          <div class="slides__item"><img class="slides__img" src="./assets/img/slides/slide-4.jpg" alt=""></div>
+                        </li>
+                        <li class="glide__slide">
+                          <div class="slides__item"><img class="slides__img" src="./assets/img/slides/slide-5.jpg" alt=""></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+                <div class="background-desc section" id="background-desc"> 
+                  <div class="background-desc__container container">
+                    <div class="background__description">Наша сплоченная команда является основой цифровой студии Einzelwerk, расположенной в прекрасном городе Гамбург, Германия. Мы предоставляем комплексные услуги онлайн-маркетинга для компаний всех форм и размеров - ведь, давайте посмотрим правде в глаза, кто может выжить без хорошего присутствия в Интернете в наши дни?<br><br>Наша многонациональная команда собрала в себе лучших представителей различных культур и менталитетов, и мы каждый день усердно работаем над тем, чтобы сделать мир прекраснее с помощью наших потрясающих продуктов и услуг.</div>
+                  </div>
+                </div>
+      </main>
+      <footer class="footer" id="footer">
+        <div class="footer__container container"> 
+          <div class="footer__top"> <a class="footer__logo" href="#hero"> 
+              <svg class="footer__logo-icon">
+                <use xlink:href="./assets/sprite.svg#logo"></use>
+              </svg></a>
+            <div class="footer__contacts">
+              <div class="footer__contacts-block"> <strong class="footer__contacts-title">Соцсети</strong>
+                <ul class="footer__contacts-list"> 
+                  <li class="footer__contacts-item"><a class="footer__contacts-link link-underline" href="#">Behance</a></li>
+                  <li class="footer__contacts-item"><a class="footer__contacts-link link-underline" href="#">Telegram</a></li>
+                  <li class="footer__contacts-item"><a class="footer__contacts-link link-underline" href="#">WhatsApp</a></li>
+                </ul>
+              </div>
+              <div class="footer__contacts-block"> <strong class="footer__contacts-title">Контакты</strong>
+                <ul class="footer__contacts-list"> 
+                  <li class="footer__contacts-item"><a class="footer__contacts-link link-underline" href="+79119892442">+7 911 989-24-42</a></li>
+                  <li class="footer__contacts-item"><a class="footer__contacts-link link-underline" href="hi@einzelwerk.ru">hi@einzelwerk.ru</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom"><span class="footer__rights">Все права защищены © Einzelwerk</span><a class="footer__agreement link-underline" href="privacy.html">Политика конфиденциальности</a></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
