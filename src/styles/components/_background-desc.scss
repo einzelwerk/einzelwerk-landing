@@ -1,8 +1,0 @@
-@use '../utils/variables' as vars;
-@use '../utils/mixins' as mix;
-@use '../utils/functions' as fn;
-
-.background-desc {
-    padding-top: 60px;
-    background: var(--colors-grayscale-100, #F2F2F2);
-}

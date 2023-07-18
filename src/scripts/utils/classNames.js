@@ -56,5 +56,6 @@ export const classNames = {
   },
   swiper: {
     slides: 'slides__slider',
+    members: 'members__slider',
   },
 };

@@ -5,7 +5,6 @@
 
 .background {
     background: var(--colors-grayscale-100, #F2F2F2);
-    padding-bottom: 60px;
 
     &__title {
         color: var(--colors-grayscale-900, #1A1A1A);
@@ -38,4 +37,8 @@
         font-weight: 400;
         line-height: fn.clip-min(24, 30);
     }
+}
+
+.members__slider{
+    padding-block: 60px;
 }

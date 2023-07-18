@@ -44,7 +44,7 @@
 
             &:nth-of-type(10),
             &:nth-of-type(11) {
-                .team__members-info {
+                .team-slides__members-info {
                     opacity: 0.4000000059604645;
                     background: linear-gradient(180deg, rgba(16, 16, 16, 0.00) 0%, #101010 100%);
                 }
@@ -96,7 +96,8 @@
         width: 100%;
 
         @media (max-width: vars.$lg) {
-            background: url(../../assets/img/team/members-search-mobile.jpg) no-repeat center center/100% 100%;
+            background: url(../../assets/img/team/members-search-mobile.jpg) no-repeat center center/contain;
+            background-color: #4655D8;
             height: 580px;
         }
     }
@@ -122,7 +123,6 @@
             margin-bottom: fn.clip-min(16, 20);
 
             @media (max-width: vars.$md) {
-                // width: 212px;
                 text-align: center;
             }
         }
@@ -157,6 +157,12 @@
                 border-radius: 12px;
                 background: rgba(255, 255, 255, 0.12);
                 backdrop-filter: blur(6px);
+            }
+
+            @media (max-width: 360px){
+                padding: 12px;
+                width: 280px;
+                margin: 0 auto;
             }
 
             &__text {

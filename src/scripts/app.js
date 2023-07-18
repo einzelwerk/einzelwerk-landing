@@ -8,7 +8,7 @@ import { headerBlur, headerHide } from './vendor/header';
 import { closePopup, openPopup } from './modules/popups';
 import { initWidget } from './modules/widget';
 import { burgerMenu } from './modules/burger-menu';
-import { initSliderSlides } from './modules/slider';
+import { initMembersSlides, initSliderSlides } from './modules/slider';
 
 import 'normalize.css';
 
@@ -29,6 +29,7 @@ window.onload = () => {
 
   // Slider
   initSliderSlides();
+  initMembersSlides();
 
   // Accordion
   new HandyCollapse(); // eslint-disable-line
