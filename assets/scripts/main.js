@@ -191,6 +191,7 @@ function getScrollbarWidth() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "initBackgroundSlides": () => (/* binding */ initBackgroundSlides),
 /* harmony export */   "initMembersSlides": () => (/* binding */ initMembersSlides),
 /* harmony export */   "initSliderSlides": () => (/* binding */ initSliderSlides)
 /* harmony export */ });
@@ -264,6 +265,38 @@ function initMembersSlides() {
     }), _breakpoints2)
   });
   var glideEl = document.querySelector(".".concat(members));
+  if (!glideEl) return null;
+  glideEl.addEventListener('mouseover', function () {
+    glide.pause();
+  });
+  glideEl.addEventListener('mouseout', function () {
+    glide.play();
+  });
+  return glide.mount();
+}
+function initBackgroundSlides() {
+  var _breakpoints3;
+  var background = _utils_classNames__WEBPACK_IMPORTED_MODULE_1__.classNames.swiper.background;
+  var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](".".concat(background), {
+    type: 'carousel',
+    autoplay: 2000,
+    animationDuration: 1000,
+    bound: true,
+    perTouch: 3,
+    startAt: 0,
+    perView: 3,
+    gap: 20,
+    peek: 50,
+    breakpoints: (_breakpoints3 = {}, _defineProperty(_breakpoints3, _utils_breakpoints__WEBPACK_IMPORTED_MODULE_2__.breakpointsMin.lg, {
+      perView: 2,
+      peek: 30
+    }), _defineProperty(_breakpoints3, _utils_breakpoints__WEBPACK_IMPORTED_MODULE_2__.breakpointsMin.sm, {
+      perView: 1,
+      gap: 12,
+      peek: 18
+    }), _breakpoints3)
+  });
+  var glideEl = document.querySelector(".".concat(background));
   if (!glideEl) return null;
   glideEl.addEventListener('mouseover', function () {
     glide.pause();
@@ -574,7 +607,8 @@ var classNames = {
   },
   swiper: {
     slides: 'slides__slider',
-    members: 'members__slider'
+    members: 'members__slider',
+    background: 'background__slider'
   }
 };
 
@@ -4960,6 +4994,7 @@ window.onload = function () {
   // Slider
   (0,_modules_slider__WEBPACK_IMPORTED_MODULE_10__.initSliderSlides)();
   (0,_modules_slider__WEBPACK_IMPORTED_MODULE_10__.initMembersSlides)();
+  (0,_modules_slider__WEBPACK_IMPORTED_MODULE_10__.initBackgroundSlides)();
 
   // Accordion
   new handy_collapse__WEBPACK_IMPORTED_MODULE_0__["default"](); // eslint-disable-line
