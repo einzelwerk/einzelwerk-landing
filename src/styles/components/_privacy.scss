@@ -11,6 +11,20 @@
     display: flex;
     flex-direction: column;
 
+    &__title {
+      font-weight: 400;
+      font-size: fn.clip-min(20, 32);
+      font-family: HeadingNow, sans-serif;
+      line-height: fn.clip-min(30, 48);
+      margin-bottom: fn.clip-min(40, 60);
+    }
+
+    b,
+    strong {
+      font-weight: 600;
+      color: var(--black);
+    }
+
     h2 {
       font-weight: 400;
       font-size: fn.clip-min(20, 24);
@@ -36,6 +50,36 @@
       margin-bottom: fn.clip-min(12, 12);
     }
 
+    h5 {
+      margin-bottom: 20px;
+      font-size: rem(14px);
+      font-weight: 600;
+    }
+
+    h6 {
+      margin-bottom: 20px;
+      font-size: rem(16px);
+      font-weight: 600;
+      line-height: 150%;
+    }
+
+    picture {
+      overflow: hidden;
+      width: 100%;
+      border: 1px solid var(--border-divider);
+      border-radius: 12px;
+
+      &:first-child:last-child {
+        margin: 0;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     p {
       @include mix.p16;
       font-weight: 400;
@@ -44,13 +88,56 @@
       margin-bottom: fn.clip-min(32, 32);
       color: vars.$grayscale700;
     }
-  }
 
-  &__title {
-    font-weight: 400;
-    font-size: fn.clip-min(20, 32);
-    font-family: HeadingNow, sans-serif;
-    line-height: fn.clip-min(30, 48);
-    margin-bottom: fn.clip-min(40, 60);
+    ul,
+    ol {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      margin: 16px 0;
+
+      color: var(--text);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    a {
+      color: var(--accent-purple);
+      text-decoration: underline;
+
+      &:hover {
+        color: #7e32e0;
+      }
+    }
+
+    li {
+      position: relative;
+      padding-left: 1.2rem;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        flex: none;
+
+        width: 6px;
+        height: 6px;
+        margin-top: 9px;
+        margin-right: 8px;
+
+        background: var(--black);
+        border-radius: 1px;
+      }
+    }
   }
 }
