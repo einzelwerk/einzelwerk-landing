@@ -78,6 +78,7 @@
     }
 
     &-link {
+      color: #ffffff;
       white-space: nowrap;
     }
   }
@@ -89,6 +90,7 @@
     align-items: center;
     margin-left: auto;
     white-space: nowrap;
+    color: #ffffff;
     @media (max-width: vars.$md) {
       flex-direction: column;
     }
