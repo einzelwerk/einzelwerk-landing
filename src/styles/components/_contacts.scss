@@ -5,7 +5,6 @@
 .contacts {
   position: relative;
   color: rgba(vars.$grayscale0, 0.6);
-  background: vars.$grayscale900;
 
   @media (max-width: vars.$lg) {
     padding-bottom: 0;
@@ -21,13 +20,34 @@
     display: flex;
     flex-direction: column;
     gap: fn.clip-min(32, 50);
-    max-width: 600px;
+
+    background: vars.$grayscale900;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1rem;
+    overflow: hidden;
+    @media (max-width: vars.$lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content-wrapper {
+    height: 100%;
   }
 
   &__text-block {
     display: flex;
     flex-direction: column;
     gap: fn.clip-min(16, 20);
+    padding-left: 3.75rem;
+    padding-top: 5.75rem;
+    padding-bottom: 5.75rem;
+    @media (max-width: vars.$lg) {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-bottom: 2rem;
+      padding-top: 1.5rem;
+    }
   }
 
   &__title {
@@ -84,29 +104,74 @@
   }
 
   &__img {
-    &-wrap {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      height: 100%;
-      transform: translateY(-50%);
-      @media (max-width: vars.$xxl) {
-        top: unset;
-        bottom: 0;
-        height: 80%;
-        transform: translateY(0);
-      }
-      @media (max-width: vars.$xl) {
-        height: 65%;
-      }
-      @media (max-width: vars.$lg) {
-        position: static;
-        width: 100%;
-        height: unset;
-      }
-    }
-
+    border-radius: 1rem;
+    overflow: hidden;
     width: 100%;
     height: 100%;
+
+    &-wrap {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      @media (max-width: vars.$lg) {
+        order: -1;
+        height: 26rem;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          bottom: 0;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 44.98%, #1a1a1a 100%);
+          z-index: 1;
+        }
+      }
+      picture {
+        width: 100%;
+        height: 100%;
+        img {
+          @media (max-width: vars.$lg) {
+            object-position: top;
+          }
+        }
+      }
+    }
+  }
+
+  &__ceo {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    background: #1a1a1a;
+    color: #fff;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 2;
+    @media (max-width: vars.$lg) {
+      left: 0.5rem;
+      bottom: 0.5rem;
+    }
+  }
+}
+
+.contacts-ceo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  &__title {
+    font-family: HeadingNow, 'sans-serif';
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 1.25rem;
+    @media (max-width: vars.$lg) {
+      font-size: 0.875rem;
+    }
   }
 }

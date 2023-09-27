@@ -17,42 +17,7 @@ mixin cases
               type: 'Сайт',
               isCompleted: true,
             },
-            {
-              src: '@/img/cases/case-3.jpg',
-              name: 'Kids Fun Palace',
-              type: 'Лендинг, брендинг',
-              isCompleted: true,
-            },
-            {
-              src: '@/img/cases/case-4.jpg',
-              name: 'Duesseldorf Business School',
-              type: 'Сайт',
-              isCompleted: true,
-            },
-            {
-              src: '@/img/cases/case-5.jpg',
-              name: 'AVB Team',
-              type: 'UX/UI дизайн',
-              isCompleted: true,
-            },
-            {
-              src: '@/img/cases/case-6.jpg',
-              name: 'Stena Glovis',
-              type: 'Сайт',
-              isCompleted: false,
-            },
-            {
-              src: '@/img/cases/case-7.jpg',
-              name: 'WaildWorld',
-              type: 'Портал',
-              isCompleted: false,
-            },
-            {
-              src: '@/img/cases/case-8.jpg',
-              name: 'KFP Architekten',
-              type: 'Сайт',
-              isCompleted: false,
-            },
+
           ];
         each caseItem in casesList
           - const classCompleted = caseItem.isCompleted ? '' : 'cases__item_soon'
@@ -73,3 +38,4 @@ mixin cases
             .cases__text-block 
               h3.cases__name=caseItem.name 
               span.cases__type=caseItem.type
+      button.cases__load-more Смотреть все кейсы

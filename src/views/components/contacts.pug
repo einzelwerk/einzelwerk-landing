@@ -4,43 +4,47 @@ mixin contacts
   section#contacts.contacts.section
     .contacts__container.container
       .contacts__content
-        .contacts__text-block
-          h2.contacts__title.section__title Оставляйте заявку
-          p.contacts__desc Наш проджект свяжется с вами в течение рабочего дня!
-        form.contacts__form(action="#") 
-          .contacts__field-block
-            +input({
-              isDark: true,
-              name: 'name',
-              placeholder: 'Ваше имя*',
-              type: 'text',
-              required: true
-            })
-            .contacts__field-row
-              +input({
-                isDark: true,
-                name: 'email',
-                placeholder: 'E-mail*',
-                type: 'email',
-                required: true
-              })
-              +input({
-                isDark: true,
-                name: 'tel',
-                placeholder: 'Телефон*',
-                type: 'tel',
-                required: true
-              })
-            +textarea({
-              isDark: true,
-              name: 'message',
-              placeholder: 'Сообщение',
-            })
-          .contacts__btn-block 
-            button.contacts__submit.btn.btn_dark(type="submit") Оставить заявку
-            .contacts__agreement
-              span Нажимая на кнопку “Оставить заявку” вы соглашаетесь с политикой 
-              a.contacts__agreement_link(href="#") обработки персональных данных
-    picture.contacts__img-wrap 
-      source(media="(max-width: 991.98px)", srcset="@//img/contacts/contacts-mobile.png")
-      img.contacts__img(src="@//img/contacts/contacts.png", alt="")
+        .contacts__content-wrapper
+          .contacts__text-block
+            h2.contacts__title.section__title Бесплатная 30-минутная сессия с СЕО Einzelwerk
+            p.contacts__desc по разбору болевых точек вашей компании
+            form.contacts__form(action="#") 
+              .contacts__field-block
+                +input({
+                  isDark: true,
+                  name: 'name',
+                  placeholder: 'Ваше имя*',
+                  type: 'text',
+                  required: true
+                })
+                .contacts__field-row
+                  +input({
+                    isDark: true,
+                    name: 'email',
+                    placeholder: 'E-mail*',
+                    type: 'email',
+                    required: true
+                  })
+                  +input({
+                    isDark: true,
+                    name: 'tel',
+                    placeholder: 'Телефон*',
+                    type: 'tel',
+                    required: true
+                  })
+                +textarea({
+                  isDark: true,
+                  name: 'message',
+                  placeholder: 'Сообщение',
+                })
+              .contacts__btn-block 
+                button.contacts__submit.btn.btn_dark(type="submit") Оставить заявку
+                .contacts__agreement
+                  span Нажимая на кнопку “Оставить заявку” вы соглашаетесь с политикой 
+                  a.contacts__agreement_link(href="#") обработки персональных данных
+        .contacts__img-wrap
+          .contacts__ceo.contacts-ceo 
+            h5.contacts-ceo__title Андрей Братухин
+            p.contacts-ceo__position CEO, Einzelwerk
+          picture
+            img.contacts__img(src="@//img/contacts/contacts.png" alt="")

@@ -5,13 +5,25 @@ mixin about
         .about__text-block
           h2.about__title.section__title 
             | Einzelwerk  - первая 
-            img.about__title_flag(src="@/img/flag.jpg", alt="") 
+            img.about__title_flag(src="@/img/flag.jpg" alt="") 
             |  немецкая диджитал студия в России и СНГ 
           p.about__desc Объединяем лучшие традиционные немецкие ценности и передовые технологии для создания высококачественных сайтов под ключ. Мы гордимся своим немецким подходом к деталям и страстью к идеальному исполнению каждого проекта.
-        ul.about__list 
-          li.about__item
-            h3.about__name Пунктуальность
-          li.about__item
-            h3.about__name Точность 
-          li.about__item
-            h3.about__name Надежность
+          .about__features.about-features 
+            h3.about-features__title
+              svg(width='20' height='20')
+                use(href='./assets/sprite.svg#bot')
+              span Собственные AI-фичи для сайтов
+            .about-features__list
+              .about-features__list-item
+                svg(width='18' height='18')
+                  use(href='./assets/sprite.svg#lightning')
+                span Генерация контента
+              .about-features__list-item
+                svg(width='18' height='18')
+                  use(href='./assets/sprite.svg#translate')
+                span Мультиязычность
+              .about-features__list-item
+                svg(width='18' height='18')
+                  use(href='./assets/sprite.svg#thumbsUp')
+                span Сбор отзывов
+
